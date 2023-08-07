@@ -7,11 +7,11 @@ Publico objetivo
 Orientado a personas que necesiten comprar electrodomesticos para el hogar, cocina, heladera, lavarropas, microondas
 
 Sitios de referencia
-_ https://www.whirlpool.com.ar/
-_ https://www.samsung.com/ar/home-appliances/
-_ https://www.tienda.philips.com.ar/productos-para-el-hogar
-_ https://www.tienda.electrolux.com.ar/
-_ https://www.tienda.gafa.com.ar/
+- https://www.whirlpool.com.ar/
+- https://www.samsung.com/ar/home-appliances/
+- https://www.tienda.philips.com.ar/productos-para-el-hogar
+- https://www.tienda.electrolux.com.ar/
+- https://www.tienda.gafa.com.ar/
 
 Wireframe de las siguientes secciones del sitio:
 - Home 
