@@ -1,10 +1,10 @@
 # grupo-09
 
 Temática del sitio
-Venta de electrodomesticos para el hogar.
+- Venta de electrodomesticos para el hogar.
 
 Publico objetivo
-Orientado a personas que necesiten comprar electrodomesticos para el hogar, cocina, heladera, lavarropas, microondas
+- Orientado a personas que necesiten comprar electrodomesticos para el hogar, cocina, heladera, lavarropas, microondas.
 
 Sitios de referencia
 - https://www.whirlpool.com.ar/
