@@ -19,3 +19,6 @@ Wireframe de las siguientes secciones del sitio:
 - Carrito de compras 
 - Formulario de registro 
 - Formulario de login
+
+Tablero Trello
+- https://trello.com/b/ErjikLRs/proyecto-integrador
