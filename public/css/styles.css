@@ -1,169 +1,101 @@
-body {
-    font-family: "Roboto";
-  }
-  
-  .bg-yellow {
-    background-color: #eac926;
-  }
-  
-  .bg-dark-grey {
-    background-color: #666;
-  }
-  
-  .bg-grey {
-    background-color: #ebebeb;
-  }
-  
-  .bg-blue {
-    background-color: #1259c3;
-  }
-  
-  .bg-white {
-    background-color: white;
-  }
-  
-  .color-green {
-    color: #39b54a;
-  }
-  
-  .font-m {
-    font-size: 12px;
-  }
-  .font-lg {
-    font-size: 16px;
-  }
-  .font-xl {
-    font-size: 18px;
-  }
-  .title {
-    font-size: 24px;
-  }
-  
-  .w-50 {
-    width: 50%;
-  }
-  
-  .vw-90 {
-    width: 90vw;
-  }
-  
-  .w-100 {
-    width: 100%;
-  }
-  
-  .b-1 {
-    border-style: solid;
-  }
-  
-  .bt-1 {
-    border-style: solid;
-    border-width: 1px;
-  }
-  
-  .b-none {
-    border: none;
-  }
-  
-  .border-grey {
-    border-color: #ebebeb;
-  }
-  
-  .bold {
-    font-weight: bold;
-  }
-  
-  .color-white {
-    color: white;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  .round {
-    border-radius: 50%;
-  }
-  
-  .radius-1 {
-    border-radius: 5px;
-  }
-  
-  .p-1 {
-    padding: 8px;
-  }
-  
-  .p-2 {
-    padding: 20px;
-  }
-  
-  .py-1 {
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
-  
-  .ml-1 {
-    margin-left: 10px;
-  }
-  
-  .mr-1 {
-    margin-right: 10px;
-  }
-  
-  .my-1 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .mr-1 {
-    margin-right: 8px;
-  }
-  
-  .flex {
-    display: flex;
-  }
-  
-  .block {
-    display: block;
-  }
-  
-  .flex-wrap {
-    flex-wrap: wrap;
-  }
-  
-  .flex-grow {
-    flex-grow: 1;
-  }
-  
-  .gap {
-    gap: 10px;
-  }
-  
-  .align-center {
-    align-self: center;
-  }
-  
-  .align-right {
-    align-self: right;
-  }
-  
-  
-  .outline-none {
-    outline: none;
-  }
-  
-  .hide {
-    display: none;
-  }
-  
-  .product-shadow {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-  }
-  
-  .relative {
-    position: relative;
-  }
+.top-header{
+  text-align: center;
+  font-size: 8px;
+  background-color: rgb(209, 160, 255);
+  padding: 1px;
+
+}
+
+.logo{
+  text-align: center;
+  color: rgb(44, 14, 72);
+  font-size: 40px;
+}
+
+
+.barra-busqueda {
+  display: flex;
+  align-items: center;
+  background-color: rgb(237, 218, 255);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+margin-left: 40px;
+margin-right: 40px;
+ height: 20px;
+ text-align: center;
+ margin-top: 10px;
+
+}
+
+
+.input-busqueda {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  width: 10px;
+  height: 5px;
+  background-color: rgb(237, 218, 255);
+}
+
+.boton-buscar {
+  background-color: rgb(237, 218, 255);
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.menu{
+  margin-top: 42px;
+  font-size: 20px;
+}
+
+
+.header-logo-register{
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon{
+  font-size: 25px;
+  padding-right: 35px;
+  margin-top: 40px
+}
+
+
+.main-navbar{
+  list-style: none;
+ 
+}
+
+
+.main-navbar a{
+text-decoration: none;
+font-size: 17px;
+padding: 5px 0;
+display: inline-block;
+color: #222222;
+}
+
+.main-navbar{
+  display: none;
+}
+
+
+.description-header{
+
+  text-align: center;
+
+}
+
+.description-header button{
+
+background-color:  rgb(44, 14, 72);
+color: white;
+height: 25px;
+width: 100px;
+border-radius: 5px;
+border: none;
+font-size: 15px;
+}
