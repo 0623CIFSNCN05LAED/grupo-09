@@ -1,3 +1,9 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+
 .top-header{
   text-align: center;
   font-size: 8px;
@@ -22,7 +28,7 @@
   padding: 5px;
 margin-left: 40px;
 margin-right: 40px;
- height: 20px;
+ height: 26px;
  text-align: center;
  margin-top: 10px;
 
@@ -34,7 +40,7 @@ margin-right: 40px;
   border: none;
   padding: 8px;
   width: 10px;
-  height: 5px;
+  height: 10px;
   background-color: rgb(237, 218, 255);
 }
 
@@ -98,4 +104,120 @@ width: 100px;
 border-radius: 5px;
 border: none;
 font-size: 15px;
+}
+.register-login-media{
+  display: none;
+}
+
+
+@media (min-width: 742px){
+
+  
+.description-header{
+
+margin-left: 20px;
+
+}
+
+  .menu{
+  display: none;
+  }
+
+
+  .header-line{
+
+display: flex;
+justify-content: space-around;
+
+  }
+
+.register-login{
+
+display: none;
+
+}
+
+
+.barra-busqueda {
+  display: flex;
+  align-items: center;
+  background-color: rgb(237, 218, 255);
+  border: none;
+  border-radius: 5px;
+ width: 50%;
+ height: 36px;
+ text-align: center;
+ margin-top: 40px;
+
+}
+
+.input-busqueda {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  width: 10px;
+  height: 20px;
+  background-color: rgb(237, 218, 255);
+}
+
+.boton-buscar {
+  background-color: rgb(237, 218, 255);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.logo{
+  margin-left: 20px;
+}
+
+
+.description-header button{
+
+display: none;
+
+
+  }
+.main-navbar{
+  display: flex;
+  
+}
+.nav-bar-a{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+ width:80%;
+ font-weight: bold;
+ 
+}
+.nav-bar-a a{
+  padding-left: 12px;
+  position: relative;
+  font-size:clamp(0.8rem, 1vw, 1.2rem);
+}
+
+.nav-bar-a a:hover{
+
+  text-decoration: underline;
+
+}
+
+
+
+.main-navbar button{
+
+  background-color:  rgb(44, 14, 72);
+  color: white;
+  height: 35px;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  margin-left: 20px;
+}
+
+.register-login-media{
+  display: flex;
+}
+
 }
