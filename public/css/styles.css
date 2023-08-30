@@ -1,6 +1,226 @@
-body {
-  font-family: "Roboto";
+
+*{
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
+
+
+.top-header{
+  text-align: center;
+  font-size: 8px;
+  background-color: rgb(209, 160, 255);
+  padding: 1px;
+
+}
+
+.logo{
+  text-align: center;
+  color: rgb(44, 14, 72);
+  font-size: 40px;
+}
+
+
+.barra-busqueda {
+  display: flex;
+  align-items: center;
+  background-color: rgb(237, 218, 255);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+margin-left: 40px;
+margin-right: 40px;
+ height: 26px;
+ text-align: center;
+ margin-top: 10px;
+
+}
+
+
+.input-busqueda {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(237, 218, 255);
+}
+
+.boton-buscar {
+  background-color: rgb(237, 218, 255);
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.menu{
+  margin-top: 42px;
+  font-size: 20px;
+}
+
+
+.header-logo-register{
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon{
+  font-size: 25px;
+  padding-right: 35px;
+  margin-top: 40px
+}
+
+
+.main-navbar{
+  list-style: none;
+ 
+}
+
+
+.main-navbar a{
+text-decoration: none;
+font-size: 17px;
+padding: 5px 0;
+display: inline-block;
+color: #222222;
+}
+
+.main-navbar{
+  display: none;
+}
+
+
+.description-header{
+
+  text-align: center;
+
+}
+
+.description-header button{
+
+background-color:  rgb(44, 14, 72);
+color: white;
+height: 25px;
+width: 100px;
+border-radius: 5px;
+border: none;
+font-size: 15px;
+}
+.register-login-media{
+  display: none;
+}
+
+
+@media (min-width: 742px){
+
+  
+.description-header{
+
+margin-left: 20px;
+
+}
+
+  .menu{
+  display: none;
+  }
+
+
+  .header-line{
+
+display: flex;
+justify-content: space-around;
+
+  }
+
+.register-login{
+
+display: none;
+
+}
+
+
+.barra-busqueda {
+  display: flex;
+  align-items: center;
+  background-color: rgb(237, 218, 255);
+  border: none;
+  border-radius: 5px;
+ width: 50%;
+ height: 36px;
+ text-align: center;
+ margin-top: 40px;
+
+}
+
+.input-busqueda {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  width: 10px;
+  height: 20px;
+  background-color: rgb(237, 218, 255);
+}
+
+.boton-buscar {
+  background-color: rgb(237, 218, 255);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.logo{
+  margin-left: 20px;
+}
+
+
+.description-header button{
+
+display: none;
+
+
+  }
+.main-navbar{
+  display: flex;
+  
+}
+.nav-bar-a{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+ width:80%;
+ font-weight: bold;
+ 
+}
+.nav-bar-a a{
+  padding-left: 12px;
+  position: relative;
+  font-size:clamp(0.8rem, 1vw, 1.2rem);
+}
+
+.nav-bar-a a:hover{
+
+  text-decoration: underline;
+
+}
+
+
+
+.main-navbar button{
+
+  background-color:  rgb(44, 14, 72);
+  color: white;
+  height: 35px;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  margin-left: 20px;
+}
+
+.register-login-media{
+  display: flex;
+}
+
 
 .bg-yellow {
   background-color: #eac926;
