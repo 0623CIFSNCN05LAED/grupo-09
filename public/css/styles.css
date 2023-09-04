@@ -109,7 +109,52 @@ font-size: 15px;
 .register-login-media{
   display: none;
 }
+.contenedor-carrusel{
+  border: 5px solid black;
+  height: 200px;
+  overflow: hidden;
+}
 
+.carrusel{
+  border: 2px solid black;
+  height: 100%;
+  position: relative;
+}
+.carrusel-img{
+  height: 100%;
+}
+.carrusel-flechas{
+  position: absolute;
+  top: 0px;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+.carrusel-flechas a{
+  text-decoration: none;
+}
+.yellow{
+  background-color: yellow;
+}
+.red{
+  background-color: red;
+}
+.green{
+  background-color: green;
+}
+
+.contenedor-puntos{
+  display: flex;
+  justify-content: center;
+  font-size: 8px;
+}
+.contenedor-puntos a{
+  padding: 5px;
+}
 
 @media (min-width: 742px){
 
@@ -118,6 +163,7 @@ font-size: 15px;
 
 margin-left: 20px;
 
+}
 }
 
   .menu{
