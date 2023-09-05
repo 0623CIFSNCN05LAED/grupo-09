@@ -60,40 +60,39 @@
                         <li><a href="#">Microondas</a></li>
                     </ul>
                 </nav>
-                <section class="contenedor-carrusel"> 
-                    <section class="carrusel yellow" id="pick-1">
-                        <div class="carrusel-img">
-                            IMAGEN A
-                        </div>
-                        <div class="carrusel-flechas">
-                            <a href="#pick-3"><i class="fa-solid fa-chevron-left" style="color: #000000;"></i></a>
-                            <a href="#pick-2"><i class="fa-solid fa-chevron-right" style="color: #000000;"></i></a>
-                        </div>
-                    </section>
-                    <section class="carrusel red" id="pick-2">
-                        <div class="carrusel-img">
-                            IMAGEN B
-                        </div>
-                        <div class="carrusel-flechas">
-                            <a href="#pick-1"><i class="fa-solid fa-chevron-left" style="color: #000000;"></i></a>
-                            <a href="#pick-3"><i class="fa-solid fa-chevron-right" style="color: #000000;"></i></a>
-                        </div>
-                    </section>
-                    <section class="carrusel green" id="pick-3">
-                        <div class="carrusel-img">
-                            IMAGEN C
-                        </div>
-                        <div class="carrusel-flechas">
-                            <a href="#pick-2"><i class="fa-solid fa-chevron-left" style="color: #000000;"></i></a>
-                            <a href="#pick-1"><i class="fa-solid fa-chevron-right" style="color: #000000;"></i></a>
-                        </div>
-                    </section>
-                </section>
-                <section class="contenedor-puntos">
-                    <a href="#pick-1"><i class="fa-solid fa-circle" style="color: #000000;"></i></a>
-                    <a href="#pick-2"><i class="fa-solid fa-circle" style="color: #000000;"></i></a>
-                    <a href="#pick-3"><i class="fa-solid fa-circle" style="color: #000000;"></i></a>
-                </section>  
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 3</div>
+                      <!--<img src="/images/cocina.jpg" style="width:100%">-->
+                        IMAGEN A
+                      <div class="text">Caption Text</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 3</div>
+                      IMAGEN B
+                      <div class="text">Caption Two</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 3</div>
+                      IMAGEN C
+                      <div class="text">Caption Three</div>
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                    
+                    </div>
+                    <br>
+                    
+                    <div style="text-align:center">
+                      <span class="dot" onclick="currentSlide(1)"></span> 
+                      <span class="dot" onclick="currentSlide(2)"></span> 
+                      <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+
             </header>
     
 
@@ -215,6 +214,33 @@
         <div>
            <!--   <p><h4>Copyright © 2023 GRUPO-09</h4></p>   --> 
         </div>
-
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
     </body>
 </html>
