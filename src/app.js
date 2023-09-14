@@ -3,13 +3,18 @@ const path = require("path");
 const mainRouter = require("./routes/mainRouters");
 const app = express();
 
-app.use(express.static(path.join(__dirname, "../public")));
 
-const PORT = process.env.PORT || 3000;
-
+//const PORT = 3000;
 app.listen(PORT, () => {
-  console.log(`Se prendió en el puerto ${PORT}`);
+  //console.log(`Using port ${PORT}`);
 });
+
+app.set("view engine", "ejs");
+app.set("views", "./src/views");
+
+//app.use(express.static(path.join(__dirname, "../public")));
+
 
 app.use(mainRouter);
 
+ 
