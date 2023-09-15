@@ -13,12 +13,21 @@
             <%- include("partials/header") %>
         </header>
         
-        <div>
-            <p><h4>LOGIN</h4></p>
-        </div>
+       
 
         <main>
             
+    <form action="/home" method="POST" class="formulario">
+        <div class="login-style"> 
+        <label class="indication" for="nombre-usuario">Email:</label>
+        <input class="cajas" id="email" name="email"  required>
+    
+        <label class="indication" for="contrasena">Contraseña:</label>
+        <input class="cajas" type="password" id="contrasena" name="contrasena" required>
+    
+        <button class="button-login" type="submit">Enviar</button>
+    </div>
+      </form>
         </main>
 
         <footer>
