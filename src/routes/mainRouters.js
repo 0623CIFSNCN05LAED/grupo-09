@@ -5,6 +5,7 @@ const router = Router();
 
 router.get("/", mainController.home);
 router.get("/login", mainController.login);
+router.post("/login", mainController.guardarlogin);
 router.get("/register", mainController.register);
 router.get("/productCart", mainController.productCart);
 router.get("/productDetail", mainController.productDetail);
