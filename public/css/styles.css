@@ -516,6 +516,8 @@ footer {
   background-color: #333;
   justify-content: space-around;
   color: white;
+  text-decoration: none;
+  /*color: inherit;*/
 }
 
 .logo-footer {
