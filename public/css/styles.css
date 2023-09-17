@@ -454,7 +454,8 @@
 }
 
 .align-center {
-  align-self: center;
+  /*text-align: center;*/
+  margin: 0 auto;
 }
 
 .align-right {
@@ -545,6 +546,10 @@ footer {
   width: 50%;
 }
 
+.section {
+    justify-content: space-around;
+}
+
 .input {
   border-radius: 5px;
   background-color: #fff;
@@ -568,6 +573,19 @@ footer {
 }
 /*}*/
 
+.description {
+  color: grey;
+  width: 100%;
+}
+
+.precio {
+  font-size: 1.625rem;
+  color: #36c;
+  margin-top: 10px;
+  margin-bottom: 1px;
+  margin-right: 10px;
+}
+
 @media (min-width: 481px) {
   /* tablet */
   .md-w-50 {
@@ -585,13 +603,13 @@ footer {
     box-shadow: none;
   }
 
-  .description {
+  /*.description {
     display: none;
-  }
-
-  /*.product:hover .description {
-    display: block;
   }*/
+
+  .product:hover .product-shadow {
+    display: block;
+  }
 }
 
 
