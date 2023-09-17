@@ -4,13 +4,11 @@
   font-family: 'Roboto', sans-serif;
 }
 
-
 .top-header{
   text-align: center;
   font-size: 8px;
   background-color: rgb(209, 160, 255);
   padding: 1px;
-
 }
 
 .logo{
@@ -19,7 +17,6 @@
   font-size: 40px;
 }
 
-
 .barra-busqueda {
   display: flex;
   align-items: center;
@@ -27,14 +24,12 @@
   border: none;
   border-radius: 5px;
   padding: 5px;
-margin-left: 40px;
-margin-right: 40px;
- height: 26px;
- text-align: center;
- margin-top: 10px;
-
+  margin-left: 40px;
+  margin-right: 40px;
+  height: 26px;
+  text-align: center;
+  margin-top: 10px;
 }
-
 
 .input-busqueda {
   flex: 1;
@@ -58,7 +53,6 @@ margin-right: 40px;
   font-size: 20px;
 }
 
-
 .header-logo-register{
   display: flex;
   justify-content: space-around;
@@ -70,42 +64,36 @@ margin-right: 40px;
   margin-top: 40px
 }
 
-
 .main-navbar{
   list-style: none;
- 
 }
 
-
 .main-navbar a{
-text-decoration: none;
-font-size: 17px;
-padding: 5px 0;
-display: inline-block;
-color: #222222;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 5px 0;
+  display: inline-block;
+  color: #222222;
 }
 
 .main-navbar{
   display: none;
 }
 
-
 .description-header{
-
   text-align: center;
-
 }
 
 .description-header button{
-
-background-color:  rgb(44, 14, 72);
-color: white;
-height: 25px;
-width: 100px;
-border-radius: 5px;
-border: none;
-font-size: 15px;
+  background-color:  rgb(44, 14, 72);
+  color: white;
+  height: 25px;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
 }
+
 .register-login-media{
   display: none;
 }
@@ -139,7 +127,6 @@ font-size: 15px;
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
-
 
 .text {
   color: #f2f2f2;
@@ -190,7 +177,6 @@ font-size: 15px;
   background-color: #f5f5f5;
 }
 
-
 .indication {
   font-weight: bold;
 }
@@ -202,7 +188,6 @@ font-size: 15px;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
-
 
 .button-login {
   display: block;
@@ -219,7 +204,6 @@ font-size: 15px;
   background-color: rgb(44, 14, 72); 
 }
 
-
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
@@ -229,34 +213,24 @@ font-size: 15px;
   .prev, .next,.text {font-size: 11px}
 }
 
-
-@media (min-width: 742px){
-
+/*@media (min-width: 742px){*/
   
 .description-header{
-
-margin-left: 20px;
-
+  margin-left: 20px;
 }
 
-  .menu{
+.menu{
   display: none;
-  }
+}
 
-
-  .header-line{
-
-display: flex;
-justify-content: space-around;
-
-  }
+.header-line{
+  display: flex;
+  justify-content: space-around;
+}
 
 .register-login{
-
-display: none;
-
+  display: none;
 }
-
 
 .barra-busqueda {
   display: flex;
@@ -264,11 +238,10 @@ display: none;
   background-color: rgb(237, 218, 255);
   border: none;
   border-radius: 5px;
- width: 50%;
- height: 36px;
- text-align: center;
- margin-top: 40px;
-
+  width: 50%;
+  height: 36px;
+  text-align: center;
+  margin-top: 40px;
 }
 
 .input-busqueda {
@@ -291,25 +264,22 @@ display: none;
   margin-left: 20px;
 }
 
-
 .description-header button{
+  display: none;
+}
 
-display: none;
-
-
-  }
 .main-navbar{
   display: flex;
-  
 }
+
 .nav-bar-a{
   list-style-type: none;
   display: flex;
   justify-content: space-between;
- width:80%;
- font-weight: bold;
- 
+  width:80%;
+  font-weight: bold;
 }
+
 .nav-bar-a a{
   padding-left: 12px;
   position: relative;
@@ -317,15 +287,10 @@ display: none;
 }
 
 .nav-bar-a a:hover{
-
   text-decoration: underline;
-
 }
 
-
-
 .main-navbar button{
-
   background-color:  rgb(44, 14, 72);
   color: white;
   height: 35px;
@@ -339,7 +304,6 @@ display: none;
 .register-login-media{
   display: flex;
 }
-
 
 .bg-yellow {
   background-color: #eac926;
@@ -368,12 +332,15 @@ display: none;
 .font-m {
   font-size: 12px;
 }
+
 .font-lg {
   font-size: 16px;
 }
+
 .font-xl {
   font-size: 18px;
 }
+
 .title {
   font-size: 24px;
 }
@@ -494,7 +461,6 @@ display: none;
   align-self: right;
 }
 
-
 .outline-none {
   outline: none;
 }
@@ -571,7 +537,6 @@ footer {
 .form {
   margin-left: 15%;
   margin-right: 15%;
-
 }
 
 .form-login{
@@ -590,26 +555,24 @@ footer {
   border-color: rgba(0,0,0,0);
   border-width: 1.5px;
   margin-top: 10px;
-   }
-
-  .formulario {
-    width: 400px; 
-    margin: 0 auto; 
-    margin-top: 90px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f5f5f5;
-  }
 }
+
+.formulario {
+  width: 400px; 
+  margin: 0 auto; 
+  margin-top: 90px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+/*}*/
 
 @media (min-width: 481px) {
   /* tablet */
   .md-w-50 {
     width: 48%;
   }
-
-
 }
 
 @media (min-width: 769px) {
