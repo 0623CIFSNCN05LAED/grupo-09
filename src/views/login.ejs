@@ -1,39 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <%- include("partials/head") %>
-    </head>
-    
-       
-    <body>
-        <header>
-            <%- include("partials/header") %>
-        </header>
-        
-       
+    <!--HEAD-->
+    <%- include("./partials/head") %>
 
-        <main>
-            
-    <form action="/login" method="POST" class="formulario">
-        <div class="login-style"> 
-        <label class="indication" for="">Email:</label>
-        <input class="cajas" id="email" name="email"  required>
-    
-        <label class="indication" for="">Contraseña:</label>
-        <input class="cajas" type="password" id="contrasena" name="contrasena" required>
-    
-        <input class="button-login" type="submit" value="Enviar">
-    </div>
-      </form>
+    <body>
+        <!--HEADER-->
+        <%- include("./partials/header") %>
+        
+        <main> 
+            <form action="/login" method="POST" class="formulario">
+                <div class="login-style"> 
+                    <label class="indication" for="">Email:</label><input class="cajas" id="email" name="email" required>
+                    <label class="indication" for="">Contraseña:</label><input class="cajas" type="password" id="contrasena" name="contrasena" required>
+                    <input class="button-login" type="submit" value="Enviar">
+                </div>
+            </form>
         </main>
 
-        <footer>
-
-        </footer>
-
-        <div>
-            <p><h4>Copyright © 2023 GRUPO-09</h4></p>
-        </div>
-
+        <!--FOOTER-->
+        <%- include("./partials/footer") %>
+        
+        <!--SCRIPTS-->
+        <script src="/js/carrousel.js"></script>
     </body>
 </html>
