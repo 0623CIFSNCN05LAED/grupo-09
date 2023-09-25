@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!--HEAD-->
+    <!--HEAD--> 
     <%- include("./partials/head") %>
 
     <body>
@@ -8,15 +8,45 @@
         <%- include("./partials/header") %>
         
         <main> 
-            <form action="/login" method="POST" class="formulario">
-                <div class="login-style"> 
-                    <label class="indication" for="">Email:</label><input class="cajas" id="email" name="email" required>
-                    <label class="indication" for="">Contraseña:</label><input class="cajas" type="password" id="contrasena" name="contrasena" required>
+        <div>
+            <form action="/login" method="POST" class="formulario" enctype="multipart/form-data">
+                <div class="login-style">
+
+                    <label class="indication">Email:</label>
+                    <input 
+                    class="cajas" 
+                    id="email" name="email"
+                    class="form-control <%= locals.errors && errors.email ? "is-invalid" : null %>"   
+                    value="<%= locals.oldData ? oldData.email : null %>">
+
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
+                    <div>
+                    </div>
+
+                    <label class="indication" >Contraseña:</label>
+                    <input 
+                    class="cajas" 
+                    type="password" 
+                    id="contrasena" 
+                    name="contrasena" 
+                    class="form-control <%= locals.errors && errors.contrasena ? "is-invalid" : null %>"   
+                    value="<%= locals.oldData ? oldData.contrasena : null %>" >
+            
+                    <% if (locals.errors && errors.contrasena) { %>
+                        <div class="text-danger">
+                            <%= errors.contrasena.msg %>
+                        </div>
+                    <% } %>
+
                     <input class="button-login" type="submit" value="Enviar">
                 </div>
             </form>
         </main>
-
+    </div>
         <!--FOOTER-->
         <%- include("./partials/footer") %>
         
