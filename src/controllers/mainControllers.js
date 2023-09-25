@@ -1,4 +1,5 @@
 const path = require("path");
+const { validationResult } = require("express-validator");
  
 const mainController = {
     home: (req, res) => {
@@ -10,11 +11,18 @@ const mainController = {
     },
   
     guardarlogin: (req, res) => {
-        const login = {
-            email: req.body.email,
-            constraseña: req.body.constraseña
-        }
-        res.redirect("/")
+        
+      const resultValidation = validationResult(req);
+
+      if(resultValidation.errors.length > 0){
+        return res.render("login", {
+ 
+         errors: resultValidation.mapped(),
+         oldData : req.body
+
+        });
+      }
+       res.redirect("/")
     },
  
     register: (req, res) => {
