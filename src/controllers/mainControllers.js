@@ -29,6 +29,20 @@ const mainController = {
         res.render("register");
     },
 
+
+    processRegister: (req, res) => {
+		const resultValidation = validationResult(req);
+		
+		if (resultValidation.errors.length > 0) {
+			return res.render('register', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
+
+		return res.send('Ok, las validaciones se pasaron y no tienes errores');
+	},
+
     productCart: (req, res) => {
         res.render("productCart");
     },
