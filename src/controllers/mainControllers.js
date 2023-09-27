@@ -40,7 +40,7 @@ const mainController = {
 			});
 		}
 
-		return res.send('Ok, las validaciones se pasaron y no tienes errores');
+		return res.redirect('/');
 	},
 
     productCart: (req, res) => {
