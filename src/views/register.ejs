@@ -10,8 +10,6 @@
        
 
         <main>
-            
-
 
             <div class="container my-5">
                 <div class="row justify-content-center">
@@ -92,6 +90,21 @@
                                         <% } %>
                                     </div>
                                 </div>
+                                <div class="col-md-6 my-1">
+                                    <div class="form-group">
+                                        <label><b>Imagen de perfil:</b></label>
+                                        <input 
+                                            type="file" 
+                                            name="avatar"
+                                            class="form-control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>"
+                                        >
+                                        <% if (locals.errors && errors.avatar) { %>
+                                            <div class="text-danger">
+                                                <%= errors.avatar.msg %>
+                                            </div>
+                                        <% } %>
+                                    </div>
+                                </div>
                                 <div class="col-12 my-3">
                                     <button type="submit" class="btn btn-primary">Registrarse</button>
                                 </div>
@@ -100,13 +113,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
 
 
 

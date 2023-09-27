@@ -1,5 +1,5 @@
 const path = require("path");
-const { validationResult } = require("express-validator");
+const { validationResult } = require('express-validator');
  
 const mainController = {
     home: (req, res) => {
@@ -18,15 +18,15 @@ const mainController = {
         return res.render("login", {
  
          errors: resultValidation.mapped(),
-         oldData : req.body
-
+         oldData : req.body,
+         
         });
       }
-       res.redirect("/")
+     
     },
- 
+
     register: (req, res) => {
-        res.render("register");
+       return res.render("register");
     },
 
 
