@@ -18,14 +18,6 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({ storage });
 
-const validations = [
-    body("email").notEmpty().withMessage("Tienes que escribir un correo electrónico"),
-    body("contrasena")
-    .notEmpty().withMessage("Tienes que escribir una contraseña").bail()
-    .isEmail().withMessage("Debes escribir un formato válido"),
-
-]
-
 const validationsRegister = [
     body('fullName').notEmpty().withMessage('Tienes que escribir un nombre'),
 	body('email')

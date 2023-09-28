@@ -15,29 +15,17 @@
                     <label class="indication">Email:</label>
                     <input 
                     class="cajas" 
-                    id="email" name="email">
-                 
-
-                    <% if (locals.errors && errors.email) { %>
-                        <div class="text-danger">
-                            <%= errors.email.msg %>
-                        </div>
-                    <% } %>
-                
+                    id="email" name="email" 
+                    required>
 
                     <label class="indication" >Contraseña:</label>
                     <input 
                     class="cajas" 
                     type="password" 
                     id="contrasena" 
-                    name="contrasena">
+                    name="contrasena" 
+                    required>
             
-                    <% if (locals.errors && errors.contrasena) { %>
-                        <div class="text-danger">
-                            <%= errors.contrasena.msg %>
-                        </div>
-                    <% } %>
-
                     <input class="button-login" type="submit" value="Enviar">
                 </div>
             </form>
