@@ -44,7 +44,7 @@ const validationsRegister = [
 
 router.get("/", mainController.home);
 router.get("/login", mainController.login);
-router.post("/login", validations ,mainController.guardarlogin);
+router.post("/login",mainController.guardarlogin);
 router.get("/register", mainController.register);
 router.post("/register", uploadFile.single('avatar'),validationsRegister, mainController.processRegister)
 router.get("/productCart", mainController.productCart);
