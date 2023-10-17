@@ -41,6 +41,47 @@ const mainController = {
     productDetail: (req, res) => {
         res.render("productDetail");
     },
+
+    anafes: (req,res)=>{
+
+        res.render("anafes");
+    },
+
+    heladeras: (req,res)=>{
+
+        res.render("heladeras");
+    },
+
+
+    cocinas: (req,res)=>{
+
+        res.render("cocinas");
+    },
+
+
+    freezers: (req,res)=>{
+
+        res.render("freezers");
+    },
+
+
+    lavarropas: (req,res)=>{
+
+        res.render("lavarropas");
+    },
+
+
+    lavavajillas: (req,res)=>{
+
+        res.render("lavavajillas");
+    },
+
+
+    microondas: (req,res)=>{
+
+        res.render("microondas");
+    },
+    
 }
 
 module.exports = mainController;
