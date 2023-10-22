@@ -49,6 +49,7 @@ router.get("/register", mainController.register);
 router.post("/register", uploadFile.single('avatar'),validationsRegister, mainController.processRegister)
 router.get("/productCart", mainController.productCart);
 router.get("/productDetail", mainController.productDetail);
+router.get("/productAdmin", mainController.productAdmin);
 router.get("/anafes",mainController.anafes);
 router.get("/heladeras",mainController.heladeras);
 router.get("/cocinas",mainController.cocinas);

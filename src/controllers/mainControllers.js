@@ -42,6 +42,10 @@ const mainController = {
         res.render("productDetail");
     },
 
+    productAdmin: (req, res) => {
+        res.render("productAdmin");
+    },
+
     anafes: (req,res)=>{
 
         res.render("anafes");
