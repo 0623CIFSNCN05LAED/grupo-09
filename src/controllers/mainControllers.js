@@ -27,7 +27,7 @@ const mainController = {
 				oldData: req.body
 			});
 		}
-        
+
 		return res.redirect('/');
 	},
 
@@ -39,8 +39,16 @@ const mainController = {
         res.render("productDetail");
     },
 
-    productAdmin: (req, res) => {
-        res.render("productAdmin");
+    productosCreate: (req, res) => {
+        res.render("./productos/create");
+    },
+
+    productosEdit: (req, res) => {
+        res.render("./productos/edit");
+    },
+
+    productosDelete: (req, res) => {
+        res.render("./productos/delete");
     },
 
     anafes: (req,res)=>{
