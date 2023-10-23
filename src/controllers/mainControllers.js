@@ -11,15 +11,12 @@ const mainController = {
     },
   
     guardarlogin: (req, res) => {
-        
       return res.redirect("/")
-     
     },
 
     register: (req, res) => {
        return res.render("register");
     },
-
 
     processRegister: (req, res) => {
 		const resultValidation = validationResult(req);
@@ -30,7 +27,7 @@ const mainController = {
 				oldData: req.body
 			});
 		}
-
+        
 		return res.redirect('/');
 	},
 
@@ -47,45 +44,32 @@ const mainController = {
     },
 
     anafes: (req,res)=>{
-
-        res.render("anafes");
+        res.render("./productos/anafes");
     },
 
     heladeras: (req,res)=>{
-
-        res.render("heladeras");
+        res.render("./productos/heladeras");
     },
-
 
     cocinas: (req,res)=>{
-
-        res.render("cocinas");
+        res.render("./productos/cocinas");
     },
-
 
     freezers: (req,res)=>{
-
-        res.render("freezers");
+        res.render("./productos/freezers");
     },
-
 
     lavarropas: (req,res)=>{
-
-        res.render("lavarropas");
+        res.render("./productos/lavarropas");
     },
-
 
     lavavajillas: (req,res)=>{
-
-        res.render("lavavajillas");
+        res.render("./productos/lavavajillas");
     },
-
 
     microondas: (req,res)=>{
-
-        res.render("microondas");
-    },
-    
+        res.render("./productos/microondas");
+    }, 
 }
 
 module.exports = mainController;
