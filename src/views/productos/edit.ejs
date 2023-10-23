@@ -7,24 +7,23 @@
         <!--HEADER-->
         <%- include("../partials/headerhome") %>
 
-        <h1><center>AGREGAR PRODUCTO</center></h1>
+        <h1><center>EDITAR PRODUCTO</center></h1>
 
         <section class="formulario">
-            <form action="/productos/create" method="POST">
+            <form action="/productos/edit" method="POST">
                 <label for="title">Title </label>
-                <p><input type="text" name="title" id="" required></p>
+                <p><input type="text" name="title" id="title" value="" required></p>
                 <label for="rating">Rating </label>
-                <p><input type="number" name="rating" id="" required> </p>
+                <p><input type="number" name="rating" id="rating" value="" required></p>
                 <label for="awards">Awards </label>
-                <p><input type="number" name="awards" id="" required></p>
+                <p><input type="number" name="awards" id="awards" value="" required></p>
                 <label for="release_date">Release date </label>
-                <p><input type="date" name="release_date" id="" required></p>
+                <p><input type="date" name="release_date" id="release_date" value="" required></p>
                 <label for="length">Length </label>
-                <p><input type="number" name="length" id="" required></p>
-    
+                <p><input type="number" name="length" id="" value="" required></p>
                 <br>
-                <p> <button class="botonAgregar" type="submit">Agregar</button>
-                
+                <p> <button class="botonAgregar" type="submit">Actualizar</button>
+            
                 <!--<a  class="botonVolver" href="/">Index</a></p>-->
             </form>
         </section>

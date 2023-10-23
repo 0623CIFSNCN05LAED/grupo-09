@@ -43,6 +43,14 @@ const mainController = {
         res.render("./productos/create");
     },
 
+    productosEdit: (req, res) => {
+        res.render("./productos/edit");
+    },
+
+    productosDelete: (req, res) => {
+        res.render("./productos/delete");
+    },
+
     anafes: (req,res)=>{
         res.render("./productos/anafes");
     },
