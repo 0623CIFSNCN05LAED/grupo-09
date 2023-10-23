@@ -50,13 +50,13 @@ router.post("/register", uploadFile.single('avatar'),validationsRegister, mainCo
 router.get("/productCart", mainController.productCart);
 router.get("/productDetail", mainController.productDetail);
 router.get("/productAdmin", mainController.productAdmin);
-router.get("/anafes",mainController.anafes);
-router.get("/heladeras",mainController.heladeras);
-router.get("/cocinas",mainController.cocinas);
-router.get("/freezers",mainController.freezers);
-router.get("/lavarropas",mainController.lavarropas);
-router.get("/lavavajillas",mainController.lavavajillas);
-router.get("/microondas",mainController.microondas);
+router.get("/productos/anafes",mainController.anafes);
+router.get("/productos/heladeras",mainController.heladeras);
+router.get("/productos/cocinas",mainController.cocinas);
+router.get("/productos/freezers",mainController.freezers);
+router.get("/productos/lavarropas",mainController.lavarropas);
+router.get("/productos/lavavajillas",mainController.lavavajillas);
+router.get("/productos/microondas",mainController.microondas);
 
 
 module.exports = router;
