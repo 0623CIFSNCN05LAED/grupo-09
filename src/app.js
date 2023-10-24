@@ -13,5 +13,11 @@ app.use(express.json());
 const mainRouter = require("./routes/mainRouters");
 app.use(mainRouter);
 
+const loginRouter = require("./routes/loginRouter")
+app.use(loginRouter);
+
+const registerRouter = require("./routes/registerRouter")
+app.use(registerRouter);
+
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));

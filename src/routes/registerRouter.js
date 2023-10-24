@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const mainController = require("../controllers/mainControllers");
+const registerController = require("../controllers/registerController");
  
 const router = Router();
 const multer = require('multer');
@@ -42,22 +42,9 @@ const validationsRegister = [
 	})
 ]
 
-router.get("/", mainController.home);
-router.get("/productCart", mainController.productCart);
-router.get("/productDetail", mainController.productDetail);
 
-//CRUD Productos
-router.get("/productos/create", mainController.productosCreate);
-router.get("/productos/edit", mainController.productosEdit);
-router.get("/productos/delete", mainController.productosDelete);
-
-router.get("/productos/anafes",mainController.anafes);
-router.get("/productos/heladeras",mainController.heladeras);
-router.get("/productos/cocinas",mainController.cocinas);
-router.get("/productos/freezers",mainController.freezers);
-router.get("/productos/lavarropas",mainController.lavarropas);
-router.get("/productos/lavavajillas",mainController.lavavajillas);
-router.get("/productos/microondas",mainController.microondas);
+router.get("/register", registerController.register);
+router.post("/register", uploadFile.single('avatar'),validationsRegister, registerController.processRegister)
 
 
 module.exports = router;
