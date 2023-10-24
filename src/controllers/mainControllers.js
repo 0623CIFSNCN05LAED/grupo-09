@@ -5,31 +5,6 @@ const mainController = {
     home: (req, res) => {
         res.render("index");
     },
-  
-    login: (req, res) => {
-        res.render("login");
-    },
-  
-    guardarlogin: (req, res) => {
-      return res.redirect("/")
-    },
-
-    register: (req, res) => {
-       return res.render("register");
-    },
-
-    processRegister: (req, res) => {
-		const resultValidation = validationResult(req);
-		
-		if (resultValidation.errors.length > 0) {
-			return res.render('register', {
-				errors: resultValidation.mapped(),
-				oldData: req.body
-			});
-		}
-
-		return res.redirect('/');
-	},
 
     productCart: (req, res) => {
         res.render("productCart");
