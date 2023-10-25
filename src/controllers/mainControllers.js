@@ -15,7 +15,7 @@ const mainController = {
     },
 
     productosCreate: (req, res) => {
-        res.render("./productos/create");
+        res.render("./productos/add");
     },
 
     productosEdit: (req, res) => {

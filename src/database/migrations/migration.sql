@@ -18,17 +18,12 @@ CREATE TABLE IF NOT EXISTS productos (
 	nombre VARCHAR(255) NOT NULL,
 	precio FLOAT NOT NULL,
 	descripcion VARCHAR(255) NOT NULL,
-	marca_id INT NOT NULL,
-	categoria_id INT NOT NULL,
-    especificacion_id INT NOT NULL
-);
-
-CREATE TABLE IF NOT EXISTS especificaciones (
-	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-	ancho FLOAT NOT NULL,
+    ancho FLOAT NOT NULL,
 	alto FLOAT NOT NULL,
 	profundidad FLOAT NOT NULL,
-	peso FLOAT NOT NULL
+	peso FLOAT NOT NULL,
+	marca_id INT NOT NULL,
+	categoria_id INT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS usuarios (
