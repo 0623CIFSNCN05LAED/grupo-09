@@ -10,16 +10,16 @@ const productsController={
     },
     'create': (req, res) => {
         db.Productos.create({
-           sku: req.body.title,
-           nombre: req.body.rating,
-           descripcion: req.body.awards,
-           precio: req.body.release_date,
-           ancho: req.body.length,
-           alto: req.body.genre_id,
-           profundidad: req.body.length,
-           peso: req.body.genre_id,
-           marca_id: req.body.length,
-           categoria_id: req.body.genre_id
+           sku: req.body.sku,
+           nombre: req.body.nombre,
+           descripcion: req.body.descripcion,
+           precio: req.body.precio,
+           ancho: req.body.ancho,
+           alto: req.body.alto,
+           profundidad: req.body.profundidad,
+           peso: req.body.peso,
+           marca_id: req.body.marca_id,
+           categoria_id: req.body.categoria_id
         });
         res.redirect("/");
     },
