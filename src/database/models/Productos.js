@@ -6,13 +6,16 @@ module.exports = (sequelize, DataTypes) => {
         nombre: DataTypes.STRING,
         precio: DataTypes.FLOAT,
         descripcion: DataTypes.STRING,
+        ancho: DataTypes.FLOAT,
+        alto: DataTypes.FLOAT,
+        profundidad: DataTypes.FLOAT,
+        peso: DataTypes.FLOAT,
         marca_id: DataTypes.INTEGER,
-        categoria_id: DataTypes.INTEGER,
-        especificacion_id: DataTypes.INTEGER,   
+        categoria_id: DataTypes.INTEGER, 
         },
         {
         tableName: "productos",
-        timeStamps: false,    
+        timestamps: false,   
         }
     );
     return Model;

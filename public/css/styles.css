@@ -254,9 +254,10 @@
 
 /* Estilos para el botón de registro */
 .container{
-  margin-bottom: 200px;
-  margin-top: 150px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
+
 .btn-primary {
   background-color: rgb(93, 53, 130); 
   color: #fff;
@@ -444,8 +445,9 @@ input[type="file"].form-control {
 }
 
 .bt-1 {
-  border-style: solid;
-  border-width: 1px;
+  /*border-style: solid;
+  border-width: 1px;*/
+  border: 1px solid black
 }
 
 .b-none {
