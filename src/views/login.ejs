@@ -7,32 +7,19 @@
         <!--HEADER-->
         <%- include("./partials/header") %>
       
-
-
         <main> 
-        <div>
             <form action="/login" method="POST" class="formulario" enctype="multipart/form-data">
                 <div class="login-style">
-
                     <label class="indication">Email:</label>
-                    <input 
-                    class="cajas" 
-                    id="email" name="email" 
-                    required>
-
+                    <input class="cajas" id="email" name="email" required>
                     <label class="indication" >Contraseña:</label>
-                    <input 
-                    class="cajas" 
-                    type="password" 
-                    id="contrasena" 
-                    name="contrasena" 
-                    required>
+                    <input class="cajas" type="password" id="contrasena" name="contrasena" required>
             
                     <input class="button-login" type="submit" value="Enviar">
                 </div>
             </form>
         </main>
-    </div>
+
         <!--FOOTER-->
         <%- include("./partials/footer") %>
         

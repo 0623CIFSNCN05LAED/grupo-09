@@ -9,11 +9,6 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-const PORT = 3000;
-app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
-
-
-
 const mainRouter = require("./routes/mainRouters");
 app.use(mainRouter);
 
@@ -29,7 +24,9 @@ app.use(productCartRouter);
 const productDetailRouter = require("./routes/productDetailRouter")
 app.use(productDetailRouter);
 
-const productosRouter = require("./routes/productsRouter")
-app.use(productosRouter);
+const productsRouter = require("./routes/productsRouter")
+app.use(productsRouter);
 
+const PORT = 3000;
+app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
 

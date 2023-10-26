@@ -1,33 +1,100 @@
 
-const productosController =  {
+const db = require('../database/models');
+const sequelize = db.sequelize;
 
-    anafes: (req,res)=>{
-    res.render("./productos/anafes");
-},
+//Otra forma de llamar a los modelos
+const Productos = db.Productos;
 
-    heladeras: (req,res)=>{
-    res.render("./productos/heladeras");
-},
+const productsController = {
 
-    cocinas: (req,res)=>{
-    res.render("./productos/cocinas");
-},
+    'anafes': (req,res)=>{
+        res.render("./productos/anafes");
+    },
+    
+    'heladeras': (req,res)=>{
+        res.render("./productos/heladeras");
+    },
 
-    freezers: (req,res)=>{
-    res.render("./productos/freezers");
-},
+    'cocinas': (req,res)=>{
+        res.render("./productos/cocinas");
+    },
+    
+    'freezers': (req,res)=>{
+        res.render("./productos/freezers");
+    },
+    
+    'lavarropas': (req,res)=>{
+        res.render("./productos/lavarropas");
+    },
+    
+    'lavavajillas': (req,res)=>{
+        res.render("./productos/lavavajillas");
+    },
+    
+    'microondas': (req,res)=>{
+        res.render("./productos/microondas");
+    }, 
 
-    lavarropas: (req,res)=>{
-    res.render("./productos/lavarropas");
-},
+    'add': (req, res) => {
+        res.render("./productos/add");
+    },
 
-    lavavajillas: (req,res)=>{
-    res.render("./productos/lavavajillas");
-},
+    'create': (req, res) => {
+        db.Productos.create({
+           sku: req.body.sku,
+           nombre: req.body.nombre,
+           descripcion: req.body.descripcion,
+           precio: req.body.precio,
+           ancho: req.body.ancho,
+           alto: req.body.alto,
+           profundidad: req.body.profundidad,
+           peso: req.body.peso,
+           marca_id: req.body.marca_id,
+           categoria_id: req.body.categoria_id
+        });
+        res.redirect("/");
+    },
 
-    microondas: (req,res)=>{
-    res.render("./productos/microondas");
-}, 
-};
+    'edit': (req, res) => {
+        db.Productos.findByPk(req.params.id)
+            .then(productos => {
+                res.render('./productos/edit', {Productos:productos});
+            });
+    },
 
-module.exports = productosController;
+    'update': (req,res) => {
+        db.Productos.update({
+            title: req.body.title,
+            rating: req.body.rating,
+            awards: req.body.awards,
+            release_date: req.body.release_date,
+            length: req.body.length,
+            genre_id: req.body.genre_id
+        }, {
+            where: {
+                id: req.params.id
+            }
+        })
+        res.redirect("/productos/edit/" + req.params.id)
+
+    },
+
+    'delete':  (req, res) => {
+        db.Productos.findByPk(req.params.id)
+            .then(productos => {
+                res.render('./productos/delete', {Productos:productos});
+            });
+    },
+    
+    'destroy': (req, res) => {
+         db.Productos.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        res.redirect("/");
+    }
+}
+
+module.exports = productsController;
+
