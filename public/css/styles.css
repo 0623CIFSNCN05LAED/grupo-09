@@ -22,27 +22,11 @@
 
 
 
-.input-busqueda {
-    flex: 1;
-    border: none;
-    padding: 8px;
-    width: 10px;
-    height: 10px;
-    background-color: rgb(237, 218, 255);
-}
 
-.boton-buscar {
-    background-color: rgb(237, 218, 255);
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    border-radius: 5px;
-}
 
-.menu{
-    margin-top: 42px;
-    font-size: 20px;
-}
+
+
+
 
 
 
@@ -204,12 +188,6 @@
 
 
 
-.boton-buscar {
-    background-color: rgb(237, 218, 255);
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
 
 .logo{
     margin-left: 20px;
@@ -387,10 +365,7 @@ footer {
     /*color: inherit;*/
 }
 
-.logo-footer {
-    width: 162px;
-    height: 57px;
-}
+
 
 .iconos {
     font-size: 2em;
@@ -483,14 +458,7 @@ footer {
     margin-top: 10px;
 }
 
-.input-busqueda {
-    flex: 1;
-    border: none;
-    padding: 8px;
-    width: 10px;
-    height: 20px;
-    background-color: rgb(237, 218, 255);
-  }
+
 
 /* Estilos para el campo de archivo */
 input[type="file"].form-control {
