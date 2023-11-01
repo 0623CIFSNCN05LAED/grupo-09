@@ -23,7 +23,8 @@ const validationsRegister = [
 	body('email')
 		.notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
 		.isEmail().withMessage('Debes escribir un formato de correo válido'),
-	body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+	body('telefono').matches(/^\d{10}$/).withMessage('Por favor, ingresa un número de teléfono válido de 10 dígitos (solo números)'),	
+	body('clave').notEmpty().withMessage('Tienes que escribir una contraseña'),
 	body('country').notEmpty().withMessage('Tienes que elegir un país'),
     body('avatar').custom((value, { req }) => {
 		let file = req.file;
@@ -40,10 +41,11 @@ const validationsRegister = [
 
 		return true;
 	})
-]
+] 
 
 
 router.get("/register", registerController.register);
+router.post("/register", registerController.registerCreate);
 router.post("/register", uploadFile.single('avatar'),validationsRegister, registerController.processRegister)
 
 
