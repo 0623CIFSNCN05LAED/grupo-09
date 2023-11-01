@@ -18,46 +18,19 @@
     right: 0;
     margin: auto;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 .icon{
     font-size: 25px;
     padding: 3px;
     margin-top: 40px;
     margin-left: 10px;
 }
-
-
-
 .display-none{
     display: none;
 }
-
-
-
-
-
-
-
-
-
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
-
-
-
 .text {
     color: #f2f2f2;
     font-size: 15px;
@@ -67,51 +40,6 @@
     width: 100%;
     text-align: center;
 }
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-    background-color: #717171;
-}
-
-
-
-.indication {
-    font-weight: bold;
-}
-
-.cajas {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-.button-login {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: rgb(93, 53, 130); 
-    color: #fff; 
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.button-login:hover {
-    background-color: rgb(44, 14, 72); 
-}
-
 /* Estilos generales del formulario */
 .container {
     max-width: 800px;
@@ -160,70 +88,33 @@
 .btn-primary:hover {
     background-color: rgb(44, 14, 72);
 }
-
-
-
-
-
-
-
 .logo{
     margin-left: 20px;
 }
-
-
-
-
-
-
-
-
-
 .register-login-media{
     display: flex;
 }
-
-
-.bg-white {
-    background-color: white;
-}
-
-.color-green {
-    color: #39b54a;
-}
-
 .font-m {
     font-size: 12px;
 }
-
-.font-lg {
-    font-size: 16px;
-}
-
 .font-xl {
     font-size: 18px;
 }
-
 .title {
     font-size: 24px;
 }
-
 .w-50 {
     width: 50%;
 }
-
 .vw-90 {
     width: 90vw;
 }
-
 .w-100 {
     width: 100%;
 }
-
 .b-1 {
     border-style: solid;
 }
-
 .bt-1 {
     /*border-style: solid;
     border-width: 1px;*/
@@ -233,27 +124,15 @@
 .b-none {
     border: none;
 }
-
-.border-grey {
-    border-color: #d9d9d9;
-}
-
-.border-radius {
-    border-radius: 15px;
-}
-
 .bold {
     font-weight: bold;
 }
-
 .text-center {
     text-align: center;
 }
-
 .round {
     border-radius: 50%;
 }
-
 .radius-1 {
     border-radius: 5px;
 }
@@ -325,11 +204,6 @@
 .outline-none {
     outline: none;
 }
-
-.product-shadow {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
-
 .relative {
     position: relative;
 }
@@ -438,23 +312,7 @@ footer {
 
 
 
-/* Estilos para el campo de archivo */
-input[type="file"].form-control {
-    padding: 5px;
-}
 
-.description {
-    color: grey;
-    width: 100%;
-}
-
-.precio {
-    font-size: 1.625rem;
-    color: #36c;
-    margin-top: 10px;
-    margin-bottom: 1px;
-    margin-right: 10px;
-}
 
 @media (min-width: 481px) {
   /* tablet */
@@ -469,13 +327,7 @@ input[type="file"].form-control {
     width: 23%;
   }
 
-  .product-shadow {
-    box-shadow: none;
-  }
 
-  .product:hover .product-shadow {
-    display: block;
-  }
 }
 
 @media (min-width: 1281px) {
