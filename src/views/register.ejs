@@ -6,7 +6,7 @@
     <body>
         <!--HEADER-->
         <%- include("./partials/header") %>
- 
+  
         <main>
             <form class="container" method="POST" action="/register" enctype="multipart/form-data">
                 <h2>Formulario de registro</h2>
@@ -28,6 +28,25 @@
                 </div>
                 <div class="col-md-6 my-1">
                     <div class="form-group">
+
+                         <label for="telefono"><b>Número de Teléfono:</b></label>
+                         <input 
+                         type="tel" 
+                         name="telefono"
+                         class="form-control <%= locals.errors && errors.telefono ? 'is-invalid' : null %>"
+                         value="<%= locals.oldData ? oldData.telefono : null %>"
+                     >
+                     <% if (locals.errors && errors.telefono) { %>
+                         <div class="text-danger">
+                             <%= errors.telefono.msg %> 
+                         </div>
+                     <% } %>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 my-1">
+                    <div class="form-group">
                         <label><b>Correo electrónico:</b></label>
                         <input 
                             type="text" 
@@ -47,12 +66,12 @@
                         <label><b>Password:</b></label>
                         <input 
                             type="password" 
-                            name="password" 
-                            class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                            name="clave" 
+                            class="form-control <%= locals.errors && errors.clave ? 'is-invalid' : null %>"
                         >
-                        <% if (locals.errors && errors.password) { %>
+                        <% if (locals.errors && errors.clave) { %>
                             <div class="text-danger">
-                                <%= errors.password.msg %>
+                                <%= errors.clave.msg %>
                             </div>
                         <% } %>
                     </div>

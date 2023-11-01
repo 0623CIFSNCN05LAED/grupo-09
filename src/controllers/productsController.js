@@ -1,7 +1,7 @@
 
 const db = require('../database/models');
 const sequelize = db.sequelize;
-
+ 
 //Otra forma de llamar a los modelos
 const Productos = db.Productos;
 
