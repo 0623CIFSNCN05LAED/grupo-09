@@ -2,6 +2,7 @@
     max-width: 100%;
     position: relative;
     margin: auto;
+    display: none;
 }
 .fade {
     animation-name: fade;
@@ -23,6 +24,9 @@
 }
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
+}
+.three-dots{
+    display: none;
 }
 .dot {
     cursor: pointer;
