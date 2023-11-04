@@ -6,6 +6,97 @@ const sequelize = db.sequelize;
 const Productos = db.Productos;
 
 const productsController = {
+    'listHeladeras': (req, res) => {
+        db.Productos.findAll({
+            where: {
+              categoria_id: 1
+            },
+            order : [
+                ['nombre', 'ASC']
+            ],
+            //limit: 5
+        })
+            .then(productos => {
+                res.render('productList.ejs', {productos});
+            });
+    },
+    'listLavarropas': (req, res) => {
+        db.Productos.findAll({
+            where: {
+              categoria_id: 2
+            },
+            order : [
+                ['nombre', 'ASC']
+            ],
+            //limit: 5
+        })
+            .then(productos => {
+                res.render('productList.ejs', {productos});
+            });
+    },
+    'listCocinas': (req, res) => {
+        db.Productos.findAll({
+            where: {
+              categoria_id: 3
+            },
+            order : [
+                ['nombre', 'ASC']
+            ],
+            //limit: 5
+        })
+            .then(productos => {
+                res.render('productList.ejs', {productos});
+            });
+    },
+    'listMicroondas': (req, res) => {
+        db.Productos.findAll({
+            where: {
+              categoria_id: 4
+            },
+            order : [
+                ['nombre', 'ASC']
+            ],
+            //limit: 5
+        })
+            .then(productos => {
+                res.render('productList.ejs', {productos});
+            });
+    },
+    'listLavavajillas': (req, res) => {
+        db.Productos.findAll({
+            where: {
+              categoria_id: 5
+            },
+            order : [
+                ['nombre', 'ASC']
+            ],
+            //limit: 5
+        })
+            .then(productos => {
+                res.render('productList.ejs', {productos});
+            });
+    },
+    'listHornos': (req, res) => {
+        db.Productos.findAll({
+            where: {
+              categoria_id: 6
+            },
+            order : [
+                ['nombre', 'ASC']
+            ],
+            //limit: 5
+        })
+            .then(productos => {
+                res.render('productList.ejs', {productos});
+            });
+    },
+
+    'list': (req, res) => {
+        db.Productos.findAll()
+            .then(productos => {
+                res.render('productList.ejs', {productos})
+            })
+    },
 
     'anafes': (req,res)=>{
         res.render("./productos/anafes");
