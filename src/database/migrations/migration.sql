@@ -22,6 +22,7 @@ CREATE TABLE IF NOT EXISTS productos (
 	alto FLOAT NOT NULL,
 	profundidad FLOAT NOT NULL,
 	peso FLOAT NOT NULL,
+    imagen VARCHAR(255) NOT NULL,
 	marca_id INT NOT NULL,
 	categoria_id INT NOT NULL
 );

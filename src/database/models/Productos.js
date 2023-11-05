@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
         alto: DataTypes.FLOAT,
         profundidad: DataTypes.FLOAT,
         peso: DataTypes.FLOAT,
+        imagen: DataTypes.STRING,
         marca_id: DataTypes.INTEGER,
         categoria_id: DataTypes.INTEGER, 
         },
