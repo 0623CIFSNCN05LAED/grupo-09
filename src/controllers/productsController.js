@@ -140,6 +140,7 @@ const productsController = {
            alto: req.body.alto,
            profundidad: req.body.profundidad,
            peso: req.body.peso,
+           imagen: req.body.imagen,
            marca_id: req.body.marca_id,
            categoria_id: req.body.categoria_id
         });
