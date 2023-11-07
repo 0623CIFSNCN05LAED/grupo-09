@@ -4,7 +4,7 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
  
 //Otra forma de llamar a los modelos
-const Registros = db.Registros;
+//const Usuarios = db.Usuarios;
 
  
 
@@ -14,9 +14,9 @@ const registerController = {
         res.render("register");
     },
 
-    registerCreate: (req, res) => {
-        db.Registros.create({
-    
+    registerCreate: async (req, res) => {
+        console.log(req.body);
+        await db.Usuarios.create({
             fullName: req.body.fullName,
             country: req.body.country,
             telefono: req.body.telefono,
