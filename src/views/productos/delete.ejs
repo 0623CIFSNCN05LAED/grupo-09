@@ -9,16 +9,16 @@
 
         <h1><center>ELIMINAR PRODUCTO</center></h1>
 
-        <section class="formulario">
-            <h1>Estas seguro de querer eliminar el producto: ???</h1>
-            <form action="/productos/delete" method="POST">
-                <br>
-                <p> <button class="botonBorrar" type="submit">Borrar Producto</button>
-                
-                <!--<a  class="botonVolver" href="/movies">Listado de Películas</a></p>-->
-            </form>    
-        </section>
-       
+        <main class="vw-90 mx-auto">
+            <section class="w-100 bt-1 formulario">
+                <h2 class="title w-100 text-center">Estas seguro de querer eliminar el producto: ???</h2>
+                <form action="/productos/destroy/<%= Productos.id %>" method="POST">
+                    <p class="text-center"><button class="botonBorrar text-center" type="submit">Borrar Producto</button></p>
+                    <p class="text-center"><a class="botonVolver" href="/productos/admin">Volver</a></p>
+                </form>    
+            </section>
+        </main>
+
         <!--FOOTER-->
         <%- include("../partials/footer") %>
         

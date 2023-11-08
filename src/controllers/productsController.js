@@ -98,6 +98,13 @@ const productsController = {
             })
     },
 
+    'listAdmin': (req, res) => {
+        db.Productos.findAll()
+            .then(productos => {
+                res.render('productListAdmin.ejs', {productos})
+            })
+    },
+
     'anafes': (req,res)=>{
         res.render("./productos/anafes");
     },
@@ -184,7 +191,7 @@ const productsController = {
                 id: req.params.id
             }
         })
-        res.redirect("/");
+        res.redirect("/productos/admin");
     }
 }
 
