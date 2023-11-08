@@ -103,8 +103,14 @@
 .title {
     font-size: 24px;
 }
+.w-25 {
+    width: 25%;
+}
 .w-50 {
     width: 50%;
+}
+.w-75 {
+    width: 75%;
 }
 .vw-90 {
     width: 90vw;
@@ -176,12 +182,20 @@
     display: flex;
 }
 
+.inline-flex {
+    display: inline-flex;
+}
+
 .block {
     display: block;
 }
 
 .flex-wrap {
     flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
 }
 
 .flex-grow {
@@ -279,9 +293,9 @@ footer {
 
 /* Estilos para el formulario login */
 .formulario {
-    width: 400px; 
+    width: 50%;
     margin: 0 auto; 
-    margin-top: 90px;
+    margin-top: 10px;
     margin-bottom: 150px;
     padding: 20px;
     border: 1px solid #ccc;

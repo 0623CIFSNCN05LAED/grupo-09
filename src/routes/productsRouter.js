@@ -3,12 +3,13 @@ const router = Router();
 const productsController = require("../controllers/productsController");
 
 router.get('/productos', productsController.list);
+router.get('/productos/admin', productsController.listAdmin);
 
-router.get('/productos/nuevo', productsController.add);
+router.get('/productos/new', productsController.add);
 router.post('/productos/create', productsController.create);
-router.get('/productos/editar/:id', productsController.edit);
+router.get('/productos/edit/:id', productsController.edit);
 router.post('/productos/update/:id', productsController.update);
-router.get('/productos/eliminar/:id', productsController.delete);
+router.get('/productos/delete/:id', productsController.delete);
 router.post('/productos/destroy/:id', productsController.destroy);
 
 router.get("/productos/heladeras", productsController.listHeladeras);
