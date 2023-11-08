@@ -163,18 +163,23 @@ const productsController = {
 
     'update': (req,res) => {
         db.Productos.update({
-            title: req.body.title,
-            rating: req.body.rating,
-            awards: req.body.awards,
-            release_date: req.body.release_date,
-            length: req.body.length,
-            genre_id: req.body.genre_id
+            sku: req.body.sku,
+            nombre: req.body.nombre,
+            descripcion: req.body.descripcion,
+            precio: req.body.precio,
+            ancho: req.body.ancho,
+            alto: req.body.alto,
+            profundidad: req.body.profundidad,
+            peso: req.body.peso,
+            imagen: req.body.imagen,
+            marca_id: req.body.marca_id,
+            categoria_id: req.body.categoria_id
         }, {
             where: {
                 id: req.params.id
             }
         })
-        res.redirect("/productos/edit/" + req.params.id)
+        res.redirect("/productos/admin")
 
     },
 
