@@ -7,14 +7,14 @@
         <!--HEADER-->
         <%- include("./partials/header") %>
       
-        <main class="p-2 vw-90 mx-auto">
+        <main class="p-1 vw-90 mx-auto">
             <section class="section">
-                <h1 class="title w-100 text-center">LISTADO DE PRODUCTOS</h1>  
-                <div class="w-100 text-center"><a href="/productos/new" > nuevo </a></div>
+                <h1 class="title w-100 text-center p-1">LISTADO DE PRODUCTOS</h1>  
+                <div class="w-100 text-center"><a class="btn-primary-admin" href="/productos/new" > nuevo </a></div>
                 <ul class="w-50 align-center"><br>
                     <% for( let i = 0; i < productos.length; i++ ) { %>
-                        <li class="flex">
-                            <div class="w-75 bt-1"><%= productos[i].nombre %></div><div class="w-50 bt-1"><a href="/productos/edit/<%= productos[i].id %>"> editar </a><a href="/productos/delete/<%= productos[i].id %>"> eliminar </a></div>
+                        <li class="flex p-1">
+                            <div class="w-75 bt-1 p-1"><%= productos[i].nombre %></div><div class="bt-1 p-1"><a class="btn-primary-admin" href="/productos/edit/<%= productos[i].id %>"> editar </a></div><div class="bt-1 p-1"><a class="btn-primary-admin" href="/productos/delete/<%= productos[i].id %>"> eliminar </a></div>
                         </li>
                     <% } %>
                 </ul>
