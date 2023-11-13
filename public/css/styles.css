@@ -88,6 +88,20 @@
 .btn-primary:hover {
     background-color: rgb(44, 14, 72);
 }
+
+.btn-primary-admin {
+    background-color: rgb(93, 53, 130); 
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 10px;
+    cursor: pointer;
+}
+
+.btn-primary-admin:hover {
+    background-color: rgb(44, 14, 72);
+}
+
 .logo{
     margin-left: 20px;
 }
@@ -324,9 +338,13 @@ footer {
     margin-top: 10px;
 }
 
+.link-footer { 
+    color: #fff;
+} /* CSS link color (red) */
 
-
-
+.link-footer:hover { 
+    color:#ccc;
+} /* CSS link hover (green) */
 
 @media (min-width: 481px) {
   /* tablet */
