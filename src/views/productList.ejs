@@ -9,15 +9,15 @@
       
         <main class="p-2 vw-90 mx-auto">
             <section class="flex flex-wrap gap section">
-                <h1 class="title w-100"><center>LISTADO DE PRODUCTOS</center></h1>  
+                <h1 class="title w-100 text-center">LISTADO DE PRODUCTOS</h1>  
 
                 <% for( let i = 0; i < productos.length; i++ ) { %>
                     <article class="p-2 bt-1 border-grey border-radius bg-white product-shadow w-100 md-w-50 lg-w-25">
                         <a href="/productos/detail/<%= productos[i].id %>">
                             <div class="relative flex flex-wrap">
                                 <img class="w-100 border-radius" src="<%= productos[i].imagen %>" alt="<%= productos[i].descripcion %>">
-                                <p class="description"><%= productos[i].nombre %>"</p>
-                                <p class="precio"><%= productos[i].precio %>"</p>
+                                <p class="description"><%= productos[i].nombre %></p>
+                                <p class="precio"><%= productos[i].precio %></p>
                                 <p class="color-green font-lg">29% OFF</p>
                             </div>
                         </a>
