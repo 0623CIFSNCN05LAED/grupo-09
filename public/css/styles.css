@@ -3,7 +3,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
-
+.oculto{
+    display: none;
+}
 
 .top-header{
     text-align: center;
