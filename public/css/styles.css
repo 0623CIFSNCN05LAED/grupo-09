@@ -231,6 +231,19 @@ footer {
     /*color: inherit;*/
 }
 
+.footer-link {
+    color:#fff
+}
+  
+  /* visited link */
+.footer-link:visited {
+    color:#fff
+}
+  
+  /* mouse over link */
+.footer-link:hover {
+    color:aliceblue
+}
 
 
 .iconos {

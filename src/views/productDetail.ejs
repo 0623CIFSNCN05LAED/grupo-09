@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <%- include("partials/head") %>
-    </head>
-        
-    <div class="top-header">
-        <p><h4>VENTA DE ELECTRODOMESTICOS PARA EL HOGAR LOGO </h4></p>
-    </div>
+    <!--HEAD--> 
+    <%- include("./partials/head") %>
 
     <body>
-        <header>
-            <%- include("partials/header") %>
-        </header>
-        <div>
-            <p><h4>DETALLE DE PRODUCTOS</h4></p>
-        </div>
-        <main>
-            
+        <!--HEADER-->
+        <%- include("./partials/header") %>
+      
+        <main class="p-2 vw-90 mx-auto">
+            <h1 class="title w-100 text-center">DETALLE DE PRODUCTO</h1>  
+            <div class="w-50 align-center flex flex-wrap">
+                <div class="bold w-25">Producto:</div><div class="w-75"><%= productos.nombre %></div>
+                <div class="bold w-25">Descripcion:</div><div class="w-75"><%= productos.descripcion %></div>
+                <div class="bold w-25">Precio:</div><div class="w-75"><%= productos.precio %></div>
+                <div class="bold w-25">Ancho:</div><div class="w-75"><%= productos.ancho %></div>
+                <div class="bold w-25">Alto:</div><div class="w-75"><%= productos.alto %></div>
+                <div class="bold w-25">Profundidad:</div><div class="w-75"><%= productos.profundidad %></div>
+                <div class="bold w-25">Peso:</div><div class="w-75"><%= productos.peso %></div>
+            </div>
         </main>
 
-        <footer>
-
-        </footer>
-
-        <div>
-            <p><h4>Copyright © 2023 GRUPO-09</h4></p>
-        </div>
- <%- include("partials/script") %>
+        <!--FOOTER-->
+        <%- include("./partials/footer") %>
+        
+        <!--SCRIPTS-->
+        <script src="/js/carrousel.js"></script>
     </body>
 </html>

@@ -98,40 +98,19 @@ const productsController = {
             })
     },
 
+    'detail': (req, res) => {
+        db.Productos.findByPk(req.params.id)
+            .then(productos => {
+                res.render('productDetail.ejs', {productos});
+            });
+    },
+
     'listAdmin': (req, res) => {
         db.Productos.findAll()
             .then(productos => {
                 res.render('productListAdmin.ejs', {productos})
             })
     },
-
-    'anafes': (req,res)=>{
-        res.render("./productos/anafes");
-    },
-    
-    'heladeras': (req,res)=>{
-        res.render("./productos/heladeras");
-    },
-
-    'cocinas': (req,res)=>{
-        res.render("./productos/cocinas");
-    },
-    
-    'freezers': (req,res)=>{
-        res.render("./productos/freezers");
-    },
-    
-    'lavarropas': (req,res)=>{
-        res.render("./productos/lavarropas");
-    },
-    
-    'lavavajillas': (req,res)=>{
-        res.render("./productos/lavavajillas");
-    },
-    
-    'microondas': (req,res)=>{
-        res.render("./productos/microondas");
-    }, 
 
     'add': (req, res) => {
         res.render("./productos/add");

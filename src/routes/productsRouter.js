@@ -3,6 +3,7 @@ const router = Router();
 const productsController = require("../controllers/productsController");
 
 router.get('/productos', productsController.list);
+router.get('/productos/detail/:id', productsController.detail);
 router.get('/productos/admin', productsController.listAdmin);
 
 router.get('/productos/new', productsController.add);
