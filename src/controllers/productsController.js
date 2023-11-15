@@ -2,119 +2,83 @@
 const db = require('../database/models');
 const sequelize = db.sequelize;
  
-//Otra forma de llamar a los modelos
-const Productos = db.Productos;
+const productService = require("../services/productService");
 
-const productsController = {
-    'listHeladeras': (req, res) => {
-        db.Productos.findAll({
-            where: {
-              categoria_id: 1
-            },
-            order : [
-                ['nombre', 'ASC']
-            ],
-            //limit: 5
-        })
-            .then(productos => {
-                res.render('productList.ejs', {productos});
-            });
-    },
-    'listLavarropas': (req, res) => {
-        db.Productos.findAll({
-            where: {
-              categoria_id: 2
-            },
-            order : [
-                ['nombre', 'ASC']
-            ],
-            //limit: 5
-        })
-            .then(productos => {
-                res.render('productList.ejs', {productos});
-            });
-    },
-    'listCocinas': (req, res) => {
-        db.Productos.findAll({
-            where: {
-              categoria_id: 3
-            },
-            order : [
-                ['nombre', 'ASC']
-            ],
-            //limit: 5
-        })
-            .then(productos => {
-                res.render('productList.ejs', {productos});
-            });
-    },
-    'listMicroondas': (req, res) => {
-        db.Productos.findAll({
-            where: {
-              categoria_id: 4
-            },
-            order : [
-                ['nombre', 'ASC']
-            ],
-            //limit: 5
-        })
-            .then(productos => {
-                res.render('productList.ejs', {productos});
-            });
-    },
-    'listLavavajillas': (req, res) => {
-        db.Productos.findAll({
-            where: {
-              categoria_id: 5
-            },
-            order : [
-                ['nombre', 'ASC']
-            ],
-            //limit: 5
-        })
-            .then(productos => {
-                res.render('productList.ejs', {productos});
-            });
-    },
-    'listHornos': (req, res) => {
-        db.Productos.findAll({
-            where: {
-              categoria_id: 6
-            },
-            order : [
-                ['nombre', 'ASC']
-            ],
-            //limit: 5
-        })
-            .then(productos => {
-                res.render('productList.ejs', {productos});
-            });
-    },
+module.exports = {
 
-    'list': (req, res) => {
-        db.Productos.findAll()
+    list: (req, res) => {
+        productService.getAllProducts()
             .then(productos => {
                 res.render('productList.ejs', {productos})
             })
     },
 
-    'detail': (req, res) => {
-        db.Productos.findByPk(req.params.id)
-            .then(productos => {
-                res.render('productDetail.ejs', {productos});
-            });
-    },
-
-    'listAdmin': (req, res) => {
-        db.Productos.findAll()
+    listAdmin: (req, res) => {
+        productService.getAllProductsAdmin()
             .then(productos => {
                 res.render('productListAdmin.ejs', {productos})
             })
     },
 
-    'add': (req, res) => {
+    detail: (req, res) => {
+        productService.getProductDetail(req.params.id)
+            .then(productos => {
+                res.render('productDetail.ejs', {productos})
+            })
+    },
+    
+    listHeladeras: (req, res) => {
+        productService.getAllHeladeras()
+        .then((productos) => {
+            res.render('productList.ejs', {productos});
+        });
+    },
+
+    listLavarropas: (req, res) => {
+        productService.getAllLavarropas()
+        .then((productos) => {
+            res.render('productList.ejs', {productos});
+        });
+    },
+
+    listCocinas: (req, res) => {
+        productService.getAllCocinas()
+        .then((productos) => {
+            res.render('productList.ejs', {productos});
+        });
+    },
+
+    listMicroondas: (req, res) => {
+        productService.getAllMicroondas()
+        .then((productos) => {
+            res.render('productList.ejs', {productos});
+        });
+    },
+
+    listLavavajillas: (req, res) => {
+        productService.getAllLavavajillas()
+        .then((productos) => {
+            res.render('productList.ejs', {productos});
+        });
+    },
+
+    listHornos: (req, res) => {
+        productService.getAllHornos()
+        .then((productos) => {
+            res.render('productList.ejs', {productos});
+        });
+    },
+
+    add: (req, res) => {
         res.render("./productos/add");
     },
+
+    /*createProduct: (req, res) => {
+        productService.createProduct()
+        .then((productos) => {
+            res.redirect("/productos/admin");
+        });
+    },*/
 
     'create': (req, res) => {
         db.Productos.create({
@@ -177,7 +141,6 @@ const productsController = {
         })
         res.redirect("/productos/admin");
     }
-}
+};
 
-module.exports = productsController;
 
