@@ -43,10 +43,8 @@ const validationsRegister = [
 	})
 ] 
 
-
 router.get("/newuser", registerController.register);
-router.post("/register",uploadFile.single('avatar'), registerController.registerCreate);
-// router.post("/register", uploadFile.single('avatar'),validationsRegister, registerController.processRegister)
 
+router.post("/register",uploadFile.single('avatar'), validationsRegister, registerController.processRegister);
 
 module.exports = router;

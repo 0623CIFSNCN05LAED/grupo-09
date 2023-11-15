@@ -14,7 +14,7 @@ const registerController = {
         res.render("register");
     },
 
-    registerCreate: async (req, res) => {
+    /* registerCreate: async (req, res) => {
         console.log(req.body);
         await db.Usuarios.create({
             fullName: req.body.fullName,
@@ -25,9 +25,9 @@ const registerController = {
             avatar: req.body.avatar
         });
         res.redirect("/");
-    },
-   
-    processRegister: (req, res) => {
+    }, */
+
+    processRegister: async (req, res) => {
      const resultValidation = validationResult(req);
      
      if (resultValidation.errors.length > 0) {
@@ -35,9 +35,18 @@ const registerController = {
              errors: resultValidation.mapped(),
              oldData: req.body
          });
+     } else {
+        await db.Usuarios.create({
+            fullName: req.body.fullName,
+            country: req.body.country,
+            telefono: req.body.telefono,
+            email: req.body.email,
+            clave: req.body.clave,
+            avatar: req.body.avatar
+        });
+        res.redirect("/");
      }
 
-     return res.redirect('/');
  },
 
  

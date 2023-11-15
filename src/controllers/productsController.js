@@ -130,7 +130,7 @@ const productsController = {
            marca_id: req.body.marca_id,
            categoria_id: req.body.categoria_id
         });
-        res.redirect("/");
+        res.redirect("/productos/admin");
     },
 
     'edit': (req, res) => {
