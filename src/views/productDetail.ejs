@@ -7,16 +7,19 @@
         <!--HEADER-->
         <%- include("./partials/header") %>
       
-        <main class="p-2 vw-90 mx-auto">
-            <h1 class="title w-100 text-center">DETALLE DE PRODUCTO</h1>  
-            <div class="w-50 align-center flex flex-wrap">
-                <div class="bold w-25">Producto:</div><div class="w-75"><%= productos.nombre %></div>
-                <div class="bold w-25">Descripcion:</div><div class="w-75"><%= productos.descripcion %></div>
-                <div class="bold w-25">Precio:</div><div class="w-75"><%= productos.precio %></div>
-                <div class="bold w-25">Ancho:</div><div class="w-75"><%= productos.ancho %></div>
-                <div class="bold w-25">Alto:</div><div class="w-75"><%= productos.alto %></div>
-                <div class="bold w-25">Profundidad:</div><div class="w-75"><%= productos.profundidad %></div>
-                <div class="bold w-25">Peso:</div><div class="w-75"><%= productos.peso %></div>
+        <main class="p-1 vw-90 mx-auto">
+            <h1 class="title w-100 text-center p-1">DETALLE DE PRODUCTO</h1>  
+            <div class="w-75 flex flex-wrap align-center">
+                <div class="w-50 text-center bt-1"><img class="w-50" src="<%= productos.imagen %>" alt="<%= productos.descripcion %>"></div>
+                <div class="w-50 flex flex-wrap bt-1 mx-auto p-2">
+                    <div class="bold w-25">Producto:</div><div class="w-75"><%= productos.nombre %></div>
+                    <div class="bold w-25">Descripcion:</div><div class="w-75"><%= productos.descripcion %></div>
+                    <div class="bold w-25">Precio:</div><div class="w-75"><%= productos.precio %></div>
+                    <div class="bold w-25">Ancho:</div><div class="w-75"><%= productos.ancho %></div>
+                    <div class="bold w-25">Alto:</div><div class="w-75"><%= productos.alto %></div>
+                    <div class="bold w-25">Profundidad:</div><div class="w-75"><%= productos.profundidad %></div>
+                    <div class="bold w-25">Peso:</div><div class="w-75"><%= productos.peso %></div>
+                </div>
             </div>
         </main>
 
