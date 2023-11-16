@@ -6,6 +6,45 @@ const productService = require("../services/productService");
 
 module.exports = {
 
+    add: (req, res) => {
+        res.render("./productos/add");
+    },
+
+    createProduct: (req, res) => {
+        productService.createProduct(req.body)
+        .then(() => {
+            res.redirect("/productos/admin");
+        });
+    },
+
+    editProduct: (req, res) => {
+        productService.editProduct(req.params.id)
+        .then((productos) => {
+            res.render('./productos/edit', {Productos:productos});
+        });
+    },
+
+    updateProduct: (req, res) => {
+        productService.updateProduct(req.body, req.params.id)
+        .then(() => {
+            res.redirect("/productos/admin");
+        });
+    },
+
+    deleteProduct: (req, res) => {
+        productService.deleteProduct(req.params.id)
+        .then((productos) => {
+            res.render('./productos/delete', {Productos:productos});
+        });
+    },
+
+    destroyProduct: (req, res) => {
+        productService.destroyProduct(req.params.id)
+        .then(() => {
+            res.redirect("/productos/admin");
+        });
+    },
+
     list: (req, res) => {
         productService.getAllProducts()
             .then(productos => {
@@ -69,78 +108,7 @@ module.exports = {
         });
     },
 
-    add: (req, res) => {
-        res.render("./productos/add");
-    },
-
-    /*createProduct: (req, res) => {
-        productService.createProduct()
-        .then((productos) => {
-            res.redirect("/productos/admin");
-        });
-    },*/
-
-    'create': (req, res) => {
-        db.Productos.create({
-           sku: req.body.sku,
-           nombre: req.body.nombre,
-           descripcion: req.body.descripcion,
-           precio: req.body.precio,
-           ancho: req.body.ancho,
-           alto: req.body.alto,
-           profundidad: req.body.profundidad,
-           peso: req.body.peso,
-           imagen: req.body.imagen,
-           marca_id: req.body.marca_id,
-           categoria_id: req.body.categoria_id
-        });
-        res.redirect("/productos/admin");
-    },
-
-    'edit': (req, res) => {
-        db.Productos.findByPk(req.params.id)
-            .then(productos => {
-                res.render('./productos/edit', {Productos:productos});
-            });
-    },
-
-    'update': (req,res) => {
-        db.Productos.update({
-            sku: req.body.sku,
-            nombre: req.body.nombre,
-            descripcion: req.body.descripcion,
-            precio: req.body.precio,
-            ancho: req.body.ancho,
-            alto: req.body.alto,
-            profundidad: req.body.profundidad,
-            peso: req.body.peso,
-            imagen: req.body.imagen,
-            marca_id: req.body.marca_id,
-            categoria_id: req.body.categoria_id
-        }, {
-            where: {
-                id: req.params.id
-            }
-        })
-        res.redirect("/productos/admin")
-
-    },
-
-    'delete':  (req, res) => {
-        db.Productos.findByPk(req.params.id)
-            .then(productos => {
-                res.render('./productos/delete', {Productos:productos});
-            });
-    },
-    
-    'destroy': (req, res) => {
-         db.Productos.destroy({
-            where: {
-                id: req.params.id
-            }
-        })
-        res.redirect("/productos/admin");
-    }
 };
+
 
 
