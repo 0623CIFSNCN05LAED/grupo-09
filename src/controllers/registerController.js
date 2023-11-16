@@ -26,7 +26,7 @@ const registerController = {
         });
         res.redirect("/");
     }, */
-
+ 
     processRegister: async (req, res) => {
      const resultValidation = validationResult(req);
      
