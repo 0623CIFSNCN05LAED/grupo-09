@@ -3,21 +3,57 @@ const Sequelize = require("sequelize");
 
 module.exports = {
 
-    /*createProduct: (req, res) => {
+    createProduct: (data) => {
         return Productos.create({
-           sku: req.body.sku,
-           nombre: req.body.nombre,
-           descripcion: req.body.descripcion,
-           precio: req.body.precio,
-           ancho: req.body.ancho,
-           alto: req.body.alto,
-           profundidad: req.body.profundidad,
-           peso: req.body.peso,
-           imagen: req.body.imagen,
-           marca_id: req.body.marca_id,
-           categoria_id: req.body.categoria_id
+           sku: data.sku,
+           nombre: data.nombre,
+           descripcion: data.descripcion,
+           precio: data.precio,
+           ancho: data.ancho,
+           alto: data.alto,
+           profundidad: data.profundidad,
+           peso: data.peso,
+           imagen: data.imagen,
+           marca_id: data.marca_id,
+           categoria_id: data.categoria_id
         });
-    },*/
+    },
+
+    updateProduct: (data, id) => {
+        return Productos.update({
+            sku: data.sku,
+            nombre: data.nombre,
+            descripcion: data.descripcion,
+            precio: data.precio,
+            ancho: data.ancho,
+            alto: data.alto,
+            profundidad: data.profundidad,
+            peso: data.peso,
+            imagen: data.imagen,
+            marca_id: data.marca_id,
+            categoria_id: data.categoria_id
+        }, {
+            where: {
+                id: id
+            }
+        });
+    },
+
+    destroyProduct: (id) => {
+        return Productos.destroy({
+            where: {
+                id: id
+            }
+        });
+    },
+
+    editProduct: (id) => {
+        return Productos.findByPk(id);
+    },
+
+    deleteProduct: (id) => {
+        return Productos.findByPk(id);
+    },
 
     getAllProducts: () => {
         return Productos.findAll();
@@ -102,7 +138,5 @@ module.exports = {
             //limit: 5
         });
     },
-
-
 
 };
