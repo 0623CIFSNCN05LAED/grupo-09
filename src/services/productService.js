@@ -76,7 +76,7 @@ module.exports = {
                 ['nombre', 'ASC']
             ],
             //limit: 5
-        });
+        }); 
     },
 
     getAllLavarropas: () => {
@@ -87,7 +87,6 @@ module.exports = {
             order: [
                 ['nombre', 'ASC']
             ],
-            //limit: 5
         });
     },
 
@@ -99,7 +98,6 @@ module.exports = {
             order: [
                 ['nombre', 'ASC']
             ],
-            //limit: 5
         });
     },
 
@@ -111,7 +109,6 @@ module.exports = {
             order: [
                 ['nombre', 'ASC']
             ],
-            //limit: 5
         });
     },
 
@@ -123,7 +120,6 @@ module.exports = {
             order: [
                 ['nombre', 'ASC']
             ],
-            //limit: 5
         });
     },
 
@@ -135,7 +131,6 @@ module.exports = {
             order: [
                 ['nombre', 'ASC']
             ],
-            //limit: 5
         });
     },
 
