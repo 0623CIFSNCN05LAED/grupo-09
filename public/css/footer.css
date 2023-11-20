@@ -1,6 +1,22 @@
+footer {
+    text-align: center;
+    background-color: #333;
+    justify-content: space-around;
+    color: white;
+    text-decoration: none;
+    /*color: inherit;*/
+}
+
 .logo-footer {
     width: 162px;
     height: 57px;
 }
 
+.link-footer { 
+    color: #fff;
+} 
+
+.link-footer:hover { 
+    color:#ccc;
+} 
 

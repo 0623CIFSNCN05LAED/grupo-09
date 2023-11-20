@@ -1,34 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <%- include("partials/head") %>
-    </head>
-    
-    <div class="top-header">
-        <p><h4>VENTA DE ELECTRODOMESTICOS PARA EL HOGAR LOGO </h4></p>
-    </div>
-      
-    <body>
-        <header>
-        
-            <%- include("partials/header") %>
-        </header>
+    <!--HEAD-->
+    <%- include("./partials/head") %>
 
-        <div>
-            <p><h4>CARRITO DE COMPRAS</h4></p>
-        </div>
+    <body>
+        <!--HEADER-->
+        <%- include("./partials/header") %>
 
         <main>
-            
+            <div>
+                <p><h4>CARRITO DE COMPRAS</h4></p>
+            </div>
+
         </main>
-
-        <footer>
-
-        </footer>
-
-        <div>
-            <p><h4>Copyright © 2023 GRUPO-09</h4></p>
-        </div>
- <%- include("partials/script") %>
+        
+        <!--FOOTER-->
+        <%- include("./partials/footer") %>
+        
+        <!--SCRIPTS-->
+        <script src="/js/carrousel.js"></script>
     </body>
 </html>
