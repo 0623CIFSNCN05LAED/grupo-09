@@ -9,22 +9,13 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-const mainRouter = require("./routes/mainRouters");
+const mainRouter = require("./routes/mainRouter");
 app.use(mainRouter);
 
-const loginRouter = require("./routes/loginRouter")
-app.use(loginRouter);
-
-const registerRouter = require("./routes/registerRouter")
+const registerRouter = require("./routes/userRouter")
 app.use(registerRouter);
 
-const productCartRouter = require("./routes/productCartRouter")
-app.use(productCartRouter);
-
-const productDetailRouter = require("./routes/productDetailRouter")
-app.use(productDetailRouter);
-
-const productsRouter = require("./routes/productsRouter")
+const productsRouter = require("./routes/productRouter")
 app.use(productsRouter);
 
 const PORT = 3000;

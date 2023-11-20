@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const registerController = require("../controllers/registerController");
+const userController = require("../controllers/userController");
  
 const router = Router();
 const multer = require('multer');
@@ -43,8 +43,10 @@ const validationsRegister = [
 	})
 ] 
 
-router.get("/newuser", registerController.register);
+router.get("/newuser", userController.register);
+router.post("/register",uploadFile.single('avatar'), validationsRegister, userController.processRegister);
 
-router.post("/register",uploadFile.single('avatar'), validationsRegister, registerController.processRegister);
+router.get("/login", userController.login);
+router.post("/login", userController.guardarlogin);
 
 module.exports = router;
