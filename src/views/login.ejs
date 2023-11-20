@@ -8,14 +8,19 @@
         <%- include("./partials/header") %>
       
         <main> 
-            <form action="/login" method="POST" class="formulario" enctype="multipart/form-data">
+            <form action="/login" method="POST" class="container-form" enctype="multipart/form-data">
+                <h2 class="text-center">Iniciar Sesion</h2>
+                <div class="form-group my-1">
+                    <label>Email:</label>
+                    <input class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group my-1">
+                    <label>Contraseña:</label>
+                    <input class="form-control" type="password" id="contrasena" name="contrasena" required>   
+                </div>
+
                 <div class="text-center">
-                    <label class="indication">Email:</label>
-                    <input class="cajas" id="email" name="email" required>
-                    <label class="indication" >Contraseña:</label>
-                    <input class="cajas" type="password" id="contrasena" name="contrasena" required>
-            
-                    <input class="button-login" type="submit" value="Enviar">
+                    <button type="submit" class="btn-primary">Enviar</button>
                 </div>
             </form>
         </main>

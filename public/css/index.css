@@ -3,10 +3,12 @@
     position: relative;
     margin: auto;
 }
+
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
 }
+
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -21,9 +23,11 @@
     border-radius: 0 3px 3px 0;
     user-select: none;
 }
+
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
+
 .dot {
     cursor: pointer;
     height: 15px;
@@ -38,27 +42,38 @@
 .active, .dot:hover {
     background-color: #717171;
 }
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
 .border-grey {
     border-color: #d9d9d9;
 }
+
 .border-radius {
     border-radius: 15px;
 }
+
 .bg-white {
     background-color: white;
 }
+
 .product-shadow {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-/* Estilos para el campo de archivo */
-input[type="file"].form-control {
-    padding: 5px;
-}
 .description {
     color: grey;
     width: 100%;
 }
+
 .precio {
     font-size: 1.625rem;
     color: #36c;
@@ -67,16 +82,10 @@ input[type="file"].form-control {
     margin-right: 10px;
 }
 
-.color-green {
+.descuento {
     color: #39b54a;
-}
-.font-lg {
     font-size: 16px;
 }
-
-
-
-
 
 @keyframes fade {
     from {opacity: .4} 

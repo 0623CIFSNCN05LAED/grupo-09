@@ -3,6 +3,14 @@
     justify-content: space-between;
     /*position: relative;*/
 }
+
+.top-header {
+    text-align: center;
+    font-size: 8px;
+    background-color: rgb(209, 160, 255);
+    padding: 1px;
+}
+
 .barra-busqueda {
     display: flex;
     align-items: center;
@@ -18,6 +26,7 @@
     margin-top: 40px;
     flex-grow: 2;
 }
+
 .input-busqueda {
     flex: 1;
     border: none;
@@ -26,6 +35,7 @@
     height: 10px;
     background-color: rgb(237, 218, 255);
 }
+
 .boton-buscar {
     background-color: rgb(237, 218, 255);
     border: none;
@@ -33,44 +43,27 @@
     padding: 5px;
     border-radius: 5px;
 }
+
 .login {
     display: flex;
     margin-left: 20px;
 }
-.header-logo-register{
-    display: flex;
-    justify-content: space-around;
-}
-.menu{
-    margin-top: 42px;
-    font-size: 20px;
-}
-.description-header{
-    text-align: center;
-    margin-left: 20px;
-}
-.description-header button{
-    background-color:  rgb(44, 14, 72);
-    color: white;
-    height: 25px;
-    width: 100px;
-    border-radius: 5px;
-    border: none;
-    font-size: 15px;
-}
-.main-navbar{
+
+.main-navbar {
     display: flex;
     list-style: none;
 }
-.main-navbar a{
+
+.main-navbar a {
     text-decoration: none;
     font-size: 17px;
     padding: 5px 0;
     display: inline-block;
     color: #222222;
 }
+
 .main-navbar button{
-    background-color:  rgb(44, 14, 72);
+    background-color: rgb(44, 14, 72);
     color: white;
     height: 35px;
     width: 100px;
@@ -79,20 +72,29 @@
     font-size: 15px;
     margin-left: 20px;
 }
+
 .nav-bar-a{
     list-style-type: none;
     display: flex;
     justify-content: space-between;
-    width:80%;
+    width: 80%;
     font-weight: bold;
 }
+
 .nav-bar-a a{
     padding-left: 12px;
     position: relative;
-    font-size:clamp(0.8rem, 1vw, 1.2rem);
+    font-size: clamp(0.8rem, 1vw, 1.2rem);
 }
+
 .nav-bar-a a:hover{
     text-decoration: underline;
 }
 
+.icon {
+    font-size: 25px;
+    padding: 3px;
+    margin-top: 40px;
+    margin-left: 10px;
+}
 
