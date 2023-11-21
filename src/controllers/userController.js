@@ -27,7 +27,7 @@ const userController = {
             });
             res.redirect("/");
         }
-    },
+    }, 
 
     login: (req, res) => {
         res.render("login");
