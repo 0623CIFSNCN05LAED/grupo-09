@@ -27,6 +27,20 @@ const userController = {
             });
             res.redirect("/");
         }
+
+
+        /*const errors = req.Usuarios.errors;
+        const oldData = req.Usuarios.errors;
+    
+        req.Usuarios.oldData = null;
+        req.Usuarios.oldData = null
+    
+        res.render('register', {
+          errors: errors ? errors : null,
+          oldData: oldData ? oldData : null,
+        })
+        */
+       
     }, 
 
     login: (req, res) => {
