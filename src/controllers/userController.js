@@ -9,14 +9,8 @@ const userController = {
     },
  
     processRegister: async (req, res) => {
-        const resultValidation = validationResult(req);
         
-        if (resultValidation.errors.length > 0) {
-            return res.render('register', {
-                errors: resultValidation.mapped(),
-                oldData: req.body
-            });
-        } else {
+    
             await db.Usuarios.create({
                 fullName: req.body.fullName,
                 country: req.body.country,
@@ -26,21 +20,7 @@ const userController = {
                 avatar: req.body.avatar
             });
             res.redirect("/");
-        }
 
-
-        /*const errors = req.session.errors;
-        const oldData = req.session.errors;
-    
-        req.session.oldData = null;
-        req.session.oldData = null
-    
-        res.render('register', {
-          errors: errors ? errors : null,
-          oldData: oldData ? oldData : null,
-        })
-        */
-       
     }, 
 
     login: (req, res) => {
