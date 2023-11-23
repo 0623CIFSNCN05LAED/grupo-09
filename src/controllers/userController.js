@@ -20,21 +20,7 @@ const userController = {
                 avatar: req.body.avatar
             });
             res.redirect("/");
-       
 
-
-        /*const errors = req.session.errors;
-        const oldData = req.session.errors;
-    
-        req.session.oldData = null;
-        req.session.oldData = null
-    
-        res.render('register', {
-          errors: errors ? errors : null,
-          oldData: oldData ? oldData : null,
-        })
-        */
-       
     }, 
 
     login: (req, res) => {
