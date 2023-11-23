@@ -29,11 +29,11 @@ const userController = {
         }
 
 
-        /*const errors = req.Usuarios.errors;
-        const oldData = req.Usuarios.errors;
+        /*const errors = req.session.errors;
+        const oldData = req.session.errors;
     
-        req.Usuarios.oldData = null;
-        req.Usuarios.oldData = null
+        req.session.oldData = null;
+        req.session.oldData = null
     
         res.render('register', {
           errors: errors ? errors : null,
