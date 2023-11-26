@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const app = express();
+const session = require("express-session");
 
 app.set("view engine", "ejs");
 app.set('views', path.resolve(__dirname, './views'));
@@ -21,3 +22,10 @@ app.use(productsRouter);
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
 
+app.use(
+    session({
+      secret: "grupo09",
+      resave: false,
+      saveUninitialized: false,
+    })
+  ); 

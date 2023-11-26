@@ -15,6 +15,7 @@ const userController = {
         });
     },
  
+
     login: (req, res) => {
         res.render("login");
     },
@@ -30,15 +31,10 @@ const userController = {
         res.redirect("/");
     }, 
 
-     /* processRegister: async (req, res) => {
+     processRegister: async (req, res) => {
         const resultValidation = validationResult(req);
-        
-        if (resultValidation.errors.length > 0) {
-            return res.render('register', {
-                errors: resultValidation.mapped(),
-                oldData: req.body
-            });
-        } else {
+
+    processRegister: async (req, res) => {
             await db.Usuarios.create({
                 fullName: req.body.fullName,
                 country: req.body.country,
@@ -48,8 +44,27 @@ const userController = {
                 avatar: req.body.avatar
             });
             res.redirect("/");
+
         }
-    }, */
+    }, 
+
+
+    }, 
+
+    login: (req, res) => {
+        res.render("login");
+    },
+
+    guardarlogin: async (req, res) => {
+        console.log(req.body);
+        await db.Usuarios.create({
+            
+            email: req.body.email,
+            clave: req.body.clave,
+            
+        });
+        res.redirect("/");
+    }, 
 
 
 };
