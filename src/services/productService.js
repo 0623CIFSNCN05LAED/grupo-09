@@ -1,5 +1,4 @@
 const { Productos } = require("../database/models");
-const Sequelize = require("sequelize");
 
 module.exports = {
 
@@ -67,70 +66,12 @@ module.exports = {
         return Productos.findByPk(id);
     },
 
-    getAllHeladeras: () => {
+    getByCategory: (categoryId) => {
         return Productos.findAll({
             where: {
-                categoria_id: 1
+                categoria_id: categoryId,
             },
-            order: [
-                ['nombre', 'ASC']
-            ],
-            //limit: 5
-        }); 
-    },
-
-    getAllLavarropas: () => {
-        return Productos.findAll({
-            where: {
-                categoria_id: 2
-            },
-            order: [
-                ['nombre', 'ASC']
-            ],
-        });
-    },
-
-    getAllCocinas: () => {
-        return Productos.findAll({
-            where: {
-                categoria_id: 3
-            },
-            order: [
-                ['nombre', 'ASC']
-            ],
-        });
-    },
-
-    getAllMicroondas: () => {
-        return Productos.findAll({
-            where: {
-                categoria_id: 4
-            },
-            order: [
-                ['nombre', 'ASC']
-            ],
-        });
-    },
-
-    getAllLavavajillas: () => {
-        return Productos.findAll({
-            where: {
-                categoria_id: 5
-            },
-            order: [
-                ['nombre', 'ASC']
-            ],
-        });
-    },
-
-    getAllHornos: () => {
-        return Productos.findAll({
-            where: {
-                categoria_id: 6
-            },
-            order: [
-                ['nombre', 'ASC']
-            ],
+            order: [["nombre", "ASC"]],
         });
     },
 
