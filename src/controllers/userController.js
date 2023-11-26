@@ -7,10 +7,34 @@ const userController = {
     register: (req, res) => {
         res.render("register");
     },
+
+    createUser: (req, res) => {
+        userService.createUser(req.body)
+        .then(() => {
+            res.redirect("login");
+        });
+    },
  
+
+    login: (req, res) => {
+        res.render("login");
+    },
+
+    guardarlogin: async (req, res) => {
+        console.log(req.body);
+        await db.Usuarios.create({
+            
+            email: req.body.email,
+            clave: req.body.clave,
+            
+        });
+        res.redirect("/");
+    }, 
+
+     processRegister: async (req, res) => {
+        const resultValidation = validationResult(req);
+
     processRegister: async (req, res) => {
-        
-    
             await db.Usuarios.create({
                 fullName: req.body.fullName,
                 country: req.body.country,
@@ -20,6 +44,10 @@ const userController = {
                 avatar: req.body.avatar
             });
             res.redirect("/");
+
+        }
+    }, 
+
 
     }, 
 

@@ -13,12 +13,7 @@ router.post('/productos/update/:id', productController.updateProduct);
 router.get('/productos/delete/:id', productController.deleteProduct);
 router.post('/productos/destroy/:id', productController.destroyProduct);
 
-router.get("/productos/heladeras", productController.listHeladeras);
-router.get("/productos/lavarropas", productController.listLavarropas);
-router.get("/productos/cocinas", productController.listCocinas);
-router.get("/productos/microondas", productController.listMicroondas);
-router.get("/productos/lavavajillas", productController.listLavavajillas);
-router.get("/productos/hornos", productController.listHornos);
+router.get("/productos/categoria/:id", productController.getByCategory);
 
 router.get("/productCart", productController.productCart);
 

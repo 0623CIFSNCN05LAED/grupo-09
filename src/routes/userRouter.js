@@ -9,7 +9,11 @@ const uploadFile = require ("../middlewares/multer-register-validaion")
 
 
 router.get("/newuser", userController.register);
+
+/*router.post("/register",uploadFile.single('avatar'), validationsRegister, userController.processRegister); */
+
 router.post("/register",uploadFile.single('avatar'), validationsRegister, validateCreateForm, userController.processRegister);
+
 
 router.get("/login", userController.login);
 router.post("/login", userController.guardarlogin);

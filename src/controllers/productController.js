@@ -65,8 +65,15 @@ module.exports = {
                 res.render('productDetail.ejs', {productos})
             })
     },
+
+    getByCategory: (req, res) => {
+        productService.getByCategory(req.params.id)
+        .then((productos) => {
+            res.render('productList.ejs', {productos});
+        });
+    },
     
-    listHeladeras: (req, res) => {
+    /* listHeladeras: (req, res) => {
         productService.getAllHeladeras()
         .then((productos) => {
             res.render('productList.ejs', {productos});
@@ -106,7 +113,7 @@ module.exports = {
         .then((productos) => {
             res.render('productList.ejs', {productos});
         });
-    },
+    }, */
 
     productCart: (req, res) => {
         res.render("productCart.ejs");
