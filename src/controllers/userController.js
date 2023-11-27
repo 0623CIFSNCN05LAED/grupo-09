@@ -1,72 +1,81 @@
-const path = require("path");
-const { validationResult } = require('express-validator');
-const db = require('../database/models');
+const userServices = require("../services/userServices");
 
 const userController = { 
 
-    register: (req, res) => {
+    registerForm: (req, res) => {
         res.render("register");
     },
 
-    createUser: (req, res) => {
-        userService.createUser(req.body)
+    processRegister: (req, res) => {
+        /*const errors = req.session.errors;
+        const oldData = req.session.oldData;
+
+        req.session.oldData = null;
+        req.session.oldData = null;
+
+        res.render('register', {
+            errors: errors ? errors : null,
+            oldData: oldData ? oldData : null,
+        });*/
+
+        userServices.createUser(req.body)
         .then(() => {
             res.redirect("login");
         });
     },
  
-
-    login: (req, res) => {
+    loginForm: (req, res) => {
         res.render("login");
     },
 
-    guardarlogin: async (req, res) => {
-        console.log(req.body);
-        await db.Usuarios.create({
-            
-            email: req.body.email,
-            clave: req.body.clave,
-            
-        });
-        res.redirect("/");
-    }, 
-
-     processRegister: async (req, res) => {
-        const resultValidation = validationResult(req);
-
-    processRegister: async (req, res) => {
-            await db.Usuarios.create({
-                fullName: req.body.fullName,
-                country: req.body.country,
-                telefono: req.body.telefono,
-                email: req.body.email,
-                clave: req.body.clave,
-                avatar: req.body.avatar
+    processLogin: async (req, res) => {
+        console.log(req.body.email);
+        const userToLogin = await userServices.getUserByEmail(req.body.email);
+    
+        if (userToLogin) {
+            const validPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+        
+            if (validPassword) {
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+        
+                if (req.body.rememberMe) {
+                    res.cookie('email', req.body.email, { maxAge: 1000 * 60 * 2 });
+                }
+                res.redirect('/userProfile');
+            }
+        
+            return res.render('login', {
+                errors: {
+                    password: {
+                        msg: 'El usuario y/o contraseña ingresados son inválidos',
+                    },
+                },
             });
-            res.redirect("/");
-
         }
-    }, 
-
-
-    }, 
-
-    login: (req, res) => {
-        res.render("login");
+    
+        return res.render('login', {
+            errors: {
+                email: {
+                    msg: 'El correo electrónico ingresado es inválido',
+                },
+            },
+        });
     },
 
-    guardarlogin: async (req, res) => {
-        console.log(req.body);
-        await db.Usuarios.create({
-            
-            email: req.body.email,
-            clave: req.body.clave,
-            
+    logout: (req, res) => {
+        res.clearCookie('email');
+        req.session.destroy();
+    
+        res.redirect('/index');
+    },
+
+    profile: (req, res) => {
+        res.render('userProfile', {
+            user: req.session.userLogged
         });
-        res.redirect("/");
-    }, 
-
-
+    },
+ 
 };
 
 module.exports = userController;

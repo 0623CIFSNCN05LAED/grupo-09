@@ -1,21 +1,31 @@
 const { Router } = require("express");
-const userController = require("../controllers/userController");
 const router = Router();
-const validateCreateForm = require("../middlewares/validate-create-form")
 
+const userController = require("../controllers/userController");
 
-const validationsRegister = require ("../validations/register-validation");
-const uploadFile = require ("../middlewares/multer-register-validaion")
+const uploadFile = require('../middlewares/multerUserMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+/*const adminMiddleware = require('../middlewares/adminMiddleware'); */////////????????
 
+const loginValidations = require('../validations/loginValidations');
+const registerValidations = require('../validations/registerValidations');
 
-router.get("/newuser", userController.register);
+const loginFormMiddleware = require('../middlewares/loginFormMiddleware');
+const registerFormMiddleware = require('../middlewares/registerFormMiddleware');
 
-/*router.post("/register",uploadFile.single('avatar'), validationsRegister, userController.processRegister); */
+router.get("/login/", guestMiddleware, userController.loginForm);
+router.post("/login/", loginFormMiddleware, userController.processLogin);
+router.post("/login/", loginValidations, loginFormMiddleware, userController.processLogin);
+router.get("/logout/", userController.logout);
 
-router.post("/register",uploadFile.single('avatar'), validationsRegister, validateCreateForm, userController.processRegister);
+router.get("/register/", guestMiddleware, userController.registerForm);
+router.post("/register/", uploadFile.single("avatar"), registerValidations, registerFormMiddleware, userController.processRegister);
 
+/* router.get('/edit/:id', authMiddleware, adminMiddleware, usersController.editProfileCrud);
+router.put('/update/:id', uploadFile.single('avatar'), authMiddleware, adminMiddleware, usersController.update);
 
-router.get("/login", userController.login);
-router.post("/login", userController.guardarlogin);
+router.get('/delete/:id', authMiddleware, userController.deleteForm);
+router.delete('/destroy/:id', authMiddleware, userController.destroy); */
 
 module.exports = router;

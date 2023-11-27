@@ -1,4 +1,4 @@
-const { Productos } = require("../database/models");
+const { Usuarios } = require("../database/models");
 
 module.exports = {
 
@@ -13,5 +13,17 @@ module.exports = {
         });
     },
 
+    getUserByEmail: async (email) => {
+        return await Usuarios.findOne({
+            where: {
+                email: email
+            }
+        }); 
+    }, 
+
 
 };
+
+
+
+
