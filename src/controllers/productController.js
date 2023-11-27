@@ -1,10 +1,6 @@
+const productService = require("../services/productServices");
 
-const db = require('../database/models');
-const sequelize = db.sequelize;
- 
-const productService = require("../services/productService");
-
-module.exports = {
+const productController = {
 
     add: (req, res) => {
         res.render("./productos/add");
@@ -121,5 +117,6 @@ module.exports = {
 
 };
 
+module.exports = productController;
 
 
