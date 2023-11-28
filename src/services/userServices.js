@@ -1,4 +1,5 @@
 const { Usuarios } = require("../database/models");
+const bcryptjs = require('bcryptjs');
 
 module.exports = {
 
@@ -8,15 +9,15 @@ module.exports = {
            country: data.country,
            telefono: data.telefono,
            email: data.email,
-           clave: data.clave,
+           clave: bcryptjs.hashSync(data.password, 10),
            avatar: data.avatar
         });
     },
 
-    getUserByEmail: async (email) => {
+    getUserByEmail: async (data) => {
         return await Usuarios.findOne({
             where: {
-                email: email
+                email: data
             }
         }); 
     }, 

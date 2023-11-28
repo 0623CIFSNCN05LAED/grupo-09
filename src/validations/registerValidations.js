@@ -1,4 +1,5 @@
 const { body } = require("express-validator");
+const userServices = require("../services/userServices");
 const path = require("path");
 
 module.exports = [
@@ -16,7 +17,7 @@ module.exports = [
         .custom(async (value, { req }) => {
             let email = req.body.email;
             let emailToLower = email.toLowerCase();
-            let checkEmail = await userService.getUserByEmail(emailToLower);
+            let checkEmail = await userServices.getUserByEmail(emailToLower);
             if (!checkEmail) {
                 return true;
             } else {

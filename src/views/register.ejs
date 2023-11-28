@@ -57,12 +57,12 @@
                         <label><b>Password:</b></label>
                         <input 
                             type="password" 
-                            name="clave" 
-                            class="form-control <%= locals.errors && errors.clave ? 'is-invalid' : null %>"
+                            name="password" 
+                            class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
                         >
-                        <% if (locals.errors && errors.clave) { %>
+                        <% if (locals.errors && errors.password) { %>
                             <div class="text-danger">
-                                <%= errors.clave.msg %>
+                                <%= errors.password.msg %>
                             </div>
                         <% } %>
                     </div>
