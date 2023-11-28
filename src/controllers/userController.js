@@ -1,4 +1,5 @@
 const userServices = require("../services/userServices");
+const bcryptjs = require('bcryptjs');
 
 const userController = { 
 
@@ -29,15 +30,22 @@ const userController = {
     },
 
     processLogin: async (req, res) => {
-        console.log(req.body.email);
+
         const userToLogin = await userServices.getUserByEmail(req.body.email);
     
         if (userToLogin) {
-            const validPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            const validPassword = bcryptjs.compareSync(req.body.password, userToLogin.clave);
+
+            console.log("req.body.password:" + req.body.password);
+            console.log("userToLogin.clave:" + userToLogin.clave);
+            console.log("validPassword:" + validPassword);
         
             if (validPassword) {
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin;
+
+                console.log("entroooooo se logueooooo")
+
+                delete userToLogin.password;            //////// ????????
+                req.session.userLogged = userToLogin;   //////// ????????
         
                 if (req.body.rememberMe) {
                     res.cookie('email', req.body.email, { maxAge: 1000 * 60 * 2 });
