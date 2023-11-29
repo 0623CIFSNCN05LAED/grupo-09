@@ -12,7 +12,7 @@ const validationsRegister = [
 		.isLength({ min: 5 })
         .withMessage("El nombre debe tener al menos cinco caracteres"),
 
-	body('email')
+	 body('email')
 		.notEmpty()
 		.withMessage("Ingresar correo eléctrónico")
 		.isEmail()
@@ -71,7 +71,7 @@ const validationsRegister = [
 				}
 			}
 			return true;
-		}),
+		}), 
 ];
 
 
