@@ -15,7 +15,7 @@ const loginFormMiddleware = require('../middlewares/loginFormMiddleware');
 const registerFormMiddleware = require('../middlewares/registerFormMiddleware');
 
 router.get("/login/", guestMiddleware, userController.loginForm);
-router.post("/login/", loginValidations, loginFormMiddleware, userController.processLogin);
+router.post("/login/",loginValidations, loginFormMiddleware, userController.processLogin);
 router.get("/logout/", userController.logout);
 /*router.post("/login/", loginFormMiddleware, userController.processLogin);*/
 
