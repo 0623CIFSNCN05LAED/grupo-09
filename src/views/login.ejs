@@ -36,6 +36,8 @@
                         name="password" 
                         class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
                         >
+                        <span class="password-toggle" onclick="togglePassword()">Mostrar</span>
+
                             <% if (locals.errors && errors.password) { %>
                                 <div class="text-danger">
                                     <%= errors.password.msg %>
@@ -54,5 +56,6 @@
         
         <!--SCRIPTS-->
         <script src="/js/carrousel.js"></script>
+        <script src="/js/script.js"></script>
     </body>
 </html>

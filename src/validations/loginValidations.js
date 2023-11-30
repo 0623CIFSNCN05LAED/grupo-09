@@ -12,6 +12,6 @@ module.exports = [
       .withMessage("Ingresar contraseña")
       .bail()
       .isLength({ min: 8 })
-      .withMessage("La contraseña debe tener al menos 8 caracteres"),
+      .withMessage("La contraseña debe tener al menos 8 caracteres")
 ];
  

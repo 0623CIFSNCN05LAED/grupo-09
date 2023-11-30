@@ -56,10 +56,13 @@
                     <div class="form-group my-1">
                         <label><b>Password:</b></label>
                         <input 
+                            id="password" 
                             type="password" 
                             name="password" 
                             class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
                         >
+                        <span class="password-toggle" onclick="togglePassword()">Mostrar</span>
+
                         <% if (locals.errors && errors.password) { %>
                             <div class="text-danger">
                                 <%= errors.password.msg %>
