@@ -2,10 +2,8 @@ const { body } = require("express-validator");
 const userServices = require("../services/userServices");
 const path = require("path");
 
-
-
 const validationsRegister = [
-
+    
     body('fullName')
 		.notEmpty()
 		.withMessage('Tienes que escribir un nombre')

@@ -15,32 +15,32 @@
                 <h2 class="text-center">Iniciar Sesion</h2>
                     <div class="form-group my-1">
                         <label>Email:</label>
-                            <input  
-                            id="email" 
-                            type="text" 
-                            name="email" 
-                            class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
-                            value="<%= locals.oldData ? oldData.email : null %>"
-                            >
-                    <% if (locals.errors && errors.email) { %>
-                        <div class="text-danger">
-                            <%= errors.email.msg %>
-                        </div>
-                    <% } %>
+                        <input  
+                        id="email" 
+                        type="text" 
+                        name="email" 
+                        class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                        value="<%= locals.oldData ? oldData.email : null %>"
+                        >
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="text-danger">
+                                    <%= errors.email.msg %>
+                                </div>
+                            <% } %>
                     </div>
                     <div class="form-group my-1">
                         <label>Contraseña:</label>
-                            <input  
-                            id="password" 
-                            type="password" 
-                            name="password" 
-                            class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                        <input  
+                        id="password" 
+                        type="password" 
+                        name="password" 
+                        class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
                         >
-                        <% if (locals.errors && errors.password) { %>
-                            <div class="text-danger">
-                                <%= errors.password.msg %>
-                            </div>
-                        <% } %>   
+                            <% if (locals.errors && errors.password) { %>
+                                <div class="text-danger">
+                                    <%= errors.password.msg %>
+                                </div>
+                            <% } %>   
                     </div>
 
                     <div class="text-center">

@@ -13,15 +13,6 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-const mainRouter = require("./routes/mainRouter");
-app.use(mainRouter);
-
-const registerRouter = require("./routes/userRouter")
-app.use(registerRouter);
-
-const productsRouter = require("./routes/productRouter")
-app.use(productsRouter);
-
 app.use(
     session({
         secret: "grupo09",
@@ -33,6 +24,15 @@ app.use(
 app.use(userLoggedMiddleware);
 
 app.use(cookies());
+
+const mainRouter = require("./routes/mainRouter");
+app.use(mainRouter);
+
+const registerRouter = require("./routes/userRouter")
+app.use(registerRouter);
+
+const productsRouter = require("./routes/productRouter")
+app.use(productsRouter);
 
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
