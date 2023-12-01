@@ -28,4 +28,28 @@ function togglePassword() {
     }
 }
 
+/*document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('.nav-link');
+
+    links.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            // Quitar la clase 'active' de todos los enlaces
+            links.forEach(el => el.classList.remove('active'));
+
+            // Agregar la clase 'active' al enlace clicado
+            this.classList.add('active');
+        });
+    });
+});*/
+
+
+
+
+
+
+
+
+
 
