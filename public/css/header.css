@@ -87,9 +87,9 @@
     font-size: clamp(0.8rem, 1vw, 1.2rem);
 }
 
-.nav-bar-a a:hover{
+/*.nav-bar-a a:hover{
     text-decoration: underline;
-}
+}*/
 
 .icon {
     font-size: 25px;
@@ -98,3 +98,44 @@
     margin-left: 10px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #333; 
+    transition: color 0.3s; 
+}
+
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 2px;
+    bottom: 0;
+    left: 9px;
+    background-color: rgb(105, 34, 171);  
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+
+.nav-link:visited::before {
+    transform: scaleX(1);
+    visibility: visible;
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+    visibility: visible;
+}
+
+
+.nav-link:hover {
+    color: rgb(105, 34, 171); 
+}
