@@ -20,6 +20,9 @@ router.get("/logout/", userController.logout);
 router.get("/register/", guestMiddleware, userController.registerForm);
 router.post("/register/", uploadFile.single("avatar"), registerValidations, registerFormMiddleware, userController.registerProcess);
 
+
+router.get("/usuarios/profile", authMiddleware, userController.userProfile);
+
 /* router.get('/edit/:id', authMiddleware, adminMiddleware, usersController.editProfileCrud);
 router.put('/update/:id', uploadFile.single('avatar'), authMiddleware, adminMiddleware, usersController.update);
 

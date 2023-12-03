@@ -42,8 +42,8 @@ const userController = {
                 if (req.body.rememberMe) {
                     res.cookie('email', req.body.email, { maxAge: 1000 * 60 * 2 });
                 }
-
-                res.redirect('/');
+                console.log(req.session.userLogged)
+                return res.redirect('/usuarios/profile');
             }else{
                 return res.render('login', {
                     errors: {
@@ -67,12 +67,11 @@ const userController = {
     logout: (req, res) => {
         res.clearCookie('email');
         req.session.destroy();
-    
-        res.redirect('/index');
+        res.redirect('/');
     },
 
-    profile: (req, res) => {
-        res.render('userProfile', {
+    userProfile: async (req, res) => {
+        res.render('profile', {
             user: req.session.userLogged
         });
     },
