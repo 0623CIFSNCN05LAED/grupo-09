@@ -34,5 +34,8 @@ app.use(registerRouter);
 const productsRouter = require("./routes/productRouter")
 app.use(productsRouter);
 
+const productsRouterAPI = require("./routes/api/productRouterAPI")
+app.use(productsRouterAPI);
+
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
