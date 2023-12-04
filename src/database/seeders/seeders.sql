@@ -1,5 +1,16 @@
 /*DATOS PARA POBLAR LA BASE*/
 
+/*CATEGORIAS*/
+INSERT INTO ecommerce.categorias (categoria) VALUES('Heladeras');
+INSERT INTO ecommerce.categorias (categoria) VALUES('Lavarropas');
+INSERT INTO ecommerce.categorias (categoria) VALUES('Cocinas');
+INSERT INTO ecommerce.categorias (categoria) VALUES('Microondas');
+INSERT INTO ecommerce.categorias (categoria) VALUES('Lavavajillas');
+INSERT INTO ecommerce.categorias (categoria) VALUES('Hornos');
+
+/*MARCAS*/
+INSERT INTO ecommerce.marcas (marca) VALUES('Whirlpool');
+
 /*HELADERAS*/
 INSERT INTO ecommerce.productos (sku, nombre, precio, descripcion, ancho, alto, profundidad, peso, imagen, marca_id, categoria_id) VALUES('HEL1', 'Heladera Bottom Mount Blanca Whirlpool 588 Lts', 1111, 'HELADERA1', 10, 20, 30, 40, '/images/productos/hel1.jpg', 1, 1);
 INSERT INTO ecommerce.productos (sku, nombre, precio, descripcion, ancho, alto, profundidad, peso, imagen, marca_id, categoria_id) VALUES('HEL2', 'Heladera Whirlpool No Frost Xpert Inverter 443 Lts', 2222, 'HELADERA2', 10, 20, 30, 40, '/images/productos/hel2.jpg', 1, 1);
@@ -47,3 +58,10 @@ INSERT INTO ecommerce.productos (sku, nombre, precio, descripcion, ancho, alto, 
 INSERT INTO ecommerce.productos (sku, nombre, precio, descripcion, ancho, alto, profundidad, peso, imagen, marca_id, categoria_id) VALUES('HOR4', 'Horno Whirlpool Empotrable Multigas 60 CM', 4444, 'HORNO4', 10, 20, 30, 40, '/images/productos/hor4.jpg', 1, 6);
 INSERT INTO ecommerce.productos (sku, nombre, precio, descripcion, ancho, alto, profundidad, peso, imagen, marca_id, categoria_id) VALUES('HOR5', 'Horno Whirlpool Empotrable Eléctrico 60 CM Inox', 5555, 'HORNO5', 10, 20, 30, 40, '/images/productos/hor5.jpg', 1, 6);
 INSERT INTO ecommerce.productos (sku, nombre, precio, descripcion, ancho, alto, profundidad, peso, imagen, marca_id, categoria_id) VALUES('HOR6', 'Horno Whirlpool Empotrable Eléctrico 60 CM Inox', 6666, 'HORNO6', 10, 20, 30, 40, '/images/productos/hor6.jpg', 1, 6);
+
+/*ROLES*/
+INSERT INTO ecommerce.roles (rol) VALUES('Administrador');
+INSERT INTO ecommerce.roles (rol) VALUES('Usuario');
+
+/*USUARIOS*/
+/*INSERT INTO ecommerce.usuarios (fullName, country, telefono, email, password, avatar, rol_id)VALUES('Fernando', '', '', '', '', '', 0);*/

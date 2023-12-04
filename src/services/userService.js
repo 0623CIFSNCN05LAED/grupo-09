@@ -9,7 +9,7 @@ module.exports = {
            country: data.country,
            telefono: data.telefono,
            email: data.email,
-           clave: bcryptjs.hashSync(data.password, 10),
+           password: bcryptjs.hashSync(data.password, 10),
            avatar: data.avatar
         });
     },

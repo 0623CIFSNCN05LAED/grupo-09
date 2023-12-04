@@ -1,4 +1,4 @@
-const userServices = require("../services/userServices");
+const userService = require("../services/userService");
 const bcryptjs = require('bcryptjs');
 
 const userController = { 
@@ -19,7 +19,7 @@ const userController = {
             oldData: oldData ? oldData : null,
         });*/
 
-        userServices.createUser(req.body)
+        userService.createUser(req.body)
         .then(() => {
             res.redirect("login");
         });
@@ -30,10 +30,10 @@ const userController = {
     },
 
     loginProcess: async (req, res) => {
-        const userToLogin = await userServices.getUserByEmail(req.body.email);
+        const userToLogin = await userService.getUserByEmail(req.body.email);
     
         if (userToLogin) {
-            const validPassword = bcryptjs.compareSync(req.body.password, userToLogin.clave);
+            const validPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
         
             if (validPassword) {
                 delete userToLogin.password;     
