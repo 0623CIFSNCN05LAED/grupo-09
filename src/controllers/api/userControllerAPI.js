@@ -1,4 +1,4 @@
-const productService = require("../../services/productService");
+const userService = require("../../services/userService");
 
 const productsControllerAPI = {
     list: (req, res) => {

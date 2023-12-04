@@ -1,19 +1,19 @@
 module.exports = (sequelize, DataTypes) => {
     const Model = sequelize.define(
-        "Marcas",
+        "Roles",
         {
-            marca: DataTypes.STRING,  
+            cantidad: DataTypes.STRING,   
         },
         {
-            tableName: "marcas",
+            tableName: "roles",
             timeStamps: false,    
         }
     );
 
     Model.associate = (models) => {
-        Model.hasMany(models.Productos, {
-            as: 'productos',
-            foreignKey: 'marca_id',
+        Model.hasMany(models.Usuarios, {
+            as: 'usuarios',
+            foreignKey: 'rol_id',
         });
     };
 

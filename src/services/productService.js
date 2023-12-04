@@ -55,19 +55,20 @@ module.exports = {
     },
 
     getAllProducts: () => {
-        return Productos.findAll();
+        return Productos.findAll({ include: ['categorias', 'marcas'] });  // include: ["categoria", "marca"] hace referencia al alias de la asociaciones entre las claves foraneas de las tablas
     },
 
     getAllProductsAdmin: () => {
-        return Productos.findAll();
+        return Productos.findAll({ include: ['categorias', 'marcas'] });
     },
 
     getProductDetail: (id) => {
-        return Productos.findByPk(id);
+        return Productos.findByPk(id, { include: ['categorias', 'marcas'] });
     },
 
     getByCategory: (categoryId) => {
         return Productos.findAll({
+            include: ['categorias', 'marcas'],
             where: {
                 categoria_id: categoryId,
             },

@@ -12,6 +12,16 @@ CREATE DATABASE IF NOT EXISTS ecommerce
 
 USE ecommerce;
 
+CREATE TABLE IF NOT EXISTS marcas (
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	marca VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS categorias (
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	categoria VARCHAR(255) NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS productos (
 	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	sku VARCHAR(255) NOT NULL,
@@ -24,7 +34,16 @@ CREATE TABLE IF NOT EXISTS productos (
 	peso FLOAT NOT NULL,
     imagen VARCHAR(255) NOT NULL,
 	marca_id INT NOT NULL,
-	categoria_id INT NOT NULL
+	categoria_id INT NOT NULL,
+    KEY `productos_marca_fk` (`marca_id`),
+    KEY `productos_categoria_fk` (`categoria_id`),
+    CONSTRAINT `productos_marca_fk` FOREIGN KEY (`marca_id`) REFERENCES `marcas` (`id`),
+    CONSTRAINT `productos_categoria_fk` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`id`)
+);
+
+CREATE TABLE IF NOT EXISTS roles (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    rol VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS usuarios (
@@ -33,29 +52,22 @@ CREATE TABLE IF NOT EXISTS usuarios (
 	country VARCHAR(255) NOT NULL,
 	telefono VARCHAR(255) NOT NULL,
 	email VARCHAR(255) NOT NULL,
-	clave VARCHAR(255) NOT NULL,
-	avatar VARCHAR(255) NOT NULL
+	password VARCHAR(255) NOT NULL,
+	avatar VARCHAR(255) NOT NULL,
+    rol_id INT NOT NULL,
+    KEY `usuarios_rol_fk` (`rol_id`),
+    CONSTRAINT `usuarios_rol_fk` FOREIGN KEY (`rol_id`) REFERENCES `roles` (`id`)
 );
 
 CREATE TABLE IF NOT EXISTS carritos (
 	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-	cantidad int NOT NULL,
-    usuario_id BINARY(16) NOT NULL,
-	producto_id BINARY(16) NOT NULL
+	cantidad INT NOT NULL,
+    usuario_id INT NOT NULL,
+	producto_id INT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS stocks (
 	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    stock int NOT NULL,
-	product_id BINARY(16) NOT NULL
-);
-
-CREATE TABLE IF NOT EXISTS marcas (
-	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-	marca VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE IF NOT EXISTS categorias (
-	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-	categoria VARCHAR(255) NOT NULL
+    stock INT NOT NULL,
+	product_id INT NOT NULL
 );
