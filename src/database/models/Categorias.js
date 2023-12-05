@@ -10,11 +10,6 @@ module.exports = (sequelize, DataTypes) => {
         }
     );
 
-
-    /*Model.associate = (models) => {
-        Model.hasMany(models.Productos);
-    };*/
-
     Model.associate = (models) => {
         Model.hasMany(models.Productos, {
             as: 'productos',
