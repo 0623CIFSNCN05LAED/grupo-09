@@ -10,7 +10,8 @@ module.exports = {
            telefono: data.telefono,
            email: data.email,
            password: bcryptjs.hashSync(data.password, 10),
-           avatar: data.avatar,
+           avatar: bcryptjs.hashSync(data.avatar, 10),
+           //avatar: data.avatar,
            rol_id: '2'
         });
     },
