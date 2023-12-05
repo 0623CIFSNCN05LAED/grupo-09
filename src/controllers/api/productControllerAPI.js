@@ -31,7 +31,6 @@ const productsControllerAPI = {
         })
     },
 
-
 };
 
 module.exports = productsControllerAPI;

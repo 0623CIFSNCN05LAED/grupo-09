@@ -30,21 +30,20 @@ const userController = {
     },
 
     loginProcess: async (req, res) => {
-        const userToLogin = await userService.getUserByEmail(req.body.email);
+        const userToLogin = await userService.getUserByEmail(req.body.email);  // Devuelve los datos del usuario que coincidan con el email ingresado durante el proceso de login
     
         if (userToLogin) {
-            const validPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            const validPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);  // Compara el password ingresado durante el proceso de login, contra el pass encriptado en la base
         
             if (validPassword) {
                 delete userToLogin.password;     
-                req.session.userLogged = userToLogin;
+                req.session.userLogged = userToLogin; 
         
                 if (req.body.rememberMe) {
                     res.cookie('email', req.body.email, { maxAge: 1000 * 60 * 2 });
                 }
-                console.log(req.session.userLogged)
                 return res.redirect('/usuarios/profile');
-            }else{
+            } else {
                 return res.render('login', {
                     errors: {
                         password: {
@@ -53,7 +52,7 @@ const userController = {
                     },
                 });
             }
-        }else{
+        } else {
             return res.render('login', {
                 errors: {
                     email: {
