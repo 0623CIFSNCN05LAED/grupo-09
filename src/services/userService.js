@@ -24,6 +24,14 @@ module.exports = {
         }); 
     }, 
 
+    getAllUsers: () => {
+        return Usuarios.findAll(); 
+    },
+
+    getUserDetail: (id) => {
+        return Usuarios.findByPk(id); 
+    },
+
 };
 
 
