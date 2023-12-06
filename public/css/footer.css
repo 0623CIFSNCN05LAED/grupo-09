@@ -1,12 +1,12 @@
 footer {
     text-align: center;
-    background-color: #333;
+    background-color: rgb(44, 14, 72);
     justify-content: space-around;
     color: white;
     text-decoration: none;
     /*color: inherit;*/
 }
-
+ 
 .logo-footer {
     width: 162px;
     height: 57px;
@@ -19,4 +19,33 @@ footer {
 .link-footer:hover { 
     color:#ccc;
 } 
+/* para celular el despliegue de atencion al cliente*/
+.toggle-input {
+    display: none;
+}
 
+.toggle-label {
+    cursor: pointer;
+}
+
+.content {
+    display: none;
+}
+
+.toggle-input:checked + .toggle-label .content {
+    display: block;
+    
+}
+
+.toggle-label:hover h3 {
+    color: rgb(232, 153, 248); /* Cambia el color del texto al pasar el mouse */
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
+}
+
+
+@media (min-width: 481px) {
+
+    .block {
+        width: 100%
+    }
+}
