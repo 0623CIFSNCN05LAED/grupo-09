@@ -1,5 +1,5 @@
 const productService = require("../../services/productService");
-
+ 
 const productsControllerAPI = {
     list: (req, res) => {
         productService.getAllProducts()

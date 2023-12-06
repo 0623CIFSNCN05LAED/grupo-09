@@ -1,31 +1,32 @@
+const Usuarios = require("../../database/models/Usuarios");
 const userService = require("../../services/userService");
 
 const productsControllerAPI = {
     list: (req, res) => {
-        productService.getAllProducts()
-        .then(productos => {
+        userService.getAllUsers()
+        .then(usuarios => {
             let respuesta = {
                 meta: {
                     status: 200,
-                    total: productos.length,
-                    url: "/api/productos",
+                    total: usuarios.length,
+                    url: "/api/usuarios",
                 },
-                data: productos,
+                data: usuarios,
             };
             res.json(respuesta);
         })
     },
 
     detail: (req, res) => {
-        productService.getProductDetail(req.params.id)
-        .then(productos => {
+        userService.getUserDetail(req.params.id)
+        .then(usuarios => {
             let respuesta = {
                 meta: {
                     status: 200,
-                    total: productos.length,
-                    url: "/api/productos/:id",
+                    total: usuarios ? 1 : 0,
+                    url: "/api/usuarios/:id",
                 },
-                data: productos,
+                data: usuarios,
             };
             res.json(respuesta);
         })
