@@ -69,6 +69,35 @@ const userController = {
         res.redirect('/');
     },
 
+    editUser: (req, res) => {
+        userService.editUser(req.params.id)
+        .then((usuarios) => {
+            res.render('./usuarios/edit', {Usuarios:usuarios});
+        });
+    },
+
+    updateUser: (req, res) => {
+        userService.updateUser(req.body, req.params.id)
+        .then(() => {
+            req.session.destroy();
+            res.redirect("/login");
+        });
+    },
+
+    deleteUser: (req, res) => {
+        userService.deleteUser(req.params.id)
+        .then((usuarios) => {
+            res.render('./usuarios/delete', {Usuarios:usuarios});
+        });
+    },
+
+    destroyUser: (req, res) => {
+        userService.destroyUser(req.params.id)
+        .then(() => {
+            res.redirect("/");
+        });
+    },
+
     userProfile: async (req, res) => {
         res.render('profile', {
             user: req.session.userLogged

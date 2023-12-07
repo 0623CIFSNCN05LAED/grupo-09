@@ -7,14 +7,14 @@
         <!--HEADER-->
         <%- include("../partials/header") %>
 
-        <h1 class="text-center">ELIMINAR PRODUCTO</h1>
+        <h1 class="text-center">ELIMINAR USUARIO</h1>
 
         <main class="vw-90 mx-auto">
             <section class="w-100 container-form">
-                <h2 class="title w-100 text-center">Estas seguro de querer eliminar el producto: ???</h2>
-                <form action="/productos/destroy/<%= Productos.id %>" method="POST">
-                    <p class="text-center"><button class="btn-primary" type="submit">Borrar Producto</button></p>
-                    <p class="text-center"><a class="botonVolver" href="/productos/admin">Volver</a></p>
+                <h2 class="title w-100 text-center">Estas seguro de querer eliminar el usuario ???</h2>
+                <form action="/usuarios/destroy/<%= Usuarios.id %>" method="POST">
+                    <p class="text-center"><button class="btn-primary" type="submit">Borrar Usuario</button></p>
+                    <p class="text-center"><a class="botonVolver" href="/usuarios/profile">Volver</a></p>
                 </form>    
             </section>
         </main>

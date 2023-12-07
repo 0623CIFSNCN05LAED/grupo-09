@@ -12,8 +12,39 @@ module.exports = {
            email: data.email,
            password: bcryptjs.hashSync(data.password, 10),
            avatar: bcryptjs.hashSync(data.avatar, 10),
-           //avatar: data.avatar,
            rol_id: '2'
+        });
+    },
+
+    editUser: (id) => {
+        return Usuarios.findByPk(id);
+    },
+
+    updateUser: (data, id) => {
+        return Usuarios.update({
+           fullName: data.fullName,
+           country: data.country,
+           telefono: data.telefono,
+           email: data.email,
+           password: bcryptjs.hashSync(data.password, 10),
+           avatar: bcryptjs.hashSync(data.avatar, 10),
+           rol_id: '2'
+        }, {
+            where: {
+                id: id
+            }
+        });
+    },
+
+    deleteUser: (id) => {
+        return Usuarios.findByPk(id);
+    },
+
+    destroyUser: (id) => {
+        return Usuarios.destroy({
+            where: {
+                id: id
+            }
         });
     },
 

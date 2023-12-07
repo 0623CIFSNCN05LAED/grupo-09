@@ -38,16 +38,16 @@ module.exports = {
         });
     },
 
+    editProduct: (id) => {
+        return Productos.findByPk(id);
+    },
+
     destroyProduct: (id) => {
         return Productos.destroy({
             where: {
                 id: id
             }
         });
-    },
-
-    editProduct: (id) => {
-        return Productos.findByPk(id);
     },
 
     deleteProduct: (id) => {
