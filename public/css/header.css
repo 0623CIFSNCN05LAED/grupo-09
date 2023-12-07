@@ -87,6 +87,14 @@
     font-size: clamp(0.8rem, 1vw, 1.2rem);
 }
 
+a[href="#ofertas"] button {
+    transition: transform 0.3s; /* Agrega la transición al estilo base también */
+}
+
+a[href="#ofertas"] button:hover {
+    transform: scale(1.1);
+    
+}
 /*.nav-bar-a a:hover{
     text-decoration: underline;
 }*/
@@ -96,6 +104,17 @@
     padding: 3px;
     margin-top: 40px;
     margin-left: 10px;
+}
+/* Estilos para los iconos */
+.icon {
+    font-size: 24px; /* Ajusta el tamaño base de los iconos según tus preferencias */
+    transition: transform 0.3s, color 0.3s; /* Agrega transiciones para suavizar el efecto */
+}
+
+/* Estilos al pasar el mouse sobre los iconos */
+.icon:hover {
+    transform: scale(1.1); /* Ajusta el factor de escala según tus preferencias */
+    color:rgb(94, 43, 142); /* Cambia el color al pasar el mouse, puedes personalizarlo */
 }
 
 html {

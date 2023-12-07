@@ -4,6 +4,7 @@ const bcryptjs = require('bcryptjs');
 module.exports = {
 
     createUser: (data) => {
+        console.log(data);
         return Usuarios.create({
            fullName: data.fullName,
            country: data.country,
