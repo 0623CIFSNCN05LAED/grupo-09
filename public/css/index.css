@@ -69,8 +69,18 @@
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
+.product-shadow:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #881b96; /* Puedes cambiar el color del borde al pasar el mouse */
+}
+
+/* Opcional: Cambia el cursor al pasar el mouse para indicar que es interactivo */
+.product-shadow:hover {
+    cursor: pointer;
+}
+
 .description {
-    color: grey;
+    color: rgb(0, 0, 0);
     width: 100%;
 }
 
