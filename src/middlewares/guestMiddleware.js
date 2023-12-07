@@ -1,10 +1,9 @@
 module.exports = (req, res, next) => {
     if (req.session && req.session.userLogged){
-        res.redirect('/login');
+        return res.redirect('/usuarios/profile');
     }
     next();   
 };
-
 
 
 /* module.exports = async (req, res, next) => {
@@ -18,7 +17,6 @@ module.exports = (req, res, next) => {
         res.redirect("/users/" + user_id);
     }
 };  */
-
 
 /* module.exports = (req, res, next) => {
     if (req.session.userLogged) {

@@ -68,48 +68,6 @@ const productController = {
             res.render('productList.ejs', {productos});
         });
     },
-    
-    /* listHeladeras: (req, res) => {
-        productService.getAllHeladeras()
-        .then((productos) => {
-            res.render('productList.ejs', {productos});
-        });
-    },
-
-    listLavarropas: (req, res) => {
-        productService.getAllLavarropas()
-        .then((productos) => {
-            res.render('productList.ejs', {productos});
-        });
-    },
-
-    listCocinas: (req, res) => {
-        productService.getAllCocinas()
-        .then((productos) => {
-            res.render('productList.ejs', {productos});
-        });
-    },
-
-    listMicroondas: (req, res) => {
-        productService.getAllMicroondas()
-        .then((productos) => {
-            res.render('productList.ejs', {productos});
-        });
-    },
-
-    listLavavajillas: (req, res) => {
-        productService.getAllLavavajillas()
-        .then((productos) => {
-            res.render('productList.ejs', {productos});
-        });
-    },
-
-    listHornos: (req, res) => {
-        productService.getAllHornos()
-        .then((productos) => {
-            res.render('productList.ejs', {productos});
-        });
-    }, */
 
     productCart: (req, res) => {
         res.render("productCart.ejs");

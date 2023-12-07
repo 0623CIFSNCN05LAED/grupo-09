@@ -4,14 +4,13 @@ const bcryptjs = require('bcryptjs');
 module.exports = {
 
     createUser: (data) => {
-        console.log(data);
         return Usuarios.create({
            fullName: data.fullName,
            country: data.country,
            telefono: data.telefono,
            email: data.email,
            password: bcryptjs.hashSync(data.password, 10),
-           avatar: bcryptjs.hashSync(data.avatar, 10),
+           avatar: data.avatarPath,
            rol_id: '2'
         });
     },
@@ -57,11 +56,11 @@ module.exports = {
     }, 
 
     getAllUsers: () => {
-        return Usuarios.findAll(); 
+        return Usuarios.findAll({ include: ['roles'] }); 
     },
 
     getUserDetail: (id) => {
-        return Usuarios.findByPk(id); 
+        return Usuarios.findByPk(id, { include: ['roles'] }); 
     },
 
 };
