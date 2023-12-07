@@ -94,7 +94,7 @@
                         <label><b>Imagen de perfil:</b></label>
                         <input 
                             type="file" 
-                            name="avatar"
+                            name="avatarFile"
                             class="form-control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>"
                         >
                         <% if (locals.errors && errors.avatar) { %>
@@ -103,6 +103,16 @@
                             </div>
                         <% } %>
                     </div>
+
+                    <div class="form-group my-1">
+                        <input 
+                            type="hidden" 
+                            name="avatarPath"
+                            value="/public/images/avatar/"
+                            class="form-control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>"
+                        >
+                    </div>
+
                 <div class="text-center">
                     <button type="submit" class="btn-primary">Registrarse</button>
                 </div>
