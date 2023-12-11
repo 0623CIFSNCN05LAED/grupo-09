@@ -76,4 +76,13 @@ module.exports = {
         });
     },
 
+    /* searchProducts: (query) => {
+        const products = db.products
+            .findAll()
+            .filter((product) =>
+            product.name.toLowerCase().includes(query.toLowerCase())
+        );
+        return formatProductsPrices(products);
+    }, */
+
 };
