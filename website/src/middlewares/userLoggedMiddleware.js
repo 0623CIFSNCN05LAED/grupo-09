@@ -1,21 +1,19 @@
-const userService = require("../services/userService");  // true
+const userService = require("../services/userService");  
 
-module.exports = async (req, res, next) => {       // true
-    res.locals.isLogged = false;                   // true
+module.exports = async (req, res, next) => {       
+    res.locals.isLogged = false;                   
 
-    /* const emailInCookie = req.cookies.email;                                    // true    
-    const userFromCookie = await userServices.getUserByEmail(emailInCookie);    // true
+    const emailInCookie = req.cookies.email || '';                                       
+    const userFromCookie = await userService.getUserByEmail(emailInCookie);    
 
-    if (userFromCookie) {                         // true
-         req.session.userLogged = userFromCookie;    // true
-    } */
+    if (userFromCookie) {                         
+         req.session.userLogged = userFromCookie;   
+    } 
   
-    if (req.session && req.session.userLogged) {       // true
-        res.locals.isLogged = true;                      // true
-        res.locals.userLogged = req.session.userLogged;  // true 
-    } else {
-        
-    }
+    if (req.session && req.session.userLogged) {      
+        res.locals.isLogged = true;                      
+        res.locals.userLogged = req.session.userLogged;  
+    } 
   
     next();
 }; 

@@ -21,9 +21,8 @@ app.use(
     })
 ); 
 
-app.use(userLoggedMiddleware);
-
 app.use(cookies());
+app.use(userLoggedMiddleware);
 
 const mainRouter = require("./routes/mainRouter");
 app.use(mainRouter);

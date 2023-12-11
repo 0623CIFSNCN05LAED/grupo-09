@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, './public/images/avatars')
+        cb(null, './public/images/productos')
     },
 
     filename: async (req, file, cb) => {
