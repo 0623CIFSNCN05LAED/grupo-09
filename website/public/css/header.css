@@ -165,3 +165,11 @@ html {
 .nav-link:hover {
     color: rgb(105, 34, 171); 
 }
+
+
+.login div {
+    margin-right: 18px; /* Añade margen entre los elementos */
+}
+
+
+

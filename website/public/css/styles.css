@@ -3,6 +3,65 @@
     font-family: 'Roboto', sans-serif;
 }
 
+
+
+
+/* DETALLE DE PRODUCTOS*/
+
+.w-75 {
+    width: 75%;
+    padding-left: 10px;
+    margin-bottom: 20px; 
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.align-center {
+    align-items: center;
+}
+
+/* Estilos para el contenedor que incluye la imagen y las especificaciones */
+.product-container {
+    width: 100%;
+}
+
+/* Estilos para la imagen */
+.product-container img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+/* Estilos para las especificaciones */
+.product-info {
+    width: 50%;
+    border-radius: 10px;
+    padding: 10px; /* Ajusta según tus preferencias */
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+/* DETALLE DE PRODUCTOS */
+
+
+
+
+
 .oculto {
     display: none;
 }
