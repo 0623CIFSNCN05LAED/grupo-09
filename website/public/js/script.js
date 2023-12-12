@@ -47,9 +47,54 @@ function togglePassword() {
 
 
 
+//PARA OCULTAR LA BARRA DE NAVEGACIÓN EN EL /REGISTER /LOGIN 
+
+document.addEventListener('DOMContentLoaded', function () {
+    
+    var currentUrl = window.location.pathname;
+
+
+    var navBar = document.querySelector('.nav-bar-a');
+
+  
+    if (currentUrl.includes('/register') || currentUrl.includes('/login')) {
+
+        navBar.style.display = 'none';
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    
+    var currentUrl = window.location.pathname;
+
+    var barraBusqueda = document.querySelector('.barra-busqueda');
+
+  
+    if (currentUrl.includes('/register') || currentUrl.includes('/login')) {
+    
+        barraBusqueda.style.display = 'none';
+    }
+});
 
 
 
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtén la URL actual
+    const currentUrl = window.location.pathname;
+
+    // Selecciona el elemento ul
+    const navBar = document.querySelector('.nav-bar-a');
+
+    // Verifica si la URL incluye alguna de las páginas específicas
+    if (currentUrl.includes('/productos') || currentUrl.includes('//productos/detail') || currentUrl.includes('//productos/categoria')) {
+        // Oculta el elemento li que contiene ofertas
+        const ofertasLi = navBar.querySelector('.Ofertas');
+        if (ofertasLi) {
+            ofertasLi.style.display = 'none';
+        }
+    }
+});
 
 
 
