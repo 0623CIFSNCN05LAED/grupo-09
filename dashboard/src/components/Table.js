@@ -3,20 +3,22 @@ import { useState, useEffect } from 'react';
 
 const ProductTable = () => {
     
-	const [productos, setProductos] = useState([])
+    const [productos, setProductos] = useState([])
 
-	useEffect(() => {
-		fetch('http://localhost:3000/api/productos')
-		.then((response) => {
-			return response.json()
-		})
-		.then((productos) => {
-			setProductos(productos)
-		})
-	}, [])
-
-    
-
+    const fetchUserData = () => {
+        fetch("http://localhost:3000/api/productos")
+        .then(response => {
+            return response.json()
+        })
+        .then(productos => {
+            setProductos(productos.data)
+        })
+    }
+  
+    useEffect(() => {
+        fetchUserData()
+    }, [])
+      
     return (
         <table className="table table-hover">
             <thead>
@@ -36,7 +38,7 @@ const ProductTable = () => {
             </thead>
             <tbody>
                 {productos.map(producto => (
-                    <tr key={producto.id}>
+                    <tr>
                         <td>{producto.id}</td>
                         <td>{producto.sku}</td>
                         <td>{producto.nombre}</td>
@@ -46,13 +48,13 @@ const ProductTable = () => {
                         <td>{producto.alto}</td>
                         <td>{producto.profundidad}</td>
                         <td>{producto.peso}</td>
-                        <td>{producto.marca}</td>
-                        <td>{producto.categoria}</td>
+                        <td>{producto.marca_id}</td>
+                        <td>{producto.categoria_id}</td>
                     </tr>
                 ))}
-            </tbody>
+            </tbody> 
         </table>
-    );
-};
+    ); 
+}
 
 export default ProductTable;

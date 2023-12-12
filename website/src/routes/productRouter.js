@@ -1,11 +1,11 @@
 const { Router } = require("express");
 const router = Router();
 const productController = require("../controllers/productController");
-const adminMiddleware = require('../middlewares/adminMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 router.get('/productos', productController.list);
 router.get('/productos/detail/:id', productController.detail);
-router.get('/productos/admin', adminMiddleware, productController.listAdmin);
+router.get('/productos/admin', authMiddleware, productController.listAdmin);
 
 router.get('/productos/new', productController.add);
 router.post('/productos/create', productController.createProduct);

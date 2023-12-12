@@ -47,6 +47,8 @@ function ContentRowTop(){
 								</div>
 							</div>
 						</div>
+
+                        {/*<!-- Categorias productos -->*/}
 						<div className="col-md-4 mb-4">
 							<div className="card border-left-warning shadow h-100 py-2">
 								<div className="card-body">
@@ -63,100 +65,32 @@ function ContentRowTop(){
 							</div>
 						</div>
 
-					
-					
+                        {/* <div class="container text-center">
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <button class="btn btn-primary" type="">Button</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-primary" type="">Button</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-primary" type="">Button</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-primary" type="">Button</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-primary" type="">Button</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-primary" type="">Button</button>
+                                </div>
+                            </div>
+                        </div> */}
 
-
-
-
-{/*<!--  
-					<div className="row">
-					
-						<div className="col-lg-6 mb-4">
-							<div className="card shadow mb-4">
-								<div className="card-header py-3">
-									<h5 className="m-0 font-weight-bold text-gray-800">Last movie in Data Base</h5>
-								</div>
-								<div className="card-body">
-									<div className="text-center">
-										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo} alt=" Star Wars - Mandalorian "/>
-									</div>
-									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa citationem ratione aperiam voluptatum non corporis ratione aperiam voluptatum quae dolorem culpa ratione aperiam voluptatum?</p>
-									<a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a>
-								</div>
-							</div>
-						</div>
-
--->*/}
-
-
-
-
-						{/*<!-- Productos in DB -->*/}
-						<div className="col-lg-12 mb-4">						
-							<div className="card shadow mb-4">
-								<div className="card-header py-3">
-									<h5 className="m-0 font-weight-bold text-gray-800">Productos in Data Base</h5>
-								</div>
-								<div className="card-body">
-									{/* Fila de productos */}
-									<div className="row">
-										<div className="col-6 mb-4">
-											<div className="card bg-dark text-white shadow">
-												<div className="card-body">
-													Heladeras
-												</div>
-											</div>
-										</div>
-										<div className="col-6 mb-4">
-											<div className="card bg-dark text-white shadow">
-												<div className="card-body">
-													Lavarropas 
-												</div>
-											</div>
-										</div>
-										<div className="col-6 mb-4">
-											<div className="card bg-dark text-white shadow">
-												<div className="card-body">
-													Cocinas
-												</div>
-											</div>
-										</div>
-										<div className="col-6 mb-4">
-											<div className="card bg-dark text-white shadow">
-												<div className="card-body">
-													Microondas
-												</div>
-											</div>
-										</div>
-										<div className="col-6 mb-4">
-											<div className="card bg-dark text-white shadow">
-												<div className="card-body">
-													Lavavajillas
-												</div>
-											</div>
-										</div>
-										<div className="col-6 mb-4">
-											<div className="card bg-dark text-white shadow">
-												<div className="card-body">
-													Hornos
-												</div>
-											</div>
-										</div>
-									</div>
-									<ProductTable/>
-								</div>
-							</div>
-						</div>
+                        <ProductTable/>
 					</div>
 				</div>
-              
-			 
-	
-
-				
-				{/*<!--End Content Row Top-->*/}
-
         </React.Fragment>
     )
 
