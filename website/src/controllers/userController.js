@@ -42,6 +42,10 @@ const userController = {
                 if (req.body.rememberMe) {
                     res.cookie('email', req.body.email, { maxAge: 1000 * 60 * 2 });
                 }
+
+                
+
+
                 return res.redirect('/usuarios/profile');
             } else {
                 return res.render('login', {
