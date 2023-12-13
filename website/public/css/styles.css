@@ -3,11 +3,34 @@
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+}
 
+
+.article-container a {
+    text-decoration: none; 
+}
 
 
 /* DETALLE DE PRODUCTOS*/
+.description {
+    color: rgb(47, 0, 53);
+    width: 100%;
+}
 
+.precio {
+    font-size: 1.625rem;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+    margin-bottom: 1px;
+    margin-right: 10px;
+}
+
+.descuento {
+    color: #d300da;
+    font-size: 16px;
+}
 .w-75 {
     width: 75%;
     padding-left: 10px;
@@ -41,7 +64,7 @@
 .product-info {
     width: 50%;
     border-radius: 10px;
-    padding: 10px; /* Ajusta según tus preferencias */
+    padding: 10px; 
 }
 
 .bold {

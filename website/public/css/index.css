@@ -80,20 +80,20 @@
 }
 
 .description {
-    color: rgb(0, 0, 0);
+    color: rgb(47, 0, 53);
     width: 100%;
 }
 
 .precio {
     font-size: 1.625rem;
-    color: #36c;
+    color: rgb(0, 0, 0);
     margin-top: 10px;
     margin-bottom: 1px;
     margin-right: 10px;
 }
 
 .descuento {
-    color: #39b54a;
+    color: #d300da;
     font-size: 16px;
 }
 
