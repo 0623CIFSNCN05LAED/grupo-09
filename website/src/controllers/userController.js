@@ -43,10 +43,13 @@ const userController = {
                     res.cookie('email', req.body.email, { maxAge: 1000 * 60 * 2 });
                 }
 
-                
+                if (req.session.userLogged.rol_id == 1) {
+                    res.redirect('/productos/admin');
+                } else {
+                    res.redirect('/usuarios/profile');
+                }
+                /* return res.redirect('/usuarios/profile'); */
 
-
-                return res.redirect('/usuarios/profile');
             } else {
                 return res.render('login', {
                     errors: {
