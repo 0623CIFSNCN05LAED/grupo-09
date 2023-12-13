@@ -1,5 +1,6 @@
 import React from 'react';
-import ProductTable from './Table'
+import Peliculas from './Peliculas'
+import Usuarios from './Usuarios'
 
 function ContentRowTop(){
 
@@ -88,7 +89,8 @@ function ContentRowTop(){
                             </div>
                         </div> */}
 
-                        <ProductTable/>
+                        <Peliculas/>
+                        <Usuarios/>
 					</div>
 				</div>
         </React.Fragment>
