@@ -1,25 +1,14 @@
 footer {
     text-align: center;
-    background-color: rgb(44, 14, 72);
+  
     justify-content: space-around;
     color: white;
     text-decoration: none;
     /*color: inherit;*/
 }
  
-.logo-footer {
-    width: 162px;
-    height: 57px;
-}
-
-.link-footer { 
-    color: #fff;
-} 
-
-.link-footer:hover { 
-    color:#ccc;
-} 
-/* para celular el despliegue de atencion al cliente*/
+/*
+ DESPLIEGUE DE GRUPO-9 Y ATENCION AL CLIENTE
 .toggle-input {
     display: none;
 }
@@ -38,14 +27,90 @@ footer {
 }
 
 .toggle-label:hover h3 {
-    color: rgb(232, 153, 248); /* Cambia el color del texto al pasar el mouse */
-    transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
+    color: rgb(232, 153, 248); 
+    transform: scale(1.05);
+}
+
+*/
+
+
+
+
+
+.logo-footer {
+    width: 162px;
+    height: 57px;
+}
+
+.link-footer { 
+    color: #fff;
+} 
+
+.link-footer:hover { 
+    color:#ccc;
+} 
+
+
+@media (min-width: 767px) {
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #ffffff; /* Cambiado a un violeta más claro */
+    color: rgb(85, 8, 95);
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para los bloques del footer */
+.block {
+    width: 100%;
+    max-width: 300px; /* Ancho máximo para cada bloque */
+}
+
+/* Estilo para los títulos de sección */
+h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #fff; /* Línea decorativa bajo el título */
+}
+
+/* Estilo para los enlaces del footer */
+.link-footer {
+    color: rgb(85, 8, 95);
+    text-decoration: none;
+}
+
+/* Estilo para la sección de medios de pago */
+.w-100.text-center {
+    margin-top: 20px;
+}
+
+/* Estilo para el copyright */
+
+
+.text-center1  {
+    
+    background-color: #7a3d93; /* Cambiado a un violeta más oscuro */
+    padding: 10px;
+    margin: 0;
 }
 
 
-@media (min-width: 481px) {
+.medios {
+    font-size: 18px;
+}
+.resto {
+    font-size: 15px;
+}
 
-    .block {
+.img-medios-de-pago {
+    height: 30px; /* Puedes ajustar la altura según tus preferencias */
+}
+
+.block {
         width: 100%
     }
 }

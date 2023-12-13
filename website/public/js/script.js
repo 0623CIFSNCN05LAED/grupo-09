@@ -1,5 +1,6 @@
 
-/*window.addEventListener('load', function() {
+   /*window.addEventListener('load', function() {
+  
     const formulario = document.querySelector('.container my-1');
     const mensajeRegistro = document.getElementById('mensajeRegistro');
 
@@ -12,8 +13,10 @@
         
         mensajeRegistro.style.display = 'block';
     });
-});
-*/
+    });
+    */
+
+
 
 function togglePassword() {
     const passwordField = document.getElementById('password');
