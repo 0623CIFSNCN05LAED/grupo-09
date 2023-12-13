@@ -5,7 +5,7 @@ const ProductTable = () => {
     
     const [productos, setProductos] = useState([])
 
-    const fetchUserData = () => {
+    useEffect(() => {
         fetch("http://localhost:3000/api/productos")
         .then(response => {
             return response.json()
@@ -13,12 +13,8 @@ const ProductTable = () => {
         .then(productos => {
             setProductos(productos.data)
         })
-    }
-  
-    useEffect(() => {
-        fetchUserData()
     }, [])
-      
+
     return (
         <table className="table table-hover">
             <thead>
