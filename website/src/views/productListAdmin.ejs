@@ -9,8 +9,17 @@
       
         <main class="p-1 vw-90 mx-auto">
             <section class="section">
-                <h1 class="title w-100 text-center p-1">LISTADO DE PRODUCTOS</h1>  
-                <div class="w-100 text-center"><a class="btn-primary-admin" href="/productos/new" > nuevo </a></div>
+                <h1 class="title w-100 text-center p-1">PANEL ADMINISTRADOR</h1>
+                
+                <div class="flex flex-center">
+                    <div class="p-1">
+                        <button class="btn-primary" onclick="window.location.href='/productos/new';">Nuevo</button>
+                    </div>
+                    <div class="p-1">
+                        <button class="btn-primary" onclick="window.location.href='/logout';">Cerrar Sesión</button>
+                    </div>
+                </div>
+
                 <ul class="w-50 align-center"><br>
                     <% for( let i = 0; i < productos.length; i++ ) { %>
                         <li class="flex p-1">
