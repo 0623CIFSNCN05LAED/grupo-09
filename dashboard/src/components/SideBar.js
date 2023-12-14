@@ -1,36 +1,38 @@
 import React from 'react';
 import image from '../assets/images/logo.png';
+import '../assets/css/style.css';
 
-function SideBar(){
-    return(
+function SideBar() {
+    return (
         <React.Fragment>
-            {/*<!-- Sidebar -->*/}
-            <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
+            {/* Sidebar */}
+            <ul className="navbar-nav bg-white sidebar sidebar-dark accordion" id="accordionSidebar">
 
-                {/*<!-- Sidebar - Brand -->*/}
+                {/* Sidebar - Brand */}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
-                        <img className="w-100" src={image} alt="Digital House"/>
+                        <img className="w-100" src={image} alt="Digital House" />
                     </div>
                 </a>
 
-                {/*<!-- Divider -->*/}
-                <hr className="sidebar-divider my-0"/>
+                {/* Divider */}
+                <hr className="sidebar-divider my-0" />
 
-                {/*<!-- Nav Item - Dashboard -->*/}
+                {/* Nav Item - Dashboard */}
                 <li className="nav-item active">
                     <a className="nav-link" href="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - GRUPO-9</span></a>
+                        <span>Dashboard - GRUPO-9</span>
+                    </a>
                 </li>
 
-                {/*<!-- Divider -->*/}
-                <hr className="sidebar-divider"/>
+                {/* Divider */}
+                <hr className="sidebar-divider" />
 
-                {/*<!-- Heading -->*/}
+                {/* Heading */}
                 <div className="sidebar-heading">Actions</div>
 
-                {/*<!-- Nav Item - Usuarios -->*/}
+                {/* Nav Item - Usuarios */}
                 <li className="nav-item">
                     <a className="nav-link collapsed" href="/">
                         <i className="fas fa-fw fa-folder"></i>
@@ -38,19 +40,20 @@ function SideBar(){
                     </a>
                 </li>
 
-                {/*<!-- Nav Item - Productos -->*/}
+                {/* Nav Item - Productos */}
                 <li className="nav-item">
-                    <a className="nav-link" href="/"> 
+                    <a className="nav-link" href="/">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Productos</span></a>
+                        <span>Productos</span>
+                    </a>
                 </li>
 
-                {/*<!-- Divider -->*/}
-                <hr className="sidebar-divider d-none d-md-block"/>
+                {/* Divider */}
+                <hr className="sidebar-divider d-none d-md-block" />
             </ul>
-            {/*<!-- End of Sidebar -->*/}
-            
+            {/* End of Sidebar */}
         </React.Fragment>
-    )
+    );
 }
+
 export default SideBar;
