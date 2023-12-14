@@ -27,6 +27,7 @@ CREATE TABLE IF NOT EXISTS productos (
 	sku VARCHAR(255) NOT NULL,
 	nombre VARCHAR(255) NOT NULL,
 	precio FLOAT NOT NULL,
+	descuento FLOAT,
 	descripcion VARCHAR(255) NOT NULL,
     ancho FLOAT NOT NULL,
 	alto FLOAT NOT NULL,

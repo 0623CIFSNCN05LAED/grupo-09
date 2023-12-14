@@ -90,7 +90,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const navBar = document.querySelector('.nav-bar-a');
 
     // Verifica si la URL incluye alguna de las páginas específicas
-    if (currentUrl.includes('/productos') || currentUrl.includes('//productos/detail') || currentUrl.includes('//productos/categoria')) {
+    if (currentUrl.includes('/productos') || 
+    currentUrl.includes('//productos/detail') || 
+    currentUrl.includes('//productos/categoria') || 
+    currentUrl.includes('/usuarios/profile') || 
+    currentUrl.includes('/usuarios/edit')|| 
+    currentUrl.includes('/usuarios/delete')) {
         // Oculta el elemento li que contiene ofertas
         const ofertasLi = navBar.querySelector('.Ofertas');
         if (ofertasLi) {
