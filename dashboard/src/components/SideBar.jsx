@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import image from '../assets/images/logo.png';
 
 function SideBar(){
@@ -28,21 +29,16 @@ function SideBar(){
                 <hr className="sidebar-divider"/>
 
                 {/*<!-- Heading -->*/}
-                <div className="sidebar-heading">Actions</div>
+                <div className="sidebar-heading">Menu</div>
 
                 {/*<!-- Nav Item - Usuarios -->*/}
-                <li className="nav-item">
-                    <a className="nav-link collapsed" href="/">
-                        <i className="fas fa-fw fa-folder"></i>
-                        <span>Usuarios</span>
-                    </a>
+                <li className="nav-item container-fluid p-1 ml-4">
+                    <Link to={{pathname: "/usuarios"}}>Usuarios</Link>
                 </li>
 
                 {/*<!-- Nav Item - Productos -->*/}
-                <li className="nav-item">
-                    <a className="nav-link" href="/"> 
-                        <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Productos</span></a>
+                <li className="nav-item container-fluid p-1 ml-4">
+                    <Link to={{pathname: "/productos"}}>Productos</Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -53,4 +49,5 @@ function SideBar(){
         </React.Fragment>
     )
 }
+
 export default SideBar;
