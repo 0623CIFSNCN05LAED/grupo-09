@@ -17,7 +17,7 @@
                             <div class="relative flex flex-wrap">
                                 <img class="w-100 border-radius" src="<%= productos[i].imagen %>" alt="<%= productos[i].descripcion %>">
                                 <p class="description"><%= productos[i].nombre %></p>
-                                <p class="precio"><%= productos[i].precio %></p>
+                                <p class="precio">$<%= productos[i].precio %></p>
                                 <p class="descuento">
                                     <% if (productos[i].descuento !== null) { %>
                                       <%= productos[i].descuento %>%OFF
