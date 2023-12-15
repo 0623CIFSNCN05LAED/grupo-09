@@ -5,6 +5,7 @@ module.exports = (sequelize, DataTypes) => {
             sku: DataTypes.STRING,
             nombre: DataTypes.STRING,
             precio: DataTypes.FLOAT,
+            descuento: DataTypes.FLOAT,
             descripcion: DataTypes.STRING,
             ancho: DataTypes.FLOAT,
             alto: DataTypes.FLOAT,
