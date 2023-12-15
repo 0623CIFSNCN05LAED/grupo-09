@@ -17,4 +17,15 @@ span{
     
 }
 
+/* Agrega esta regla CSS para ajustar el ancho de la topbar */
+.topbar {
+  width: 100%; /* Puedes ajustar el valor según tus necesidades */
+}
+
+/* Asegúrate de que el botón de alternancia de la barra lateral (sidebarToggleTop) también se ve bien en la topbar más ancha */
+#sidebarToggleTop {
+  margin-right: 15px; /* Ajusta el margen según sea necesario */
+}
+
+
 
