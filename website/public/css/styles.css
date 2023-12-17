@@ -31,11 +31,12 @@ a {
     color: #d300da;
     font-size: 16px;
 }
-.w-75 {
+
+.product-detail {
     width: 75%;
     padding-left: 10px;
     margin-bottom: 20px; 
-}
+} 
 
 .flex {
     display: flex;
@@ -80,10 +81,6 @@ a {
 }
 
 /* DETALLE DE PRODUCTOS */
-
-
-
-
 
 .oculto {
     display: none;

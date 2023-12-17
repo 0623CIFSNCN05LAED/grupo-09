@@ -34,6 +34,7 @@ CREATE TABLE IF NOT EXISTS productos (
 	profundidad FLOAT NOT NULL,
 	peso FLOAT NOT NULL,
     imagen VARCHAR(255) NOT NULL,
+    oferta BOOLEAN NOT NULL,
 	marca_id INT NOT NULL,
 	categoria_id INT NOT NULL,
     KEY `productos_marca_fk` (`marca_id`),

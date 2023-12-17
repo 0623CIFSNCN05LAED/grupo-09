@@ -33,10 +33,6 @@ footer {
 
 */
 
-
-
-
-
 .logo-footer {
     width: 162px;
     height: 57px;
@@ -89,8 +85,6 @@ h3 {
 }
 
 /* Estilo para el copyright */
-
-
 .text-center1  {
     
     background-color: #7a3d93; /* Cambiado a un violeta más oscuro */
@@ -98,16 +92,16 @@ h3 {
     margin: 0;
 }
 
-
 .medios {
     font-size: 18px;
 }
+
 .resto {
     font-size: 15px;
 }
 
 .img-medios-de-pago {
-    height: 30px; /* Puedes ajustar la altura según tus preferencias */
+    height: 110px; /* Puedes ajustar la altura según tus preferencias */
 }
 
 .block {
