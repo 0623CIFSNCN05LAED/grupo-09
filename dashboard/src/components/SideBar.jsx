@@ -19,13 +19,6 @@ function SideBar(){
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider my-0"/>
 
-                {/*<!-- Nav Item - Dashboard -->*/}
-                <li className="nav-item active">
-                    <a className="nav-link" href="/">
-                        <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - GRUPO-9</span></a>
-                </li>
-
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider"/>
 

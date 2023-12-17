@@ -8,10 +8,7 @@ function Content(){
         <React.Fragment>
 				{/*<!-- Content Row Top -->*/}
 				<div className="container-fluid">
-					<div className="d-sm-flex aligns-items-center justify-content-between mb-4">
-						<h1 className="h3 mb-0 text-gray-800">Dashboard Grupo 09</h1>
-					</div>
-				
+                    
 					{/*<!-- Content Row Movies-->*/}
 					<div className="row">
 
@@ -21,7 +18,7 @@ function Content(){
 								<div className="card-body">
 									<div className="row no-gutters align-items-center">
 										<div className="col mr-2">
-											<div className="text-xs font-weight-bold text-primary text-uppercase mb-1">Usuarios in Data Base</div>
+											<div className="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Usuarios</div>
 											<div className="h5 mb-0 font-weight-bold text-gray-800">1000</div>
 										</div>
 										<div className="col-auto">
