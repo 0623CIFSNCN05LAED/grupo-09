@@ -52,6 +52,23 @@
                     <input class="form-control" type="text" name="precio" id="precio" value="<%= Productos.precio %>" required>
                 </div>
 
+                <div class="w-25 p-2 bold">
+                    <label for="descuento">Descuento</label>
+                </div>
+                <div class="w-75">
+                    <input class="form-control" type="number" name="descuento" id="descuento" value="<%= Productos.descuento %>" required>
+                </div>
+
+                <div class="w-25 p-2 bold">
+                    <label for="oferta">Oferta</label>
+                </div>
+                <div class="w-75">
+                    <select class="form-control" id="oferta" name="oferta" onchange="optionSelected(this.value)">
+                        <option value="1" <%= Productos.oferta == 1 ? "selected" : ""  %>>SI</option>
+                        <option value="0" <%= Productos.oferta == 0 ? "selected" : ""  %>>NO</option>
+                    </select>
+                </div>
+
                 <div class="w-25 p-2 bold">   
                     <label for="ancho">Ancho</label>
                 </div>
@@ -97,6 +114,14 @@
         <%- include("../partials/footer") %>
         
         <!--SCRIPTS-->
-        <script src="/js/carrousel.js"></script>         
+        <script src="/js/carrousel.js"></script>   
+        <script>
+            function optionSelected(){
+				let e = document.getElementById("oferta");
+				let result = e.options[e.selectedIndex].value;
+				
+				document.getElementById("oferta").innerHTML = result;
+			}
+        </script>       
     </body>
 </html>
