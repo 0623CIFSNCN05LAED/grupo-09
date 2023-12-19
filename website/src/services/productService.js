@@ -9,12 +9,12 @@ module.exports = {
            descripcion: data.descripcion,
            precio: data.precio,
            descuento: data.descuento,
+           oferta: data.oferta,
            ancho: data.ancho,
            alto: data.alto,
            profundidad: data.profundidad,
            peso: data.peso,
            imagen: data.imagen,
-           oferta: data.oferta,
            marca_id: data.marca_id,
            categoria_id: data.categoria_id
         });
@@ -27,12 +27,12 @@ module.exports = {
             descripcion: data.descripcion,
             precio: data.precio,
             descuento: data.descuento,
+            oferta: data.oferta,
             ancho: data.ancho,
             alto: data.alto,
             profundidad: data.profundidad,
             peso: data.peso,
             imagen: data.imagen,
-            oferta: data.oferta,
             marca_id: data.marca_id,
             categoria_id: data.categoria_id
         }, {
