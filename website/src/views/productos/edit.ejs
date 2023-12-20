@@ -18,8 +18,8 @@
                     class="form-control" 
                     type="text"
                     name="sku" 
-                    id="sku" 
-                    value="<%= Productos.sku %>" >
+                    id="sku"  <%= locals.errors && errors.sku? 'is-invalid' : null %>
+                    value="<%= Productos.sku %>
                     <%= locals.errors && errors.sku? 'is-invalid' : null %>"
                 >
                 <% if (locals.errors && errors.sku) { %>
@@ -37,9 +37,9 @@
                     class="form-control" 
                     type="text" 
                     name="nombre" 
-                    id="nombre" 
-                    value="<%= Productos.nombre %>" >
-                    <%= locals.errors && errors.nombre? 'is-invalid' : null %>"
+                    id="nombre" <%= locals.errors && errors.nombre? 'is-invalid' : null %>
+                    value="<%= Productos.nombre %>" 
+                    
                 >
                 <% if (locals.errors && errors.nombre) { %>
                     <div class="text-danger">
@@ -56,9 +56,9 @@
                     class="form-control" 
                     type="text" 
                     name="descripcion" 
-                    id="descripcion" 
-                    value="<%= Productos.descripcion %>" >
-                    <%= locals.errors && errors.descripcion? 'is-invalid' : null %>"
+                    id="descripcion" <%= locals.errors && errors.descripcion? 'is-invalid' : null %>
+                    value="<%= Productos.descripcion %>" 
+                  
                     >
                     <% if (locals.errors && errors.descripcion) { %>
                         <div class="text-danger">
@@ -75,9 +75,9 @@
                     class="form-control" 
                     type="text" 
                     name="marca_id" 
-                    id="marca_id" 
+                    id="marca_id"  <%= locals.errors && errors.marca_id? 'is-invalid' : null %>
                     value="<%= Productos.marca_id %>" >
-                    <%= locals.errors && errors.marca_id? 'is-invalid' : null %>"
+               
                     >
                     <% if (locals.errors && errors.marca_id) { %>
                         <div class="text-danger">
@@ -94,10 +94,10 @@
                     class="form-control" 
                     type="text" 
                     name="categoria_id" 
-                    id="categoria_id" 
+                    id="categoria_id"   <%= locals.errors && errors.categoria_id? 'is-invalid' : null %>
                     value="<%= Productos.categoria_id %>" >
-                    <%= locals.errors && errors.categoria_id? 'is-invalid' : null %>"
-                    >
+                   
+                    
                     <% if (locals.errors && errors.categoria_id) { %>
                         <div class="text-danger">
                             <%= errors.categoria_id.msg %> 
@@ -114,10 +114,10 @@
                     class="form-control" 
                     type="text" 
                     name="precio" 
-                    id="precio" 
+                    id="precio" <%= locals.errors && errors.precio? 'is-invalid' : null %>
                     value="<%= Productos.precio %>" >
-                    <%= locals.errors && errors.precio? 'is-invalid' : null %>"
-                    >
+                 
+                    
                     <% if (locals.errors && errors.precio) { %>
                         <div class="text-danger">
                             <%= errors.precio.msg %> 
@@ -134,10 +134,10 @@
                     class="form-control" 
                     type="number" 
                     name="descuento" 
-                    id="descuento" 
+                    id="descuento"  <%= locals.errors && errors.descuento? 'is-invalid' : null %>"
                     value="<%= Productos.descuento %>" >
-                    <%= locals.errors && errors.descuento? 'is-invalid' : null %>"
-                    >
+                 
+                    
                     <% if (locals.errors && errors.descuento) { %>
                         <div class="text-danger">
                             <%= errors.descuento.msg %> 
@@ -163,10 +163,10 @@
                     class="form-control" 
                     type="text" 
                     name="ancho" 
-                    id="ancho" 
+                    id="ancho" <%= locals.errors && errors.ancho? 'is-invalid' : null %>
                     value="<%= Productos.ancho %>">
-                    <%= locals.errors && errors.ancho? 'is-invalid' : null %>"
-                >
+                   
+                
                 <% if (locals.errors && errors.ancho) { %>
                     <div class="text-danger">
                         <%= errors.ancho.msg %> 
@@ -183,10 +183,10 @@
                     class="form-control" 
                     type="text" 
                     name="alto" 
-                    id="alto" 
+                    id="alto" <%= locals.errors && errors.alto? 'is-invalid' : null %>
                     value="<%= Productos.alto %>">
-                    <%= locals.errors && errors.alto? 'is-invalid' : null %>"
-                >
+                    
+                
                 <% if (locals.errors && errors.alto) { %>
                     <div class="text-danger">
                         <%= errors.alto.msg %> 
@@ -202,10 +202,10 @@
                     class="form-control" 
                     type="text" 
                     name="profundidad" 
-                    id="profundidad"
-                     value="<%= Productos.profundidad %>">
-                     <%= locals.errors && errors.profundidad? 'is-invalid' : null %>"
-                >
+                    id="profundidad" <%= locals.errors && errors.profundidad? 'is-invalid' : null %>
+                    value="<%= Productos.profundidad %>">
+                    
+                
                 <% if (locals.errors && errors.profundidad) { %>
                     <div class="text-danger">
                         <%= errors.profundidad.msg %> 
@@ -221,10 +221,10 @@
                     class="form-control" 
                     type="text" 
                     name="peso" 
-                    id="peso" 
+                    id="peso"   <%= locals.errors && errors.peso? 'is-invalid' : null %>
                     value="<%= Productos.peso %>">
-                    <%= locals.errors && errors.peso? 'is-invalid' : null %>"
-                >
+                  
+                
                 <% if (locals.errors && errors.peso) { %>
                     <div class="text-danger">
                         <%= errors.peso.msg %> 
@@ -240,10 +240,10 @@
                     class="form-control" 
                     type="text" 
                     name="imagen" 
-                    id="imagen" 
+                    id="imagen"  <%= locals.errors && errors.imagen? 'is-invalid' : null %>
                     value="<%= Productos.imagen %>" >
-                    <%= locals.errors && errors.imagen? 'is-invalid' : null %>"
-                    >
+                   
+                    
                     <% if (locals.errors && errors.imagen) { %>
                         <div class="text-danger">
                             <%= errors.imagen.msg %> 

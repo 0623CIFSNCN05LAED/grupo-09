@@ -18,8 +18,8 @@
                             type="text" 
                             name="sku" 
                             class="form-control <%= locals.errors && errors.sku ? 'is-invalid' : null %>"
-                            value="<%= locals.oldData ? oldData.sku : null %>"
-                        >
+                            value="<%= locals.oldData ? oldData.sku : null %>">
+                            
                         <% if (locals.errors && errors.sku) { %>
                             <div class="text-danger">
                                 <%= errors.sku.msg %> 
