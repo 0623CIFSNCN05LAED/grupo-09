@@ -15,7 +15,7 @@ module.exports = (req, res, next) => {
         return res.render('register', {
             errors: resultValidation.mapped(),
             oldData: req.body,
-            email: req.session?.userLogged.email,
+            email: req.session?.userLogged?.email,
         });
     }
     

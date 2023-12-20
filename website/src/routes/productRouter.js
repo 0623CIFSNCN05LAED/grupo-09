@@ -12,7 +12,7 @@ router.get('/', productController.list);
 router.get('/detail/:id', productController.detail);
 router.get('/admin', adminMiddleware, productController.listAdmin);
 
-router.get('/new', adminMiddleware, productController.add);
+router.get('/new', productValidations, adminMiddleware, productController.add);
 router.post('/create', adminMiddleware, uploadFile.single("imagen"), productValidations, addProductMiddleware, productController.createProduct);
 router.get('/edit/:id', adminMiddleware, productController.editProduct);
 router.post('/update/:id', adminMiddleware, productController.updateProduct);

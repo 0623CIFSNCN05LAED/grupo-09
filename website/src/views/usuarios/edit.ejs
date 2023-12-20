@@ -8,51 +8,93 @@
         <%- include("../partials/header") %>
 
         <main>
-            <form class="container-form my-1 flex flex-wrap" action="/usuarios/update/<%= Usuarios.id %>" method="POST">
+            <form class="container-form my-1" action="/usuarios/update/<%= Usuarios.id %>" method="POST">
                 <div class="w-100"><h2 class="text-center">EDITAR USUARIO</h2></div>
 
-                <div class="w-25 p-2 bold">
-                    <label for="fullName">Nombre</label>
+                <div class="form-group my-1">
+                    <label><b>Nombre completo:</b></label>
+                    <input 
+                        type="text" 
+                        name="fullName" 
+                        class="form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>"
+                        value="<%= Usuarios.fullName %>"
+                    >
+                    <% if (locals.errors && errors.fullName) { %>
+                        <div class="text-danger">
+                            <%= errors.fullName.msg %> 
+                        </div>
+                    <% } %>
                 </div>
-                <div class="w-75">
-                    <input class="form-control" type="text" name="fullName" id="fullName" value="<%= Usuarios.fullName %>" required>
+                <div class="form-group my-1">
+                     <label for="telefono"><b>Número de Teléfono:</b></label>
+                     <input 
+                     type="tel" 
+                     name="telefono"
+                     class="form-control <%= locals.errors && errors.telefono ? 'is-invalid' : null %>"
+                     value="<%= Usuarios.telefono %>"
+                 >
+                 <% if (locals.errors && errors.telefono) { %>
+                     <div class="text-danger">
+                         <%= errors.telefono.msg %> 
+                     </div>
+                 <% } %>
+                </div> 
+                <div class="form-group my-1">
+                    <label><b>Correo electrónico:</b></label>
+                    <input 
+                        type="text" 
+                        name="email" 
+                        class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                        value="<%= Usuarios.email %>"
+                    >
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
                 </div>
+                <div class="form-group my-1">
+                    <label><b>Password:</b></label>
+                    <input 
+                        id="password" 
+                        type="password" 
+                        name="password" 
+                        class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                    >
+                    <span class="password-toggle" onclick="togglePassword()">Mostrar</span>
 
-                <div class="w-25 p-2 bold">
-                    <label for="email">Email</label>
+                    <% if (locals.errors && errors.password) { %>
+                        <div class="text-danger">
+                            <%= errors.password.msg %>
+                        </div>
+                    <% } %>
                 </div>
-                <div class="w-75">
-                    <input class="form-control" type="text" name="email" id="email" value="<%= Usuarios.email %>" required>
+                <div class="form-group my-1">
+                    <label><b>País de nacimiento:</b></label>
+                    <select 
+                        name="country" 
+                        class="form-select <%= locals.errors && errors.country ? 'is-invalid' : null %>"
+                    >
+                        <option value="">Elegí un país</option>
+                        <% let countries = ['Argentina', 'Bolivia', 'Brasil', 'Colombia', 'Chile', 'Ecuador', 'Paraguay', 'Perú', 'Uruguay', 'Venezuela']; %>
+                        <% for (const oneCountry of countries) { %>
+                            <option 
+                                value="<%= oneCountry %>"
+                                <%= locals.oldData && (oneCountry === oldData.country) ? 'selected' : null %> 
+                            > <%= oneCountry %> </option>
+                        <% } %>
+                    </select>
+                    <% if (locals.errors && errors.country) { %>
+                        <div class="text-danger">
+                            <%= errors.country.msg %>
+                        </div>
+                    <% } %>
                 </div>
-
-                <div class="w-25 p-2 bold">
-                    <label for="country">Pais</label>
-                </div>
-                <div class="w-75">
-                    <input class="form-control" type="text" name="country" id="country" value="<%= Usuarios.country %>" required>
-                </div>
-
-                <div class="w-25 p-2 bold">
-                    <label for="telefono">Telefono</label>
-                </div>
-                <div class="w-75">
-                    <input class="form-control" type="text" name="telefono" id="telefono" value="<%= Usuarios.telefono %>" required>
-                </div>
-
-                <div class="w-25 p-2 bold">
-                    <label for="password">Password</label>
-                </div>
-                <div class="w-75">
-                    <input class="form-control" type="text" name="password" id="password" required>
-                </div>
-
-                <div class="w-25 p-2 bold">
+                <div class="form-group my-1">
                     <label><b>Imagen de perfil:</b></label>
-                </div>
-                <div class="w-75">
                     <input 
                         type="file" 
-                        name="avatar"
+                        name="avatarFile"
                         class="form-control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>"
                     >
                     <% if (locals.errors && errors.avatar) { %>
@@ -61,11 +103,14 @@
                         </div>
                     <% } %>
                 </div>
-   
                 <div class="align-center p-1">
                     <button type="submit" class="btn-primary">Actualizar Datos Personales</button>
-                </div>   
+                </div>
+               
+   
+                 
             </form>
+
         </main>
        
         <!--FOOTER-->
