@@ -22,7 +22,7 @@ router.post("/register", uploadFile.single("avatarFile"), registerValidations, r
 
 router.get("/profile", authMiddleware, userController.userProfile);
 
-router.get('/edit/:id', authMiddleware, userController.editUser);
+router.get('/edit/:id', registerValidations, authMiddleware, userController.editUser);
 router.post('/update/:id', authMiddleware, userController.updateUser);
 
 router.get('/delete/:id', authMiddleware, userController.deleteUser);
