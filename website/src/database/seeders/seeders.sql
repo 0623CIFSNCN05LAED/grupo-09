@@ -60,8 +60,5 @@ INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, an
 INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('HOR6', 'Horno Whirlpool Empotrable Eléctrico 60 CM Inox', 6666, 5, 'HORNO6', 10, 20, 30, 40, '/images/productos/hor6.jpg', 0, 1, 6);
 
 /*ROLES*/
-INSERT INTO ecommerce.roles (rol) VALUES('Administrador');
-INSERT INTO ecommerce.roles (rol) VALUES('Usuario');
-
-/*USUARIOS*/  /* usuario administrador --> user: admin - pass: Admin123* */
-INSERT INTO ecommerce.usuarios(fullName, country, telefono, email, password, avatar, rol_id) VALUES('Usuario Administrador', 'Argentina', '0123456789', 'admin@gmail.com', '$2a$10$G7uWZkEf1PT9/aQnbEZjOe1hFYeMrhRDocfWceoFQNVgzJdXNEUpe', '/public/images/avatar/', 1);
+INSERT INTO ecommerce.roles (tipo) VALUES('Administrador');
+INSERT INTO ecommerce.roles (tipo) VALUES('Usuario');

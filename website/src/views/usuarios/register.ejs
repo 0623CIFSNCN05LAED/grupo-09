@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <!--HEAD-->
-    <%- include("./partials/head") %>
+    <%- include("../partials/head") %>
 
     <body>
         <!--HEADER-->
-        <%- include("./partials/header") %>
+        <%- include("../partials/header") %>
   
         <main> 
             <form class="container-form my-1" method="POST" action="/register" enctype="multipart/form-data">
@@ -104,15 +104,6 @@
                         <% } %>
                     </div>
 
-                    <div class="form-group my-1">
-                        <input 
-                            type="hidden" 
-                            name="avatarPath"
-                            value="/public/images/avatar/"
-                            class="form-control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>"
-                        >
-                    </div>
-
                 <div class="text-center">
                     <button type="submit" class="btn-primary">Registrarse</button>
                 </div>
@@ -126,7 +117,7 @@
         </main>
 
         <!--FOOTER-->
-        <%- include("./partials/footer") %>
+        <%- include("../partials/footer") %>
         
         <!--SCRIPTS-->
         <script src="/js/carrousel.js"></script>

@@ -3,15 +3,14 @@ const bcryptjs = require('bcryptjs');
 
 module.exports = {
 
-    createUser: (data) => {
+    createUser: (data, file) => {
         return Usuarios.create({
            fullName: data.fullName,
            country: data.country,
            telefono: data.telefono,
            email: data.email,
            password: bcryptjs.hashSync(data.password, 10),
-           avatar: data.avatarPath,
-           rol_id: '2'
+           avatar: file.filename
         });
     },
 
@@ -26,8 +25,7 @@ module.exports = {
            telefono: data.telefono,
            email: data.email,
            password: bcryptjs.hashSync(data.password, 10),
-           avatar: bcryptjs.hashSync(data.avatar, 10),
-           rol_id: '2'
+           avatar: data.avatarPath
         }, {
             where: {
                 id: id

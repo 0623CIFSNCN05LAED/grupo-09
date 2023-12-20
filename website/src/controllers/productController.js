@@ -44,33 +44,33 @@ const productController = {
     list: (req, res) => {
         productService.getAllProducts()
             .then(productos => {
-                res.render('productList.ejs', {productos})
+                res.render('./productos/productList.ejs', {productos})
             })
     },
 
     listAdmin: (req, res) => {
-        productService.getAllProductsAdmin()
+        productService.getAllProducts()
             .then(productos => {
-                res.render('productListAdmin.ejs', {productos})
+                res.render('./productos/productListAdmin.ejs', {productos})
             })
     },
 
     detail: (req, res) => {
         productService.getProductDetail(req.params.id)
             .then(productos => {
-                res.render('productDetail.ejs', {productos})
+                res.render('./productos/productDetail.ejs', {productos})
             })
     },
 
     getByCategory: (req, res) => {
         productService.getByCategory(req.params.id)
         .then((productos) => {
-            res.render('productList.ejs', {productos});
+            res.render('./productos/productList.ejs', {productos});
         });
     },
 
     productCart: (req, res) => {
-        res.render("productCart.ejs");
+        res.render("./productos/productCart.ejs");
     },
 
 };

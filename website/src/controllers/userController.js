@@ -4,7 +4,7 @@ const bcryptjs = require('bcryptjs');
 const userController = { 
 
     registerForm: (req, res) => {
-        res.render("register");
+        res.render("./usuarios/register");
     },
 
     registerProcess: (req, res) => {
@@ -19,14 +19,14 @@ const userController = {
             oldData: oldData ? oldData : null,
         });*/
 
-        userService.createUser(req.body)
+        userService.createUser(req.body, req.file)
         .then(() => {
-            res.redirect("login");
+            res.redirect("/login");
         });
     },
  
     loginForm: (req, res) => {
-        res.render("login");
+        res.render("./usuarios/login");
     },
 
     loginProcess: async (req, res) => {
@@ -43,7 +43,7 @@ const userController = {
                     res.cookie('email', req.body.email, { maxAge: 1000 * 60 * 2 });
                 }
 
-                if (req.session.userLogged.rol_id == 1) {
+                if (req.session.userLogged.rol_tipo == 'Administrador') {
                     res.redirect('/productos/admin');
                 } else {
                     res.redirect('/usuarios/profile');
@@ -51,7 +51,7 @@ const userController = {
                 /* return res.redirect('/usuarios/profile'); */
 
             } else {
-                return res.render('login', {
+                return res.render('./usuarios/login', {
                     errors: {
                         password: {
                             msg: 'El usuario y/o contraseña ingresados son inválidos',
@@ -60,7 +60,7 @@ const userController = {
                 });
             }
         } else {
-            return res.render('login', {
+            return res.render('./usuarios/login', {
                 errors: {
                     email: {
                         msg: 'El correo electrónico ingresado es inválido',
@@ -87,7 +87,7 @@ const userController = {
         userService.updateUser(req.body, req.params.id)
         .then(() => {
             req.session.destroy();
-            res.redirect("/login");
+            res.redirect("/usuarios/login");
         });
     },
 
@@ -106,7 +106,7 @@ const userController = {
     },
 
     userProfile: async (req, res) => {
-        res.render('profile', {
+        res.render('./usuarios/profile', {
             user: req.session.userLogged
         });
     },
