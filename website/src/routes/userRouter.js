@@ -28,13 +28,4 @@ router.post('/update/:id', authMiddleware, userController.updateUser);
 router.get('/delete/:id', authMiddleware, userController.deleteUser);
 router.post('/destroy/:id', authMiddleware, userController.destroyUser);
 
-/*router.post('/usuarios/update/:id', uploadFile.single('avatar'), authMiddleware, adminMiddleware, userController.updateUser);*/
-
-/* router.get('/edit/:id', authMiddleware, adminMiddleware, usersController.editProfileCrud);
-router.put('/update/:id', uploadFile.single('avatar'), authMiddleware, adminMiddleware, usersController.update);
-
-router.get('/delete/:id', authMiddleware, userController.deleteForm);
-router.delete('/destroy/:id', authMiddleware, userController.destroy); */
-/*const adminMiddleware = require('../middlewares/adminMiddleware'); */////////????????
-
 module.exports = router;
