@@ -8,7 +8,10 @@ module.exports = (sequelize, DataTypes) => {
             email: DataTypes.STRING,
             password: DataTypes.STRING,
             avatar: DataTypes.STRING,
-            rol_id: DataTypes.INTEGER,
+            rol_tipo: {
+                type: DataTypes.STRING,
+                defaultValue: 'Usuario'
+            }
         },
         {
             tableName: "usuarios",
@@ -19,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     Model.associate = (models) => {
         Model.belongsTo(models.Roles, {
             as: 'roles',
-            foreignKey: 'rol_id',
+            foreignKey: 'rol_tipo',
         });
     };
 

@@ -20,13 +20,13 @@ router.get("/logout", userController.logout);
 router.get("/register", guestMiddleware, userController.registerForm);
 router.post("/register", uploadFile.single("avatarFile"), registerValidations, registerFormMiddleware, userController.registerProcess);
 
-router.get("/usuarios/profile", authMiddleware, userController.userProfile);
+router.get("/profile", authMiddleware, userController.userProfile);
 
-router.get('/usuarios/edit/:id', authMiddleware, userController.editUser);
-router.post('/usuarios/update/:id', authMiddleware, userController.updateUser);
+router.get('/edit/:id', authMiddleware, userController.editUser);
+router.post('/update/:id', authMiddleware, userController.updateUser);
 
-router.get('/usuarios/delete/:id', authMiddleware, userController.deleteUser);
-router.post('/usuarios/destroy/:id', authMiddleware, userController.destroyUser);
+router.get('/delete/:id', authMiddleware, userController.deleteUser);
+router.post('/destroy/:id', authMiddleware, userController.destroyUser);
 
 /*router.post('/usuarios/update/:id', uploadFile.single('avatar'), authMiddleware, adminMiddleware, userController.updateUser);*/
 

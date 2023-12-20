@@ -5,17 +5,17 @@ module.exports = (req, res, next) => {
 
     if (resultValidation.errors.length > 0) {
 
-        let email = null;
+        /* let email = null;
         const userLogged = req.session.userLogged;
 
         if (userLogged) {
             email = userLogged.email;
-        }
+        } */
 
         return res.render('register', {
             errors: resultValidation.mapped(),
             oldData: req.body,
-            email,
+            email: req.session?.userLogged.email,
         });
     }
     

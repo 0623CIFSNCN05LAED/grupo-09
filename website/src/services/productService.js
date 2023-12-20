@@ -62,10 +62,6 @@ module.exports = {
         return Productos.findAll({ include: ['categorias', 'marcas'] });  // include: ["categoria", "marca"] hace referencia al alias de la asociaciones entre las claves foraneas de las tablas
     },
 
-    getAllProductsAdmin: () => {
-        return Productos.findAll({ include: ['categorias', 'marcas'] });
-    },
-
     getProductDetail: (id) => {
         return Productos.findByPk(id, { include: ['categorias', 'marcas'] });
     },

@@ -2,7 +2,10 @@ module.exports = (sequelize, DataTypes) => {
     const Model = sequelize.define(
         "Roles",
         {
-            rol: DataTypes.STRING,   
+            tipo: {
+                type: DataTypes.STRING,
+                primaryKey: true
+              }   
         },
         {
             tableName: "roles",
@@ -13,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     Model.associate = (models) => {
         Model.hasMany(models.Usuarios, {
             as: 'usuarios',
-            foreignKey: 'rol_id',
+            foreignKey: 'rol_tipo',
         });
     };
 
