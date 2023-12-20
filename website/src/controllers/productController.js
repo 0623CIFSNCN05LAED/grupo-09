@@ -7,7 +7,7 @@ const productController = {
     },
 
     createProduct: (req, res) => {
-        productService.createProduct(req.body)
+        productService.createProduct(req.body, req.file)
         .then(() => {
             res.redirect("/productos/admin");
         });
@@ -21,7 +21,7 @@ const productController = {
     },
 
     updateProduct: (req, res) => {
-        productService.updateProduct(req.body, req.params.id)
+        productService.updateProduct(req.body, req.file, req.params.id)
         .then(() => {
             res.redirect("/productos/admin");
         });

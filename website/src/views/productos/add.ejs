@@ -201,9 +201,11 @@
                     <div class="w-25 p-2 bold">
                         <label for="imagen">Imagen</label>
                     </div>
+
+
                     <div class="w-75">
                         <input 
-                            type="text" 
+                            type="file" 
                             name="imagen" 
                             class="form-control <%= locals.errors && errors.imagen ? 'is-invalid' : null %>"
                             value="<%= locals.oldData ? oldData.imagen : null %>"
@@ -215,6 +217,11 @@
                         <% } %>
                     </div>
                  
+
+
+
+
+
                     <div class="align-center">
                         <button type="submit" class="btn-primary">Agregar</button>
                     </div>   

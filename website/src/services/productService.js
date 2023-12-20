@@ -2,7 +2,7 @@ const { Productos } = require("../database/models");
 
 module.exports = {
 
-    createProduct: (data) => {
+    createProduct: (data, file) => {
         return Productos.create({
            sku: data.sku,
            nombre: data.nombre,
@@ -14,13 +14,13 @@ module.exports = {
            alto: data.alto,
            profundidad: data.profundidad,
            peso: data.peso,
-           imagen: data.imagen,
+           imagen: file.filename,
            marca_id: data.marca_id,
            categoria_id: data.categoria_id
         });
     },
 
-    updateProduct: (data, id) => {
+    updateProduct: (data, file, id,) => {
         return Productos.update({
             sku: data.sku,
             nombre: data.nombre,
@@ -32,7 +32,7 @@ module.exports = {
             alto: data.alto,
             profundidad: data.profundidad,
             peso: data.peso,
-            imagen: data.imagen,
+            imagen: file.filename,
             marca_id: data.marca_id,
             categoria_id: data.categoria_id
         }, {
