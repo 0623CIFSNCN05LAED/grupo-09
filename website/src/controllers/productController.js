@@ -7,7 +7,6 @@ const productController = {
     },
 
     createProduct: (req, res) => {
-        console.log(req.file);
         productService.createProduct(req.body, req.file)
         .then(() => {
             res.redirect("/productos/admin");

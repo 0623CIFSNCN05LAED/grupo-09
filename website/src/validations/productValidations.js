@@ -1,7 +1,8 @@
 const { body } = require("express-validator");
 
 const path = require("path");
-module.exports = [
+
+const productValidations = [
     body("sku").notEmpty().withMessage("Ingrese SKU"),
     body("nombre").notEmpty().withMessage("Ingrese nombre"),
     body("precio").notEmpty().withMessage("Ingrese precio"),
@@ -12,7 +13,7 @@ module.exports = [
     body("peso").notEmpty().withMessage("Ingrese peso"),
     body("marca_id").notEmpty().withMessage("Ingrese marca"),
     body("categoria_id").notEmpty().withMessage("Ingrese categoria"),
-    body("imagen").custom((value, { req }) => {
+    body("imagenPath").custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"];
 
@@ -27,5 +28,7 @@ module.exports = [
             }
         }
         return true;
-    }),  
+    }), 
 ];
+
+module.exports = productValidations;

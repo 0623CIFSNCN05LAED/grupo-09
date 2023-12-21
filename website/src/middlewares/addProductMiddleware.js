@@ -10,7 +10,8 @@ module.exports = async (req, res, next) => {
     const [categoria, marca] = await Promise.all([categoriesService.getAllCategories(), brandService.getAllBrands()]);
 
     if (resultValidation.errors.length > 0) {
-        return res.render("productos/add", {
+        console.log("entroooooooooooo")
+        return res.render("./productos/add", {
             marca,
             categoria,
             errors: resultValidation.mapped(),
