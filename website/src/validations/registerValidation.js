@@ -70,7 +70,7 @@ const validationsRegister = [
 			}
 			return true;
 		}), 
-];
+]; 
 
 
 module.exports = validationsRegister;
