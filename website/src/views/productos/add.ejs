@@ -8,223 +8,215 @@
         <%- include("../partials/header") %>
 
         <main>
-            <form class="container-form my-1 flex flex-wrap" action="/productos/create" method="POST">
+            <form class="container-form my-1 flex flex-wrap" action="/productos/create" method="POST" enctype="multipart/form-data">
                 <div class="w-100"><h2 class="text-center">AGREGAR PRODUCTO</h2></div>
-                    <div class="w-25 p-2 bold">
-                        <label for="sku">SKU</label>
-                    </div>
-                    <div class="w-75">
-                        <input 
-                            type="text" 
-                            name="sku" 
-                            class="form-control <%= locals.errors && errors.sku ? 'is-invalid' : null %>"
-                            value="<%= locals.oldData ? oldData.sku : null %>">
-                            
-                        <% if (locals.errors && errors.sku) { %>
-                            <div class="text-danger">
-                                <%= errors.sku.msg %> 
-                            </div>
-                        <% } %>
-                    </div>
+                <div class="w-25 p-2 bold">
+                    <label for="sku">SKU</label>
+                </div>
+                <div class="w-75">
+                    <input 
+                        type="text" 
+                        name="sku" 
+                        class="form-control <%= locals.errors && errors.sku ? 'is-invalid' : null %>"
+                        value="<%= locals.oldData ? oldData.sku : null %>">
+                        
+                    <% if (locals.errors && errors.sku) { %>
+                        <div class="text-danger">
+                            <%= errors.sku.msg %> 
+                        </div>
+                    <% } %>
+                </div>
+            
+                <div class="w-25 p-2 bold">
+                    <label for="nombre">Nombre</label>
+                </div>
+                <div class="w-75">
+                    <input 
+                        type="text" 
+                        name="nombre" 
+                        class="form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
+                        value="<%= locals.oldData ? oldData.nombre : null %>"
+                    >
+                    <% if (locals.errors && errors.nombre) { %>
+                        <div class="text-danger">
+                            <%= errors.nombre.msg %> 
+                        </div>
+                    <% } %>
+                </div>
                 
-                    <div class="w-25 p-2 bold">
-                        <label for="nombre">Nombre</label>
-                    </div>
-                    <div class="w-75">
-                        <input 
-                            type="text" 
-                            name="nombre" 
-                            class="form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
-                            value="<%= locals.oldData ? oldData.nombre : null %>"
-                        >
-                        <% if (locals.errors && errors.nombre) { %>
-                            <div class="text-danger">
-                                <%= errors.nombre.msg %> 
-                            </div>
-                        <% } %>
-                    </div>
-                    
-                    <div class="w-25 p-2 bold">
-                        <label for="descripcion">Descripcion</label>
-                    </div>   
-                    <div class="w-75">
-                        <input 
-                            type="text" 
-                            name="descripcion" 
-                            class="form-control <%= locals.errors && errors.descripcion ? 'is-invalid' : null %>"
-                            value="<%= locals.oldData ? oldData.descripcion : null %>"
-                        >
-                        <% if (locals.errors && errors.descripcion) { %>
-                            <div class="text-danger">
-                                <%= errors.descripcion.msg %> 
-                            </div>
-                        <% } %>
-                    </div>
+                <div class="w-25 p-2 bold">
+                    <label for="descripcion">Descripcion</label>
+                </div>   
+                <div class="w-75">
+                    <input 
+                        type="text" 
+                        name="descripcion" 
+                        class="form-control <%= locals.errors && errors.descripcion ? 'is-invalid' : null %>"
+                        value="<%= locals.oldData ? oldData.descripcion : null %>"
+                    >
+                    <% if (locals.errors && errors.descripcion) { %>
+                        <div class="text-danger">
+                            <%= errors.descripcion.msg %> 
+                        </div>
+                    <% } %>
+                </div>
 
-                    <div class="w-25 p-2 bold">
-                        <label for="marca_id">Marca</label>
-                    </div>
-                    <div class="w-75">
-                        <input 
-                            type="text" 
-                            name="marca_id" 
-                            class="form-control <%= locals.errors && errors.marca_id ? 'is-invalid' : null %>"
-                            value="<%= locals.oldData ? oldData.marca_id : null %>"
-                        >
-                        <% if (locals.errors && errors.marca_id) { %>
-                            <div class="text-danger">
-                                <%= errors.marca_id.msg %> 
-                            </div>
-                        <% } %>
-                    </div>
+                <div class="w-25 p-2 bold">
+                    <label for="marca_id">Marca</label>
+                </div>
+                <div class="w-75">
+                    <input 
+                        type="text" 
+                        name="marca_id" 
+                        class="form-control <%= locals.errors && errors.marca_id ? 'is-invalid' : null %>"
+                        value="<%= locals.oldData ? oldData.marca_id : null %>"
+                    >
+                    <% if (locals.errors && errors.marca_id) { %>
+                        <div class="text-danger">
+                            <%= errors.marca_id.msg %> 
+                        </div>
+                    <% } %>
+                </div>
 
+                <div class="w-25 p-2 bold">
+                    <label for="categoria">Categoria</label>
+                </div>
+                <div class="w-75">
+                    <input 
+                        type="text" 
+                        name="categoria_id" 
+                        class="form-control <%= locals.errors && errors.categoria_id ? 'is-invalid' : null %>"
+                        value="<%= locals.oldData ? oldData.categoria_id : null %>"
+                    >
+                    <% if (locals.errors && errors.categoria_id) { %>
+                        <div class="text-danger">
+                            <%= errors.categoria_id.msg %> 
+                        </div>
+                    <% } %>
+                </div>
+            
+                <div class="w-25 p-2 bold">
+                    <label for="precio">Precio</label>
+                </div>
+                <div class="w-75">
+                    <input 
+                        type="text" 
+                        name="precio" 
+                        class="form-control <%= locals.errors && errors.precio ? 'is-invalid' : null %>"
+                        value="<%= locals.oldData ? oldData.precio : null %>"
+                    >
+                    <% if (locals.errors && errors.precio) { %>
+                        <div class="text-danger">
+                            <%= errors.precio.msg %> 
+                        </div>
+                    <% } %>
+                </div>
 
-                    <div class="w-25 p-2 bold">
-                        <label for="categoria">Categoria</label>
-                    </div>
-                    <div class="w-75">
-                        <input 
-                            type="text" 
-                            name="categoria_id" 
-                            class="form-control <%= locals.errors && errors.categoria_id ? 'is-invalid' : null %>"
-                            value="<%= locals.oldData ? oldData.categoria_id : null %>"
-                        >
-                        <% if (locals.errors && errors.categoria_id) { %>
-                            <div class="text-danger">
-                                <%= errors.categoria_id.msg %> 
-                            </div>
-                        <% } %>
-                    </div>
-               
-                    <div class="w-25 p-2 bold">
-                        <label for="precio">Precio</label>
-                    </div>
-                    <div class="w-75">
-                        <input 
-                            type="text" 
-                            name="precio" 
-                            class="form-control <%= locals.errors && errors.precio ? 'is-invalid' : null %>"
-                            value="<%= locals.oldData ? oldData.precio : null %>"
-                        >
-                        <% if (locals.errors && errors.precio) { %>
-                            <div class="text-danger">
-                                <%= errors.precio.msg %> 
-                            </div>
-                        <% } %>
-                    </div>
+                <div class="w-25 p-2 bold">
+                    <label for="descuento">Descuento</label>
+                </div>
+                <div class="w-75">
+                    <input class="form-control" type="number" name="descuento" id="">
+                </div>
 
-                    <div class="w-25 p-2 bold">
-                        <label for="descuento">Descuento</label>
-                    </div>
-                    <div class="w-75">
-                        <input class="form-control" type="number" name="descuento" id="">
-                    </div>
-
-                    <div class="w-25 p-2 bold">
-                        <label for="oferta">Oferta</label>
-                    </div>
-                    <div class="w-75">
-                        <select class="form-control" id="oferta" name="oferta">
-                            <option value="SI">SI</option>
-                            <option value="NO">NO</option>
-                        </select>
-                    </div>
-                    
-                    <div class="w-25 p-2 bold">
-                        <label for="ancho">Ancho</label>
-                    </div>
-                    <div class="w-75">
-                        <input 
-                            type="text" 
-                            name="ancho" 
-                            class="form-control <%= locals.errors && errors.ancho ? 'is-invalid' : null %>"
-                            value="<%= locals.oldData ? oldData.ancho : null %>"
-                        >
-                        <% if (locals.errors && errors.ancho) { %>
-                            <div class="text-danger">
-                                <%= errors.ancho.msg %> 
-                            </div>
-                        <% } %>
-                    </div>
-               
-                    <div class="w-25 p-2 bold">
-                        <label for="alto">Alto</label>
-                    </div>
-                    <div class="w-75">
-                        <input 
-                            type="text" 
-                            name="alto" 
-                            class="form-control <%= locals.errors && errors.alto ? 'is-invalid' : null %>"
-                            value="<%= locals.oldData ? oldData.alto : null %>"
-                        >
-                        <% if (locals.errors && errors.alto) { %>
-                            <div class="text-danger">
-                                <%= errors.alto.msg %> 
-                            </div>
-                        <% } %>
-                    </div>
-               
-                    <div class="w-25 p-2 bold">
-                        <label for="profundidad">Profundidad</label>
-                    </div>
-                    <div class="w-75">
-                        <input 
-                            type="text" 
-                            name="profundidad" 
-                            class="form-control <%= locals.errors && errors.profundidad ? 'is-invalid' : null %>"
-                            value="<%= locals.oldData ? oldData.profundidad : null %>"
-                        >
-                        <% if (locals.errors && errors.profundidad) { %>
-                            <div class="text-danger">
-                                <%= errors.profundidad.msg %> 
-                            </div>
-                        <% } %>
-                    </div>
-              
-                    <div class="w-25 p-2 bold">
-                        <label for="peso">Peso</label>
-                    </div>
-                    <div class="w-75">
-                        <input 
-                            type="text" 
-                            name="peso" 
-                            class="form-control <%= locals.errors && errors.peso ? 'is-invalid' : null %>"
-                            value="<%= locals.oldData ? oldData.peso : null %>"
-                        >
-                        <% if (locals.errors && errors.peso) { %>
-                            <div class="text-danger">
-                                <%= errors.peso.msg %> 
-                            </div>
-                        <% } %>
-                    </div>
+                <div class="w-25 p-2 bold">
+                    <label for="oferta">Oferta</label>
+                </div>
+                <div class="w-75">
+                    <select class="form-control" id="oferta" name="oferta">
+                        <option value="SI">SI</option>
+                        <option value="NO">NO</option>
+                    </select>
+                </div>
                 
-                    <div class="w-25 p-2 bold">
-                        <label for="imagen">Imagen</label>
-                    </div>
+                <div class="w-25 p-2 bold">
+                    <label for="ancho">Ancho</label>
+                </div>
+                <div class="w-75">
+                    <input 
+                        type="text" 
+                        name="ancho" 
+                        class="form-control <%= locals.errors && errors.ancho ? 'is-invalid' : null %>"
+                        value="<%= locals.oldData ? oldData.ancho : null %>"
+                    >
+                    <% if (locals.errors && errors.ancho) { %>
+                        <div class="text-danger">
+                            <%= errors.ancho.msg %> 
+                        </div>
+                    <% } %>
+                </div>
+            
+                <div class="w-25 p-2 bold">
+                    <label for="alto">Alto</label>
+                </div>
+                <div class="w-75">
+                    <input 
+                        type="text" 
+                        name="alto" 
+                        class="form-control <%= locals.errors && errors.alto ? 'is-invalid' : null %>"
+                        value="<%= locals.oldData ? oldData.alto : null %>"
+                    >
+                    <% if (locals.errors && errors.alto) { %>
+                        <div class="text-danger">
+                            <%= errors.alto.msg %> 
+                        </div>
+                    <% } %>
+                </div>
+            
+                <div class="w-25 p-2 bold">
+                    <label for="profundidad">Profundidad</label>
+                </div>
+                <div class="w-75">
+                    <input 
+                        type="text" 
+                        name="profundidad" 
+                        class="form-control <%= locals.errors && errors.profundidad ? 'is-invalid' : null %>"
+                        value="<%= locals.oldData ? oldData.profundidad : null %>"
+                    >
+                    <% if (locals.errors && errors.profundidad) { %>
+                        <div class="text-danger">
+                            <%= errors.profundidad.msg %> 
+                        </div>
+                    <% } %>
+                </div>
+            
+                <div class="w-25 p-2 bold">
+                    <label for="peso">Peso</label>
+                </div>
+                <div class="w-75">
+                    <input 
+                        type="text" 
+                        name="peso" 
+                        class="form-control <%= locals.errors && errors.peso ? 'is-invalid' : null %>"
+                        value="<%= locals.oldData ? oldData.peso : null %>"
+                    >
+                    <% if (locals.errors && errors.peso) { %>
+                        <div class="text-danger">
+                            <%= errors.peso.msg %> 
+                        </div>
+                    <% } %>
+                </div>
+            
+                <div class="w-25 p-2 bold">
+                    <label for="imagenPath">Imagen</label>
+                </div>
+                <div class="w-75">
+                    <input type="file" 
+                        name="imagenPath" 
+                        class="form-control <%= locals.errors && errors.imagenPath ? 'is-invalid' : null %>"
+                        value="<%= locals.oldData ? oldData.imagenPath : null %>"
+                    >
 
-
-                    <div class="w-75">
-                        <input 
-                            type="file" 
-                            name="imagen" 
-                            class="form-control <%= locals.errors && errors.imagen ? 'is-invalid' : null %>"
-                            value="<%= locals.oldData ? oldData.imagen : null %>"
-                        >
-                        <% if (locals.errors && errors.imagen) { %>
-                            <div class="text-danger">
-                                <%= errors.imagen.msg %> 
-                            </div>
-                        <% } %>
-                    </div>
-                 
-
-
-
-
-
-                    <div class="align-center">
-                        <button type="submit" class="btn-primary">Agregar</button>
-                    </div>   
+                    <% if (locals.errors && errors.imagenPath) { %>
+                        <div class="text-danger">
+                            <%= errors.imagenPath.msg %> 
+                        </div>
+                    <% } %>
+                </div>
+                
+                <div class="align-center">
+                    <button type="submit" class="btn-primary">Agregar</button>
+                </div>   
             </form>
         </main>
        
