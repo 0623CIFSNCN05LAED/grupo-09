@@ -1,5 +1,6 @@
 const { body } = require("express-validator");
 
+const path = require("path");
 module.exports = [
     body("sku").notEmpty().withMessage("Ingrese SKU"),
     body("nombre").notEmpty().withMessage("Ingrese nombre"),
@@ -12,9 +13,19 @@ module.exports = [
     body("marca_id").notEmpty().withMessage("Ingrese marca"),
     body("categoria_id").notEmpty().withMessage("Ingrese categoria"),
     body("imagen").custom((value, { req }) => {
-        if (!req.file) {
-            throw new Error("Cargue la imagen");
+        let file = req.file;
+        let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"];
+
+        if (!file) {
+            throw new Error('Seleccionar imagen');
+        } else {
+            let fileExtension = path.extname(file.originalname);
+            if (!acceptedExtensions.includes(fileExtension)) {
+                throw new Error(
+                `Las extensiones aceptadas son ${acceptedExtensions.join(", ")}`
+                );
+            }
         }
         return true;
-    }),
+    }),  
 ];

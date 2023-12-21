@@ -15,12 +15,13 @@
                 </div>
                 <div class="w-75">
                     <input 
-                    class="form-control" 
+                    
                     type="text"
                     name="sku" 
-                    id="sku"  <%= locals.errors && errors.sku? 'is-invalid' : null %>
-                    value="<%= Productos.sku %>
-                    <%= locals.errors && errors.sku? 'is-invalid' : null %>"
+                    id="sku"  
+                    class="form-control <%= locals.errors && errors.sku? 'is-invalid' : null %>" 
+                    value="<%= Productos.sku %>" 
+                  
                 >
                 <% if (locals.errors && errors.sku) { %>
                     <div class="text-danger">
@@ -34,10 +35,11 @@
                 </div>
                 <div class="w-75">
                     <input 
-                    class="form-control" 
+                     
                     type="text" 
                     name="nombre" 
-                    id="nombre" <%= locals.errors && errors.nombre? 'is-invalid' : null %>
+                    id="nombre" 
+                    class="form-control <%= locals.errors && errors.nombre? 'is-invalid' : null %>" 
                     value="<%= Productos.nombre %>" 
                     
                 >
@@ -53,10 +55,11 @@
                 </div>
                 <div class="w-75">
                     <input 
-                    class="form-control" 
+                    
                     type="text" 
                     name="descripcion" 
-                    id="descripcion" <%= locals.errors && errors.descripcion? 'is-invalid' : null %>
+                    id="descripcion" 
+                    class="form-control <%= locals.errors && errors.descripcion? 'is-invalid' : null %>" 
                     value="<%= Productos.descripcion %>" 
                   
                     >
@@ -72,10 +75,11 @@
                 </div>
                 <div class="w-75">
                     <input 
-                    class="form-control" 
+                   
                     type="text" 
                     name="marca_id" 
-                    id="marca_id"  <%= locals.errors && errors.marca_id? 'is-invalid' : null %>
+                    id="marca_id"  
+                    class="form-control <%= locals.errors && errors.marca_id? 'is-invalid' : null %>" 
                     value="<%= Productos.marca_id %>" >
                
                     >
@@ -91,10 +95,11 @@
                 </div>
                 <div class="w-75">
                     <input 
-                    class="form-control" 
+                    
                     type="text" 
                     name="categoria_id" 
-                    id="categoria_id"   <%= locals.errors && errors.categoria_id? 'is-invalid' : null %>
+                    id="categoria_id"   
+                    class="form-control<%= locals.errors && errors.categoria_id? 'is-invalid' : null %>" 
                     value="<%= Productos.categoria_id %>" >
                    
                     
@@ -111,10 +116,11 @@
                 </div>
                 <div class="w-75">
                     <input 
-                    class="form-control" 
+
                     type="text" 
                     name="precio" 
-                    id="precio" <%= locals.errors && errors.precio? 'is-invalid' : null %>
+                    id="precio"
+                    class="form-control <%= locals.errors && errors.precio? 'is-invalid' : null %>" 
                     value="<%= Productos.precio %>" >
                  
                     
@@ -131,10 +137,11 @@
                 </div>
                 <div class="w-75">
                     <input 
-                    class="form-control" 
+        
                     type="number" 
                     name="descuento" 
-                    id="descuento"  <%= locals.errors && errors.descuento? 'is-invalid' : null %>"
+                    id="descuento"  
+                    class="form-control <%= locals.errors && errors.descuento? 'is-invalid' : null %>"
                     value="<%= Productos.descuento %>" >
                  
                     
@@ -160,10 +167,11 @@
                 </div>
                 <div class="w-75">
                     <input 
-                    class="form-control" 
+                    
                     type="text" 
                     name="ancho" 
-                    id="ancho" <%= locals.errors && errors.ancho? 'is-invalid' : null %>
+                    id="ancho" 
+                    class="form-control <%= locals.errors && errors.ancho? 'is-invalid' : null %>" 
                     value="<%= Productos.ancho %>">
                    
                 
@@ -180,10 +188,11 @@
                 </div>
                 <div class="w-75">
                     <input 
-                    class="form-control" 
+                    
                     type="text" 
                     name="alto" 
-                    id="alto" <%= locals.errors && errors.alto? 'is-invalid' : null %>
+                    id="alto" 
+                    class="form-control <%= locals.errors && errors.alto? 'is-invalid' : null %>" 
                     value="<%= Productos.alto %>">
                     
                 
@@ -199,10 +208,11 @@
                 </div>
                 <div class="w-75">
                     <input 
-                    class="form-control" 
+                   
                     type="text" 
                     name="profundidad" 
-                    id="profundidad" <%= locals.errors && errors.profundidad? 'is-invalid' : null %>
+                    id="profundidad"
+                    class="form-control <%= locals.errors && errors.profundidad? 'is-invalid' : null %>" 
                     value="<%= Productos.profundidad %>">
                     
                 
@@ -218,10 +228,10 @@
                 </div>
                 <div class="w-75">
                     <input 
-                    class="form-control" 
                     type="text" 
                     name="peso" 
-                    id="peso"   <%= locals.errors && errors.peso? 'is-invalid' : null %>
+                    id="peso"   
+                    class="form-control <%= locals.errors && errors.peso? 'is-invalid' : null %>" 
                     value="<%= Productos.peso %>">
                   
                 
@@ -237,18 +247,15 @@
                 </div>
                 <div class="w-75">
                     <input 
-                    class="form-control" 
-                    type="text" 
-                    name="imagen" 
-                    id="imagen"  <%= locals.errors && errors.imagen? 'is-invalid' : null %>
-                    value="<%= Productos.imagen %>" >
-                   
-                    
-                    <% if (locals.errors && errors.imagen) { %>
-                        <div class="text-danger">
-                            <%= errors.imagen.msg %> 
-                        </div>
-                    <% } %>
+                            type="file" 
+                            name="imagen"
+                            class="form-control <%= locals.errors && errors.imagen ? 'is-invalid' : null %>"
+                        >
+                        <% if (locals.errors && errors.imagen) { %>
+                            <div class="text-danger">
+                                <%= errors.imagen.msg %>
+                            </div>
+                        <% } %>
                 </div>
 
                 <div class="align-center">
