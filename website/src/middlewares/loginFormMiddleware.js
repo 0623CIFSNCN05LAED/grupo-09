@@ -12,10 +12,10 @@ module.exports = (req, res, next) => {
             email = userLogged.email;
         } */
 
-        return res.render('login', {
+        return res.render('./usuarios/login', {
             errors: resultValidation.mapped(),
             oldData: req.body,
-            email: req.session?.userLogged.email,
+            email: req.session?.userLogged?.email,
         });
     }
 

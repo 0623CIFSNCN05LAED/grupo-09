@@ -18,14 +18,14 @@ module.exports = {
         return Usuarios.findByPk(id);
     },
 
-    updateUser: (data, id) => {
+    updateUser: (data, file, id) => {
         return Usuarios.update({
            fullName: data.fullName,
            country: data.country,
            telefono: data.telefono,
            email: data.email,
            password: bcryptjs.hashSync(data.password, 10),
-           avatar: data.avatarPath
+           avatar: file.filename
         }, {
             where: {
                 id: id
