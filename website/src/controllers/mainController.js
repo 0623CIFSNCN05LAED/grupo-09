@@ -1,8 +1,12 @@
-const path = require("path");
+const productService = require("../services/productService");
  
 const mainController = {
     home: (req, res) => {
-        res.render("index");
+        productService.getAllProducts()
+        .then(productos => {
+            res.render("index", {productos});
+        })
+        
     },
 }
 

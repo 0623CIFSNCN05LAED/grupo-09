@@ -33,73 +33,28 @@
 
         <main class="p-2 vw-90 mx-auto">
             <section class="flex flex-wrap gap section">
-                <h2 id="ofertas" class="title w-100">Ofertas</h2>    
-                <article class="p-2 bt-1 border-grey border-radius bg-white product-shadow w-100 md-w-50 lg-w-25">
-                    <img class="w-100 border-radius" src="/images/productos/lavavajillas1.jpg" alt="Lavavajillas Whirlpool">
-                    <div class="relative flex flex-wrap">
-                        <p class="description">Lavavajillas Whirlpool Tecnología Inverter 10 Cubiertos Inox</p>
-                        <p class="precio">$543.899</p>
-                        <p class="descuento">29% OFF</p>
-                    </div>
-                </article>
-                <article class="p-2 bt-1 border-grey border-radius bg-white product-shadow w-100 md-w-50 lg-w-25">
-                    <img class="w-100 border-radius" src="/images/productos/lavarropas1.jpg" alt="Lavarropas Whirlpool">
-                    <div class="relative flex flex-wrap">
-                        <p class="description">Lavarropas Whirlpool 9kg - 1400rpm Blanco Inverter</p>
-                        <p class="precio">$462.499</p>
-                        <p class="descuento">29% OFF</p>
-                    </div>
-                </article>
-                <article class="p-2 bt-1 border-grey border-radius bg-white product-shadow w-100 md-w-50 lg-w-25">
-                    <img class="w-100 border-radius" src="/images/productos/heladera1.jpg" alt="Heladera Whirlpool">
-                    <div class="relative flex flex-wrap">
-                        <p class="description">Heladera Whirlpool No Frost Xpert Inverter de 462 Lts</p>
-                        <p class="precio">$957.699</p>
-                        <p class="descuento">29% OFF</p>
-                    </div>
-                </article>
-                <article class="p-2 bt-1 border-grey border-radius bg-white product-shadow w-100 md-w-50 lg-w-25">
-                    <img class="w-100 border-radius" src="/images/productos/microondas1.jpg" alt="Microondas Whirlpool">
-                    <div class="relative flex flex-wrap">
-                        <p class="description">Microondas Whirlpool con grill y vaporera 25 litros</p>
-                        <p class="precio">$175.499</p>
-                        <p class="descuento">29% OFF</p>
-                    </div>
-                </article>
-                <article class="p-2 bt-1 border-grey border-radius bg-white product-shadow w-100 md-w-50 lg-w-25">
-                    <img class="w-100 border-radius" src="/images/productos/horno1.jpg" alt="Freezer Whirlpool">
-                    <div class="relative flex flex-wrap">
-                        <p class="description">Freezer Whirlpool Horizontal Ciclico 414 Lts</p>
-                        <p class="precio">$560.458</p>
-                        <p class="descuento">29% OFF</p>
-                    </div>
-                </article>
-                <article class="p-2 bt-1 border-grey border-radius bg-white product-shadow w-100 md-w-50 lg-w-25">
-                    <img class="w-100 border-radius" src="/images/productos/cocina1.jpg" alt="Cocina Whirlpool">
-                    <div class="relative flex flex-wrap">
-                        <p class="description">Cocina a gas Whirlpool 50 cm</p>
-                        <p class="precio">$273.699</p>
-                        <p class="descuento">29% OFF</p>
-                    </div>
-                </article>
-                <article class="p-2 bt-1 border-grey border-radius bg-white product-shadow w-100 md-w-50 lg-w-25">
-                    <img class="w-100 border-radius" src="/images/productos/anafe1.jpg" alt="Anafe Whirlpool">
-                    <div class="relative flex flex-wrap">
-                        <p class="description">Anafe Whirlpool a gas Vidrio Templado 73 cm</p>
-                        <p class="precio">$353.499</p>
-                        <p class="descuento">29% OFF</p>
-                    </div>
-                </article>
-                <article class="p-2 bt-1 border-grey border-radius bg-white product-shadow w-100 md-w-50 lg-w-25">
-                    <img class="w-100 border-radius" src="/images/productos/extractor1.jpg" alt="Extractor Whirlpool">
-                    <div class="relative flex flex-wrap">
-                        <p class="description">Campana Whirlpool extractora 90cm</p>
-                        <p class="precio">$268.399</p>
-                        <p class="descuento">29% off</p>
-                    </div>
-                </article>
+                <h2 id="ofertas" class="title w-100">Ofertas</h2>
+        
+                <% for (let i = 0; i < productos.length; i++) { %>
+                    <% if (productos[i].descuento >= 18) { %>
+                        <article class="p-2 bt-1 border-grey border-radius bg-white product-shadow w-100 md-w-50 lg-w-25">
+                            <a href="/productos/detail/<%= productos[i].id %>">
+                                <div class="relative flex flex-wrap">
+                                    <img class="w-100 border-radius" src="<%= productos[i].imagen %>" alt="<%= productos[i].descripcion %>">
+                                    <p class="description"><%= productos[i].nombre %></p>
+                                    <p class="precio">$<%= productos[i].precio %></p>
+                                    <p class="descuento">
+                                        <%= productos[i].descuento %>% OFF
+                                    </p>
+                                </div>
+                            </a>
+                        </article>
+                    <% } %>
+                <% } %>
             </section>
         </main>
+        
+        
 
         <!--FOOTER-->
         <%- include("./partials/footer") %>
