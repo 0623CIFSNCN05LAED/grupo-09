@@ -13,3 +13,6 @@ RETROSPECTIVA SPRINT 1 - SPRINT 4
     - Menos procastinacion
 5. Dejar de hacer.
     - Dejar de trabajar para ponernos al dia con todo el curso
+
+
+
