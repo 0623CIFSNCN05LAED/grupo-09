@@ -106,6 +106,10 @@
     font-size: 16px;
 }
 
+#ofertas{
+    margin-top: 60px;
+}
+
 @keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}
