@@ -79,12 +79,12 @@ const userController = {
     editUser: (req, res) => {
         userService.editUser(req.params.id)
         .then((usuarios) => {
-            res.render('./usuarios/edit', {Usuarios:usuarios});
+            res.render('./usuarios/edit', {usuarios});
         });
     },
 
     updateUser: (req, res) => {
-        userService.updateUser(req.body, req.params.id)
+        userService.updateUser(req.body, req.file, req.params.id)
         .then(() => {
             req.session.destroy();
             res.redirect("/usuarios/login");
@@ -94,7 +94,7 @@ const userController = {
     deleteUser: (req, res) => {
         userService.deleteUser(req.params.id)
         .then((usuarios) => {
-            res.render('./usuarios/delete', {Usuarios:usuarios});
+            res.render('./usuarios/delete', {usuarios});
         });
     },
 

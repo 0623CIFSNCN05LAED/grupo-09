@@ -12,10 +12,10 @@
                 <h1>Mi Perfil</h1>
                 <div class="flex flex-center">
                     <div class="form-group p-1">
-                        <button class="btn-primary" onclick="window.location.href=`/usuarios/edit/<%= user.id %>`;">Actualizar datos</button>
+                        <button class="btn-primary" onclick="window.location.href=`/usuarios/edit/<%= usuarios.id %>`;">Actualizar datos</button>
                     </div> 
                     <div class="form-group p-1">
-                        <button class="btn-primary" onclick="window.location.href=`/usuarios/delete/<%= user.id %>`;">Eliminar usuario</a></button>
+                        <button class="btn-primary" onclick="window.location.href=`/usuarios/delete/<%= usuarios.id %>`;">Eliminar usuario</a></button>
                     </div>
                     <div class="form-group p-1">
                         <button class="btn-primary">Historial de compras</a></button>
@@ -32,7 +32,7 @@
                         name="fullName"
                         type="text"
                         class="form-control"
-                        value="<%= user.fullName %>"
+                        value="<%= usuarios.fullName %>"
                         readonly
                     />
                 </div>
@@ -42,7 +42,7 @@
                         name="email"
                         type="text"
                         class="form-control"
-                        value="<%= user.email %>"
+                        value="<%= usuarios.email %>"
                         readonly
                     />
                 </div>
@@ -52,7 +52,7 @@
                         name="country"
                         type="text"
                         class="form-control"
-                        value="<%= user.country %>"
+                        value="<%= usuarios.country %>"
                         readonly
                     />
                 </div>
@@ -62,14 +62,14 @@
                         name="telefono"
                         type="text"
                         class="form-control"
-                        value="<%= user.telefono %>"
+                        value="<%= usuarios.telefono %>"
                         readonly
                     />
                 </div>
                 <div class="form-group my-1">
                     <label for="avatar">Avatar</label>
                     <div>
-                        <img src="/images/avatars/<%= user.avatar %>" alt="avatar" class="img-avatar"/>
+                        <img src="/images/avatars/<%= usuarios.avatar %>" alt="avatar" class="img-avatar"/>
                     </div>
                 </div>
                       

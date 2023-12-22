@@ -18,12 +18,12 @@ router.post("/login", loginValidations, loginFormMiddleware, userController.logi
 router.get("/logout", userController.logout);
 
 router.get("/register", guestMiddleware, userController.registerForm);
-router.post("/register", uploadFile.single("avatarFile"), registerValidations, registerFormMiddleware, userController.registerProcess);
+router.post("/register", uploadFile.single("avatar"), registerValidations, registerFormMiddleware, userController.registerProcess);
 
 router.get("/profile", authMiddleware, userController.userProfile);
 
 router.get('/edit/:id', registerValidations, authMiddleware, userController.editUser);
-router.post('/update/:id', authMiddleware, userController.updateUser);
+router.post('/update/:id', uploadFile.single("avatar"), authMiddleware, userController.updateUser);
 
 router.get('/delete/:id', authMiddleware, userController.deleteUser);
 router.post('/destroy/:id', authMiddleware, userController.destroyUser);

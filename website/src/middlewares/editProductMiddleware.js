@@ -8,7 +8,7 @@ const { validationResult } = require("express-validator");
 
 module.exports = async (req, res, next) => {
     const id = req.params.id;
-    const producto = await productService.getProductDetail(id);
+    const productos = await productService.getProductDetail(id);
 
     const resultValidation = validationResult(req);
 
@@ -18,7 +18,7 @@ module.exports = async (req, res, next) => {
         return res.render("productos/edit", {
             marca,
             categoria,
-            Productos: producto,
+            productos: productos,
             errors: resultValidation.mapped(),
             oldData: req.body,
         });

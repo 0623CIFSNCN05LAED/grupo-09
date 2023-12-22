@@ -16,7 +16,7 @@ const productController = {
     editProduct: (req, res) => {
         productService.editProduct(req.params.id)
         .then((productos) => {
-            res.render('./productos/edit', {Productos:productos});
+            res.render('./productos/edit', {productos});
         });
     },
 
@@ -30,7 +30,7 @@ const productController = {
     deleteProduct: (req, res) => {
         productService.deleteProduct(req.params.id)
         .then((productos) => {
-            res.render('./productos/delete', {Productos:productos});
+            res.render('./productos/delete', {productos});
         });
     },
 
