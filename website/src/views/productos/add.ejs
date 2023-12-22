@@ -201,15 +201,15 @@
                     <label for="imagenPath">Imagen</label>
                 </div>
                 <div class="w-75">
-                    <input type="file" 
-                        name="imagenPath" 
-                        class="form-control <%= locals.errors && errors.imagenPath ? 'is-invalid' : null %>"
-                        value="<%= locals.oldData ? oldData.imagenPath : null %>"
+                    <input 
+                        type="file" 
+                        name="imagen" 
+                        class="form-control <%= locals.errors && errors.imagen ? 'is-invalid' : null %>"
+                        value="<%= locals.oldData ? oldData.imagen : null %>"
                     >
-
-                    <% if (locals.errors && errors.imagenPath) { %>
+                    <% if (locals.errors && errors.imagen) { %>
                         <div class="text-danger">
-                            <%= errors.imagenPath.msg %> 
+                            <%= errors.imagen.msg %> 
                         </div>
                     <% } %>
                 </div>

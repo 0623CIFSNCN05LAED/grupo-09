@@ -8,7 +8,7 @@
         <%- include("../partials/header") %>
 
         <main>
-            <form class="container-form my-1" action="/usuarios/update/<%= Usuarios.id %>" method="POST" enctype="multipart/form-data">
+            <form class="container-form my-1" method="POST" action="/usuarios/update/<%= usuarios.id %>" enctype="multipart/form-data">
                 <div class="w-100"><h2 class="text-center">EDITAR USUARIO</h2></div>
 
                 <div class="form-group my-1">
@@ -17,7 +17,7 @@
                         type="text" 
                         name="fullName" 
                         class="form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>"
-                        value="<%= Usuarios.fullName %>"
+                        value="<%= usuarios.fullName %>"
                     >
                     <% if (locals.errors && errors.fullName) { %>
                         <div class="text-danger">
@@ -25,27 +25,29 @@
                         </div>
                     <% } %>
                 </div>
+
                 <div class="form-group my-1">
-                     <label for="telefono"><b>Número de Teléfono:</b></label>
-                     <input 
-                     type="tel" 
-                     name="telefono"
-                     class="form-control <%= locals.errors && errors.telefono ? 'is-invalid' : null %>"
-                     value="<%= Usuarios.telefono %>"
-                 >
-                 <% if (locals.errors && errors.telefono) { %>
-                     <div class="text-danger">
-                         <%= errors.telefono.msg %> 
-                     </div>
-                 <% } %>
-                </div> 
+                    <label for="telefono"><b>Número de Teléfono:</b></label>
+                    <input 
+                        type="tel" 
+                        name="telefono"
+                        class="form-control <%= locals.errors && errors.telefono ? 'is-invalid' : null %>"
+                        value="<%= usuarios.telefono %>"
+                    >
+                    <% if (locals.errors && errors.telefono) { %>
+                        <div class="text-danger">
+                            <%= errors.telefono.msg %> 
+                        </div>
+                    <% } %>
+                </div>
+
                 <div class="form-group my-1">
                     <label><b>Correo electrónico:</b></label>
                     <input 
                         type="text" 
                         name="email" 
                         class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
-                        value="<%= Usuarios.email %>"
+                        value="<%= usuarios.email %>"
                     >
                     <% if (locals.errors && errors.email) { %>
                         <div class="text-danger">
@@ -53,6 +55,7 @@
                         </div>
                     <% } %>
                 </div>
+
                 <div class="form-group my-1">
                     <label><b>Password:</b></label>
                     <input 
@@ -62,13 +65,13 @@
                         class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
                     >
                     <span class="password-toggle" onclick="togglePassword()">Mostrar</span>
-
                     <% if (locals.errors && errors.password) { %>
                         <div class="text-danger">
                             <%= errors.password.msg %>
                         </div>
                     <% } %>
                 </div>
+
                 <div class="form-group my-1">
                     <label><b>País de nacimiento:</b></label>
                     <select 
@@ -90,11 +93,12 @@
                         </div>
                     <% } %>
                 </div>
+
                 <div class="form-group my-1">
                     <label><b>Imagen de perfil:</b></label>
                     <input 
                         type="file" 
-                        name="avatarFile"
+                        name="avatar"
                         class="form-control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>"
                     >
                     <% if (locals.errors && errors.avatar) { %>
@@ -103,14 +107,11 @@
                         </div>
                     <% } %>
                 </div>
+
                 <div class="align-center p-1">
                     <button type="submit" class="btn-primary">Actualizar Datos Personales</button>
                 </div>
-               
-   
-                 
             </form>
-
         </main>
        
         <!--FOOTER-->

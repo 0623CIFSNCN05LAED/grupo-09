@@ -10,7 +10,6 @@ module.exports = async (req, res, next) => {
     const [categoria, marca] = await Promise.all([categoriesService.getAllCategories(), brandService.getAllBrands()]);
 
     if (resultValidation.errors.length > 0) {
-        console.log("entroooooooooooo")
         return res.render("./productos/add", {
             marca,
             categoria,

@@ -20,7 +20,7 @@ module.exports = {
         });
     },
 
-    updateProduct: (data, file, id,) => {
+    updateProduct: (data, file, id) => {
         return Productos.update({
             sku: data.sku,
             nombre: data.nombre,

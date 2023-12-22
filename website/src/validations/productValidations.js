@@ -13,7 +13,7 @@ const productValidations = [
     body("peso").notEmpty().withMessage("Ingrese peso"),
     body("marca_id").notEmpty().withMessage("Ingrese marca"),
     body("categoria_id").notEmpty().withMessage("Ingrese categoria"),
-    body("imagenPath").custom((value, { req }) => {
+    body("imagen").custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"];
 

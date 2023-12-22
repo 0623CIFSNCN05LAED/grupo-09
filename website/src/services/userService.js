@@ -5,12 +5,12 @@ module.exports = {
 
     createUser: (data, file) => {
         return Usuarios.create({
-           fullName: data.fullName,
-           country: data.country,
-           telefono: data.telefono,
-           email: data.email,
-           password: bcryptjs.hashSync(data.password, 10),
-           avatar: file.filename
+            fullName: data.fullName,
+            country: data.country,
+            telefono: data.telefono,
+            email: data.email,
+            password: bcryptjs.hashSync(data.password, 10),
+            avatar: file.filename
         });
     },
 
@@ -20,12 +20,12 @@ module.exports = {
 
     updateUser: (data, file, id) => {
         return Usuarios.update({
-           fullName: data.fullName,
-           country: data.country,
-           telefono: data.telefono,
-           email: data.email,
-           password: bcryptjs.hashSync(data.password, 10),
-           avatar: file.filename
+            fullName: data.fullName,
+            country: data.country,
+            telefono: data.telefono,
+            email: data.email,
+            password: bcryptjs.hashSync(data.password, 10),  
+            avatar: file.filename
         }, {
             where: {
                 id: id

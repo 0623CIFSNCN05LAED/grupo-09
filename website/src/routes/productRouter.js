@@ -13,10 +13,9 @@ router.get('/detail/:id', productController.detail);
 router.get('/admin', adminMiddleware, productController.listAdmin);
 
 router.get('/new', productValidations, adminMiddleware, productController.add);
-router.post('/create', uploadFile.single("imagenPath"), productValidations, addProductMiddleware, productController.createProduct);
-/* router.post('/create', uploadFile.single("imagen"), productValidations, addProductMiddleware, adminMiddleware, productController.createProduct); */
+router.post('/create', uploadFile.single("imagen"), productValidations, addProductMiddleware, adminMiddleware, productController.createProduct);
 router.get('/edit/:id', productValidations, adminMiddleware, productController.editProduct);
-router.post('/update/:id', adminMiddleware, productController.updateProduct);
+router.post('/update/:id', uploadFile.single("imagen"), productValidations, editProductMiddleware, adminMiddleware, productController.updateProduct);
 router.get('/delete/:id', adminMiddleware, productController.deleteProduct);
 router.post('/destroy/:id', adminMiddleware, productController.destroyProduct);
 

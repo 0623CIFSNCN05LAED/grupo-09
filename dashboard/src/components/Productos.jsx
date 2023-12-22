@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-function Peliculas(){
+function Productos(){
     const [productos, setProductos] = useState([])
 
     useEffect(() => {
@@ -52,5 +52,5 @@ function Peliculas(){
     ); 
 }
 
-export default Peliculas;
+export default Productos;
 

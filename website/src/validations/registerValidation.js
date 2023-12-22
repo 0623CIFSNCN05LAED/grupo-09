@@ -54,7 +54,7 @@ const validationsRegister = [
 		.notEmpty()
 		.withMessage('Tienes que elegir un país'),
 
-	body("avatarFile").custom((value, { req }) => {
+	body("avatar").custom((value, { req }) => {
 			let file = req.file;
 			let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"];
 	

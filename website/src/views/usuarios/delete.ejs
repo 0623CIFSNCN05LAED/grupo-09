@@ -12,7 +12,7 @@
         <main class="vw-90 mx-auto">
             <section class="w-100 container-form">
                 <h2 class="title w-100 text-center">Estas seguro de querer eliminar el usuario ???</h2>
-                <form action="/usuarios/destroy/<%= Usuarios.id %>" method="POST">
+                <form action="/usuarios/destroy/<%= usuarios.id %>" method="POST">
                     <p class="text-center"><button class="btn-primary" type="submit">Borrar Usuario</button></p>
                     <p class="text-center"><a class="botonVolver" href="/usuarios/profile">Volver</a></p>
                 </form>    
