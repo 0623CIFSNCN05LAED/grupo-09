@@ -8,10 +8,23 @@
         <%- include("../partials/header") %>
 
         <main>
-            <div>
-                <p><h4>CARRITO DE COMPRAS</h4></p>
-            </div>
-
+            <div class="carrito-container">
+                <h2>Carrito de Compras</h2>
+                <table class="carrito-table">
+                    <thead>
+                        <tr>
+                            <th>Producto</tr>
+                            <th>Cantidad-+</th>
+                            <th>Precio</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody class="carrito-body">
+                       
+                    </tbody>
+                </table>
+                <p class="total">Total: $0.00</p>
+                <button class="finalizar-btn" onclick="finalizarCompra()">Finalizar Compra</button>
         </main>
         
         <!--FOOTER-->
