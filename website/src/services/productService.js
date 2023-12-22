@@ -1,7 +1,7 @@
 const { Productos } = require("../database/models");
 
 module.exports = {
-
+  
     createProduct: (data, file) => {
         return Productos.create({
            sku: data.sku,
