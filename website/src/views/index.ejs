@@ -11,19 +11,15 @@
             <div class="mySlides fade">
                 <img src="/images/carrousel1.jpg" style="width:100%">
             </div>
-            
             <div class="mySlides fade">
                 <img src="/images/carrousel2.gif" style="width:100%">
             </div>
-            
             <div class="mySlides fade">
                 <img src="/images/carrousel3.jpg" style="width:100%">
             </div>
-        
             <a class="prev" onclick="plusSlides(-1)">❮</a>
             <a class="next" onclick="plusSlides(1)">❯</a>
         </div>
-        <br>
         
         <div class="text-center">
             <span class="dot" onclick="currentSlide(1)"></span> 
@@ -31,66 +27,29 @@
             <span class="dot" onclick="currentSlide(3)"></span> 
         </div> 
 
-        <main class="p-2 vw-90 mx-auto">
-
+        <main class="p-1 vw-90 mx-auto">
             <section class="flex flex-wrap gap section">
-
-                <h2 class="title w-100">Productos</h2>
-
-                <% let contadorProductos = 0; %>
-
-                <% for (let i = 0; i < productos.length && contadorProductos < 4; i++) { %>
-                    <% if (productos[i].descuento === null) { %>
+                <h2 id="ofertas" class="title w-100">Ofertas</h2>
+        
+                <% for (let i = 0; i < productos.length; i++) { %>
+                    <% if (productos[i].oferta == 1) { %>
                         <article class="p-2 bt-1 border-grey border-radius bg-white product-shadow w-100 md-w-50 lg-w-25">
                             <a href="/productos/detail/<%= productos[i].id %>">
                                 <div class="relative flex flex-wrap">
-                                    <img class="w-100 border-radius" src="<%= productos[i].imagen %>" alt="<%= productos[i].descripcion %>">
+                                    <img class="w-100 border-radius" src="/images/productos/<%= productos[i].imagen %>" alt="<%= productos[i].descripcion %>">
                                     <p class="description"><%= productos[i].nombre %></p>
                                     <p class="precio">$<%= productos[i].precio %></p>
                                     <p class="descuento">
-                                        Sin descuento
+                                        <%= productos[i].descuento %>% OFF
                                     </p>
                                 </div>
                             </a>
                         </article>
-                        <% contadorProductos++; %>
                     <% } %>
                 <% } %>
                 
-                
-
-
-
-
-
-            </section>
-            <section class="flex flex-wrap gap section">
-                <h2 id="ofertas" class="title w-100">Ofertas</h2>
-        
-                <% let contadorProductosConDescuento = 0; %>
-
-                    <% for (let i = 0; i < productos.length && contadorProductosConDescuento < 4; i++) { %>
-                        <% if (productos[i].descuento >= 18) { %>
-                            <article class="p-2 bt-1 border-grey border-radius bg-white product-shadow w-100 md-w-50 lg-w-25">
-                                <a href="/productos/detail/<%= productos[i].id %>">
-                                    <div class="relative flex flex-wrap">
-                                        <img class="w-100 border-radius" src="<%= productos[i].imagen %>" alt="<%= productos[i].descripcion %>">
-                                        <p class="description"><%= productos[i].nombre %></p>
-                                        <p class="precio">$<%= productos[i].precio %></p>
-                                        <p class="descuento">
-                                            <%= productos[i].descuento %>% OFF
-                                        </p>
-                                    </div>
-                                </a>
-                            </article>
-                            <% contadorProductosConDescuento++; %>
-                        <% } %>
-                    <% } %>
-
             </section>
         </main>
-        
-        
 
         <!--FOOTER-->
         <%- include("./partials/footer") %>

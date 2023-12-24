@@ -87,7 +87,7 @@ const userController = {
         userService.updateUser(req.body, req.file, req.params.id)
         .then(() => {
             req.session.destroy();
-            res.redirect("/usuarios/login");
+            res.redirect("/usuarios/profile");
         });
     },
 
@@ -107,7 +107,7 @@ const userController = {
 
     userProfile: async (req, res) => {
         res.render('./usuarios/profile', {
-            user: req.session.userLogged
+            usuarios: req.session.userLogged
         });
     },
  

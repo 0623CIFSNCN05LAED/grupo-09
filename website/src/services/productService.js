@@ -32,7 +32,7 @@ module.exports = {
             alto: data.alto,
             profundidad: data.profundidad,
             peso: data.peso,
-            imagen: file.filename,
+            imagen: file ? file.filename : data.imagen,
             marca_id: data.marca_id,
             categoria_id: data.categoria_id
         }, {

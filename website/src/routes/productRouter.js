@@ -6,6 +6,7 @@ const adminMiddleware = require('../middlewares/adminMiddleware');
 const addProductMiddleware = require('../middlewares/addProductMiddleware');
 const editProductMiddleware = require('../middlewares/editProductMiddleware');
 const productValidations = require('../validations/productValidations');
+const productEditValidations = require('../validations/productValidations');
 const uploadFile = require('../middlewares/multerProductMiddleware');
 
 router.get('/', productController.list);
@@ -14,8 +15,8 @@ router.get('/admin', adminMiddleware, productController.listAdmin);
 
 router.get('/new', productValidations, adminMiddleware, productController.add);
 router.post('/create', uploadFile.single("imagen"), productValidations, addProductMiddleware, adminMiddleware, productController.createProduct);
-router.get('/edit/:id', productValidations, adminMiddleware, productController.editProduct);
-router.post('/update/:id', uploadFile.single("imagen"), productValidations, editProductMiddleware, adminMiddleware, productController.updateProduct);
+router.get('/edit/:id', productEditValidations, adminMiddleware, productController.editProduct);
+router.post('/update/:id', uploadFile.single("imagen"), productEditValidations, editProductMiddleware, adminMiddleware, productController.updateProduct);
 router.get('/delete/:id', adminMiddleware, productController.deleteProduct);
 router.post('/destroy/:id', adminMiddleware, productController.destroyProduct);
 

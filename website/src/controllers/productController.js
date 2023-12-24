@@ -1,4 +1,6 @@
 const productService = require("../services/productService");
+const brandService = require("../services/brandService");
+const categoryService = require("../services/categoryService");
 
 const productController = {
 
@@ -6,17 +8,20 @@ const productController = {
         res.render("./productos/add");
     },
 
-    createProduct: (req, res) => {
+    createProduct: async(req, res) => {
         productService.createProduct(req.body, req.file)
         .then(() => {
             res.redirect("/productos/admin");
         });
     },
 
-    editProduct: (req, res) => {
+    editProduct: async(req, res) => {
+        const marcas = await brandService.getAllBrands();
+        const categorias = await categoryService.getAllCategories();
+
         productService.editProduct(req.params.id)
         .then((productos) => {
-            res.render('./productos/edit', {productos});
+            res.render('./productos/edit', {productos, marcas, categorias});
         });
     },
 
