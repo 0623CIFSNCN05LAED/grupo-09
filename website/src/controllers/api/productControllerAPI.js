@@ -7,7 +7,7 @@ const productsControllerAPI = {
             let respuesta = {
                 meta: {
                     status: 200,
-                    total: productos.length,
+                   /*  total: productos.length, */
                     url: "/api/productos",
                 },
                 data: productos,
@@ -22,7 +22,6 @@ const productsControllerAPI = {
             let respuesta = {
                 meta: {
                     status: 200,
-                    total: productos.length,
                     url: "/api/productos/:id",
                 },
                 data: productos,

@@ -3,7 +3,7 @@ const bcryptjs = require('bcryptjs');
 
 const userController = { 
 
-    registerForm: (req, res) => {
+    register: (req, res) => {
         res.render("./usuarios/register");
     },
 
@@ -25,7 +25,7 @@ const userController = {
         });
     },
  
-    loginForm: (req, res) => {
+    login: (req, res) => {
         res.render("./usuarios/login");
     },
 
@@ -44,26 +44,26 @@ const userController = {
                 }
 
                 if (req.session.userLogged.rol_tipo == 'Administrador') {
-                    res.redirect('/productos/admin');
+                    res.redirect("/productos/admin");
                 } else {
-                    res.redirect('/usuarios/profile');
+                    res.redirect("/usuarios/profile");
                 }
                 /* return res.redirect('/usuarios/profile'); */
 
             } else {
-                return res.render('./usuarios/login', {
+                return res.render("./usuarios/login", {
                     errors: {
                         password: {
-                            msg: 'El usuario y/o contraseña ingresados son inválidos',
+                            msg: "El usuario y/o contraseña ingresados son inválidos",
                         },
                     },
                 });
             }
         } else {
-            return res.render('./usuarios/login', {
+            return res.render("./usuarios/login", {
                 errors: {
                     email: {
-                        msg: 'El correo electrónico ingresado es inválido',
+                        msg: "El correo electrónico ingresado es inválido",
                     },
                 },
             });
@@ -76,14 +76,14 @@ const userController = {
         res.redirect('/');
     },
 
-    editUser: (req, res) => {
+    edit: (req, res) => {
         userService.editUser(req.params.id)
         .then((usuarios) => {
-            res.render('./usuarios/edit', {usuarios});
+            res.render("./usuarios/edit", {usuarios});
         });
     },
 
-    updateUser: (req, res) => {
+    update: (req, res) => {
         userService.updateUser(req.body, req.file, req.params.id)
         .then(() => {
             req.session.destroy();
@@ -91,22 +91,22 @@ const userController = {
         });
     },
 
-    deleteUser: (req, res) => {
+    delete: (req, res) => {
         userService.deleteUser(req.params.id)
         .then((usuarios) => {
-            res.render('./usuarios/delete', {usuarios});
+            res.render("./usuarios/delete", {usuarios});
         });
     },
 
-    destroyUser: (req, res) => {
+    destroy: (req, res) => {
         userService.destroyUser(req.params.id)
         .then(() => {
             res.redirect("/");
         });
     },
 
-    userProfile: async (req, res) => {
-        res.render('./usuarios/profile', {
+    profile: async (req, res) => {
+        res.render("./usuarios/profile", {
             usuarios: req.session.userLogged
         });
     },

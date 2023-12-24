@@ -65,12 +65,13 @@
                     <label for="marca_id">Marca</label>
                 </div>
                 <div class="w-75">
-                    <input 
-                        type="text" 
-                        name="marca_id" 
-                        class="form-control <%= locals.errors && errors.marca_id ? 'is-invalid' : null %>"
-                        value="<%= locals.oldData ? oldData.marca_id : null %>"
-                    >
+                    <select name="marca_id" id="marca_id" class="form-control">
+                        <% marcas.forEach(marca => { %>
+                            <option value="<%= marca.id %>">
+                                <%= marca.marca %>
+                            </option>
+                        <% }) %>
+                    </select>
                     <% if (locals.errors && errors.marca_id) { %>
                         <div class="text-danger">
                             <%= errors.marca_id.msg %> 
@@ -82,12 +83,13 @@
                     <label for="categoria">Categoria</label>
                 </div>
                 <div class="w-75">
-                    <input 
-                        type="text" 
-                        name="categoria_id" 
-                        class="form-control <%= locals.errors && errors.categoria_id ? 'is-invalid' : null %>"
-                        value="<%= locals.oldData ? oldData.categoria_id : null %>"
-                    >
+                    <select name="categoria_id" id="categoria_id" class="form-control">
+                        <% categorias.forEach(categoria => { %>
+                            <option value="<%= categoria.id %>">
+                                <%= categoria.categoria %>
+                            </option>
+                        <% }) %>
+                    </select>
                     <% if (locals.errors && errors.categoria_id) { %>
                         <div class="text-danger">
                             <%= errors.categoria_id.msg %> 

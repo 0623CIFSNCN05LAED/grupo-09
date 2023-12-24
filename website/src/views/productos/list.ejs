@@ -19,8 +19,8 @@
                                 <p class="description"><%= productos[i].nombre %></p>
                                 <p class="precio">$<%= productos[i].precio %></p>
                                 <p class="descuento">
-                                    <% if (productos[i].descuento !== null) { %>
-                                      <%= productos[i].descuento %>%OFF
+                                    <% if (productos[i].descuento !== null || productos[i].descuento !== 0) { %>
+                                      <%= productos[i].descuento %> %OFF
                                     <% } %>
                                   </p>
                             </div>

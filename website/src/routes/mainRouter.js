@@ -8,13 +8,10 @@ const usersRouter = require("./userRouter")
 router.use(usersRouter);
 router.use("/usuarios", usersRouter);
 
-const productsRouter = require("../routes/productRouter")
+const productsRouter = require("./productRouter")
 router.use("/productos", productsRouter);
 
-const productsRouterAPI = require("../routes/api/productRouterAPI")
-router.use(productsRouterAPI);
-
-const usersRouterAPI = require("../routes/api/userRouterAPI")
-router.use(usersRouterAPI);
+const apiRouter = require("./api/mainRouterAPI")
+router.use("/api", apiRouter);
 
 module.exports = router;

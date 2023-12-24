@@ -4,42 +4,44 @@ const categoryService = require("../services/categoryService");
 
 const productController = {
 
-    add: (req, res) => {
-        res.render("./productos/add");
+    add: async(req, res) => {
+        const marcas = await brandService.getAllBrands();
+        const categorias = await categoryService.getAllCategories();
+        res.render("./productos/add", {marcas, categorias});
     },
 
-    createProduct: async(req, res) => {
+    create: async(req, res) => {
         productService.createProduct(req.body, req.file)
         .then(() => {
             res.redirect("/productos/admin");
         });
     },
 
-    editProduct: async(req, res) => {
+    edit: async(req, res) => {
         const marcas = await brandService.getAllBrands();
         const categorias = await categoryService.getAllCategories();
 
         productService.editProduct(req.params.id)
         .then((productos) => {
-            res.render('./productos/edit', {productos, marcas, categorias});
+            res.render("./productos/edit", {productos, marcas, categorias});
         });
     },
 
-    updateProduct: (req, res) => {
+    update: (req, res) => {
         productService.updateProduct(req.body, req.file, req.params.id)
         .then(() => {
             res.redirect("/productos/admin");
         });
     },
 
-    deleteProduct: (req, res) => {
+    delete: (req, res) => {
         productService.deleteProduct(req.params.id)
         .then((productos) => {
-            res.render('./productos/delete', {productos});
+            res.render("./productos/delete", {productos});
         });
     },
 
-    destroyProduct: (req, res) => {
+    destroy: (req, res) => {
         productService.destroyProduct(req.params.id)
         .then(() => {
             res.redirect("/productos/admin");
@@ -48,34 +50,34 @@ const productController = {
 
     list: (req, res) => {
         productService.getAllProducts()
-            .then(productos => {
-                res.render('./productos/productList.ejs', {productos})
-            })
+        .then(productos => {
+            res.render("./productos/list.ejs", {productos})
+        })
     },
 
     listAdmin: (req, res) => {
         productService.getAllProducts()
-            .then(productos => {
-                res.render('./productos/productListAdmin.ejs', {productos})
-            })
+        .then(productos => {
+            res.render("./productos/listAdmin.ejs", {productos})
+        })
     },
 
     detail: (req, res) => {
         productService.getProductDetail(req.params.id)
-            .then(productos => {
-                res.render('./productos/productDetail.ejs', {productos})
-            })
+        .then(productos => {
+            res.render("./productos/detail.ejs", {productos})
+        })
     },
 
     getByCategory: (req, res) => {
         productService.getByCategory(req.params.id)
         .then((productos) => {
-            res.render('./productos/productList.ejs', {productos});
+            res.render("./productos/list.ejs", {productos});
         });
     },
 
-    productCart: (req, res) => {
-        res.render("./productos/productCart.ejs");
+    cart: (req, res) => {
+        res.render("./productos/cart.ejs");
     },
 
 };
