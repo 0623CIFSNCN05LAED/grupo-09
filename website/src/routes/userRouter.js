@@ -9,9 +9,11 @@ const guestMiddleware = require('../middlewares/guestMiddleware');
 
 const loginValidations = require('../validations/loginValidations');
 const registerValidations = require('../validations/registerValidation');
+const userValidations = require('../validations/userValidation');
 
 const loginFormMiddleware = require('../middlewares/loginFormMiddleware');
 const registerFormMiddleware = require('../middlewares/registerFormMiddleware');
+const userEditMiddleware = require('../middlewares/userEditMiddleware');
 
 router.get("/login", guestMiddleware, userController.loginForm);
 router.post("/login", loginValidations, loginFormMiddleware, userController.loginProcess);
@@ -22,8 +24,8 @@ router.post("/register", uploadFile.single("avatar"), registerValidations, regis
 
 router.get("/profile", authMiddleware, userController.userProfile);
 
-router.get('/edit/:id', registerValidations, authMiddleware, userController.editUser);
-router.post('/update/:id', uploadFile.single("avatar"), authMiddleware, userController.updateUser);
+router.get('/edit/:id', authMiddleware, userController.editUser);
+router.post('/update/:id', uploadFile.single("avatar"), userValidations, userEditMiddleware, authMiddleware, userController.updateUser);
 
 router.get('/delete/:id', authMiddleware, userController.deleteUser);
 router.post('/destroy/:id', authMiddleware, userController.destroyUser);

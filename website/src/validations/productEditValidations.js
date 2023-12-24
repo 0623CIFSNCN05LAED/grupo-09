@@ -17,14 +17,13 @@ const productValidations = [
         let file = req.file;
         let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"];
 
-        if (file) {
-            let fileExtension = path.extname(file.originalname);
-            if (!acceptedExtensions.includes(fileExtension)) {
-                throw new Error(
-                `Las extensiones aceptadas son ${acceptedExtensions.join(", ")}`
-                );
-            }
+        let fileExtension = path.extname(file.originalname);
+        if (!acceptedExtensions.includes(fileExtension)) {
+            throw new Error(
+            `Las extensiones aceptadas son ${acceptedExtensions.join(", ")}`
+            );
         }
+        
         return true;
     }), 
 ];
