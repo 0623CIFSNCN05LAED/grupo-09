@@ -29,7 +29,6 @@ const productsControllerAPI = {
             res.json(respuesta);
         })
     },
-
 };
 
 module.exports = productsControllerAPI;
