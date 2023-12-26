@@ -3,19 +3,9 @@ import Productos from './Productos'
 import Usuarios from './Usuarios'
 import CantidadDeUsuariuos from "./CantidadDeUsuarios"
 import CantidadDeProductos from './CantidadDeProductos';
-import { useState, useEffect } from 'react';
 
-const Contetnt = () => {
-	let cantidadUsuarios = [ ];
 
-  useEffect(() => {
-    fetch('http://localhost:3000/api/usuarios')
-      .then(response => response.json())
-      .then(data => {
-        cantidadUsuarios = data.cantidadUsuarios;
-      });
-  }, []);
-
+function Contetnt(){
 
   return(
 	<React.Fragment>

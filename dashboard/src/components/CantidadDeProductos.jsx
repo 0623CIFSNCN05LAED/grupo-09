@@ -3,15 +3,19 @@ import { useState, useEffect } from 'react';
 
 
 const CantidadDeProductos = () => {
-	let cantidadProductos = [ ];
+    const [cantidadProductos, setCantidadProductos] = useState(0);
 
-  useEffect(() => {
-    fetch('http://localhost:3000/api/productos')
-      .then(response => response.json())
-      .then(data => {
-        cantidadProductos = data.cantidadProductos;
-      });
-  }, []);
+    useEffect(() => {
+      const obtenerCantidadProductos = async () => {
+        const response = await fetch('http://localhost:3000/api/productos');
+        const { cantidadProductos } = await response.json();
+        setCantidadProductos(cantidadProductos);
+      };
+  
+      obtenerCantidadProductos();
+    }, []);
+  
+    console.log(" cantidadProductos ", cantidadProductos);
 
 
   return(
