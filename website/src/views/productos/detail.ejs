@@ -10,21 +10,27 @@
         <main class="p-1 vw-90 mx-auto">
             <h1 class="title w-100 text-center p-1">DETALLE DE PRODUCTO</h1>  
             <div class="w-75 flex flex-wrap align-center product-container">
-                <img class="w-50" src="/images/productos/<%= productos.imagen %>" alt="<%= productos.descripcion %>">
+                <img class="w-50" src="<%= productos.imagen %>" alt="<%= productos.descripcion %>">
                 <div class="w-50 flex flex-wrap bt-1 mx-auto p-2 product-info">
                     <div class="bold w-25">Producto:</div><div class="product-detail"><%= productos.nombre %></div>
                     <div class="bold w-25">Descripcion:</div><div class="product-detail"><%= productos.descripcion %></div>
-                    <div class="bold w-25">Precio:</div><div class="product-detail"><%= productos.precio %></div>
+                    <div class="bold w-25">Precio:</div><div class="product-detail">$<%= productos.precio %></div>
                     <div class="bold w-25">Ancho:</div><div class="product-detail"><%= productos.ancho %></div>
                     <div class="bold w-25">Alto:</div><div class="product-detail"><%= productos.alto %></div>
                     <div class="bold w-25">Profundidad:</div><div class="product-detail"><%= productos.profundidad %></div>
                     <div class="bold w-25">Peso:</div><div class="product-detail"><%= productos.peso %></div>
+                    
+                    <% if (productos.descuento !== null && productos.descuento !== 0) { %>
+                        <div class="bold w-25">Descuento:</div><div class="product-detail"><%= productos.descuento %>%</div>
+                    <% } else { %>
+                        <div class="bold w-25">Descuento:</div><div class="product-detail">Sin descuento</div>
+                    <% } %>
+        
                     <button class="agregar">Agregar al Carrito</button>
-
                 </div>
             </div>
-            
         </main>
+        
 
         <!--FOOTER-->
         <%- include("../partials/footer") %>
