@@ -74,9 +74,7 @@
     background-color: white;
 }
 
-.product-shadow {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
+
 
 .product-shadow:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -91,10 +89,11 @@
 .description {
     color: rgb(47, 0, 53);
     width: 100%;
+    font-size: 14px;
 }
 
 .precio {
-    font-size: 1.625rem;
+    font-size: 18px;
     color: rgb(0, 0, 0);
     margin-top: 10px;
     margin-bottom: 1px;
@@ -103,7 +102,7 @@
 
 .descuento {
     color: #d300da;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 #ofertas{
@@ -117,11 +116,58 @@
 @media only screen and (max-width: 300px) {
     .prev, .next,.text {font-size: 11px}
 }
-@media (min-width: 769px) {  
+@media (min-width: 910px) {  
     .product-shadow {
       box-shadow: none;
     }  
     .product:hover .product-shadow {
       display: block;
+    }
+    .description {
+        color: rgb(47, 0, 53);
+        width: 100%;
+        font-size: 15px;
+    }
+    
+    .precio {
+        font-size: 19px;
+        color: rgb(0, 0, 0);
+        margin-top: 10px;
+        margin-bottom: 1px;
+        margin-right: 10px;
+    }
+    
+    .descuento {
+        color: #d300da;
+        font-size: 16px;
+    }
+}
+
+
+
+@media (min-width: 1100px) {  
+    .product-shadow {
+      box-shadow: none;
+    }  
+    .product:hover .product-shadow {
+      display: block;
+    }
+    .description {
+        color: rgb(47, 0, 53);
+        width: 100%;
+        font-size: 16px;
+    }
+    
+    .precio {
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        margin-top: 10px;
+        margin-bottom: 1px;
+        margin-right: 20px;
+    }
+    
+    .descuento {
+        color: #d300da;
+        font-size: 17px;
     }
 }

@@ -7,7 +7,7 @@
         <!--HEADER-->
         <%- include("../partials/header") %>
       
-        <main class="p-1 vw-90 mx-auto">
+        <main class="p-1 mx-auto">
             <section class="section">
                 <h1 class="title w-100 text-center p-1">PANEL ADMINISTRADOR</h1>
                 
@@ -20,10 +20,10 @@
                     </div>
                 </div>
 
-                <ul class="w-50 align-center"><br>
+                <ul class="main-admin"><br>
                     <% for( let i = 0; i < productos.length; i++ ) { %>
                         <li class="flex p-1">
-                            <div class="w-75 bt-1 p-1"><%= productos[i].nombre %></div><div class="bt-1 p-1"><a class="btn-primary-admin" href="/productos/edit/<%= productos[i].id %>"> editar </a></div><div class="bt-1 p-1"><a class="btn-primary-admin" href="/productos/delete/<%= productos[i].id %>"> eliminar </a></div>
+                            <div class="w-75 bt-1 p-1" id="admin-panel"><%= productos[i].nombre %></div><div class="bt-1 p-1"><a class="btn-primary-admin" href="/productos/edit/<%= productos[i].id %>"> editar </a></div><div class="bt-1 p-1"><a class="btn-primary-admin" href="/productos/delete/<%= productos[i].id %>"> eliminar </a></div>
                         </li>
                     <% } %>
                 </ul>

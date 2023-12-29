@@ -66,7 +66,7 @@
     border-radius: 4px;
     padding: 5px 10px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .btn-primary-admin:hover {
@@ -106,6 +106,20 @@
     margin-top: 20px;
 }
 
+
+#admin-panel{
+
+font-size: 12px;
+
+
+}
+
+.main-admin{
+
+    margin-left:10px ;
+    margin-right: 10px;
+    padding:0px ;
+}
 @media (min-width: 474px) {
 
     .container-form {
@@ -132,6 +146,18 @@
         font-size: 15px;
     
     }
+    #admin-panel{
+
+        font-size: 14px;
+        
+        
+        }
+        .main-admin{
+
+            margin-left:10px ;
+            margin-right: 10px;
+            padding-left: 60px;
+        }
 }
 
 @media (min-width: 907px) {
@@ -149,6 +175,27 @@
         margin-right: 45px;
         font-size: 16px;
     }
+    #admin-panel{
+
+        font-size: 16px;
+        
+        
+        }
+        .btn-primary-admin {
+            background-color: rgb(93, 53, 130); 
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .main-admin{
+
+            margin-left:200px ;
+            margin-right: 200px;
+            
+        }
 }
 
 
