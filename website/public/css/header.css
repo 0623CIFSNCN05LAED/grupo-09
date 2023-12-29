@@ -14,11 +14,21 @@
     transform: scale(1.1); /* Ajusta el factor de escala según tus preferencias */
 }
 
-.top-header {
+.top-header2 {
     text-align: center;
     font-size: 8px;
     background-color: rgb(209, 160, 255);
     padding: 1px;
+}
+.top-header {
+    background-color: rgb(209, 160, 255);
+    font-size: 8px;
+    padding: 1px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 .barra-busqueda {
