@@ -1,7 +1,7 @@
 const { Categorias } = require("../database/models");
 
 module.exports = {
-  getAllCategories: () => {
-    return Categorias.findAll();
-  },
+    getAllCategories: () => {
+        return Categorias.findAll();
+    },
 };

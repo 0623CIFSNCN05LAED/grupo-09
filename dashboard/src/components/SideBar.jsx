@@ -25,14 +25,19 @@ function SideBar(){
                 {/*<!-- Heading -->*/}
                 <div className="sidebar-heading">Menu</div>
 
-                {/*<!-- Nav Item - Usuarios -->*/}
+                {/*<!-- Nav Item - Productos -->*/}
                 <li className="nav-item container-fluid p-1 ml-4">
-                    <Link to={{pathname: "/usuarios"}}>Usuarios</Link>
+                    <Link className="text-white fw-bold" to={{pathname: "/productos"}}>Productos</Link>
                 </li>
 
                 {/*<!-- Nav Item - Productos -->*/}
                 <li className="nav-item container-fluid p-1 ml-4">
-                    <Link to={{pathname: "/productos"}}>Productos</Link>
+                    <Link className="text-white fw-bold" to={{pathname: "/categorias"}}>Categorias</Link>
+                </li>
+
+                {/*<!-- Nav Item - Usuarios -->*/}
+                <li className="nav-item container-fluid p-1 ml-4">
+                    <Link className="text-white fw-bold" to={{pathname: "/usuarios"}}>Usuarios</Link>
                 </li>
 
                 {/*<!-- Divider -->*/}

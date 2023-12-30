@@ -13,9 +13,10 @@ router.get('/', productController.list);
 router.get('/detail/:id', productController.detail);
 router.get('/admin', adminMiddleware, productController.listAdmin);
 
-router.get('/new', productValidations, adminMiddleware, productController.add);
+router.get('/new', adminMiddleware, productController.add);
 router.post('/create', uploadFile.single("imagen"), productValidations, addProductMiddleware, adminMiddleware, productController.create);
-router.get('/edit/:id', productEditValidations, adminMiddleware, productController.edit);
+/* router.get('/edit/:id', productEditValidations, adminMiddleware, productController.edit); */
+router.get('/edit/:id', adminMiddleware, productController.edit);
 router.post('/update/:id', uploadFile.single("imagen"), productEditValidations, editProductMiddleware, adminMiddleware, productController.update);
 router.get('/delete/:id', adminMiddleware, productController.delete);
 router.post('/destroy/:id', adminMiddleware, productController.destroy);

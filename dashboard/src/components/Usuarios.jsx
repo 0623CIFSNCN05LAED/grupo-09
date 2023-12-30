@@ -15,8 +15,11 @@ function Usuarios(){
     }, [])
 
     return (
-        <table className="table table-hover">
+        <table className="table table-hover mt-5">
             <thead>
+                <tr>
+                    <td className="bg-primary text-white" align="center" colspan="11"><b>USUARIOS</b></td>
+                </tr>
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>

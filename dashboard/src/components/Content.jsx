@@ -1,9 +1,10 @@
 import React from 'react';
 import Productos from './Productos'
 import Usuarios from './Usuarios'
+import Categorias from './Categorias'
 import CardCountProductos from './CardCountProductos'
 import CardCountUsuarios from './CardCountUsuarios'
-import CardCountCategoryProductos from './CardCountCategoryProductos'
+import CardCountCategory from './CardCountCategory'
 
 function Content(){
 
@@ -15,9 +16,10 @@ function Content(){
 					{/*<!-- Content Row Movies-->*/}
 					<div className="row">
                         <CardCountProductos/>
-                        <CardCountCategoryProductos/>
+                        <CardCountCategory/>
                         <CardCountUsuarios/>
                         <Productos/>
+                        <Categorias/>
                         <Usuarios/>
 					</div>
 				</div>

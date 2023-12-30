@@ -1,21 +1,26 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-function CardCountCategoryProductos(){
-    const [productos, setProductos] = useState([])
+function CardCountCategory(){
+    const [categorias, setCategorias] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:3000/api/productos")
+        fetch("http://localhost:3000/api/categorias")
         .then(response => {
             return response.json()
         })
-        .then(productos => {
-            setProductos(productos.data)
+        .then(categorias => {
+            setCategorias(categorias.data)
         })
     }, [])
 
-    const categorias = Object.groupBy(productos, (producto) => producto.categorias.categoria);
-    const countCategorias = Object.keys(categorias); // [ Lavarropas, Heladeras, Microondas ]
+    let cantidad = 0;
+    categorias.map(categoria => (
+        cantidad += 1
+    ))
+
+   /*  const categorias = Object.groupBy(productos, (producto) => producto.categorias.categoria);
+    const countCategorias = Object.keys(categorias); // [ Lavarropas, Heladeras, Microondas ] */
 
     return (
         <div className="col-md-4 mb-4">
@@ -24,7 +29,7 @@ function CardCountCategoryProductos(){
                     <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
                             <div className="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Categorias Productos</div>
-                            <div className="h5 mb-0 font-weight-bold text-gray-800">{countCategorias.length}</div>
+                            <div className="h5 mb-0 font-weight-bold text-gray-800">{cantidad}</div>
                         </div>
                         <div className="col-auto">
                             <i className="fas fa-film fa-2x text-gray-300"></i>
@@ -36,5 +41,5 @@ function CardCountCategoryProductos(){
     ); 
 }
 
-export default CardCountCategoryProductos;
+export default CardCountCategory;
 
