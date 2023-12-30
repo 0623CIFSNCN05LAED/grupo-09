@@ -1,4 +1,3 @@
-const Usuarios = require("../../database/models/Usuarios");
 const userService = require("../../services/userService");
 
 const productsControllerAPI = {
