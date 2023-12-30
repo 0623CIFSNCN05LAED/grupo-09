@@ -105,3 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+function toggleContent(id) {
+    const content = document.getElementById(`${id}Content`);
+    content.style.display = content.style.display === 'none' ? 'block' : 'none';
+}

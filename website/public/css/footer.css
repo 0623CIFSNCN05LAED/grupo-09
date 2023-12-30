@@ -1,20 +1,42 @@
 footer {
+    display: flex;
+    flex-wrap: wrap; 
     text-align: center;
-  
     justify-content: space-around;
-    color: white;
     text-decoration: none;
-    /*color: inherit;*/
+    background-color: #ffffff; /* Cambiado a un violeta más claro */
+    color: rgb(85, 8, 95);
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+   
 }
  
-/*
- DESPLIEGUE DE GRUPO-9 Y ATENCION AL CLIENTE
-.toggle-input {
+
+ /*DESPLIEGUE DE GRUPO-9 Y ATENCION AL CLIENTE*/
+
+ .content {
     display: none;
 }
 
+.toggle-label:hover h3 {
+    color: rgb(232, 153, 248);
+    transform: scale(1.05);
+}
+
+.toggle-item {
+    display: block;
+    margin-top: 10px;
+    margin-left: 90px; 
+    margin-right: 90px; 
+}
+
+/* Estilos adicionales según tus necesidades */
+
+
+/* Estilos generales */
 .toggle-label {
     cursor: pointer;
+    margin-top: 10px; /* Espacio entre cada elemento desplegable */
 }
 
 .content {
@@ -23,43 +45,58 @@ footer {
 
 .toggle-input:checked + .toggle-label .content {
     display: block;
-    
 }
 
 .toggle-label:hover h3 {
-    color: rgb(232, 153, 248); 
+    color: rgb(232, 153, 248);
     transform: scale(1.05);
 }
 
-*/
+
+/* Estilos adicionales según tus necesidades */
+
+
+
+
 
 .logo-footer {
     width: 162px;
     height: 57px;
 }
 
-.link-footer { 
-    color: #fff;
-} 
 
 .link-footer:hover { 
-    color:#ccc;
+    color:#8b5a89;
 } 
 
+.img-medios-de-pago {
+    height: 100px; /* Puedes ajustar la altura según tus preferencias */
+}
 
-@media (min-width: 767px) {
+
+@media (min-width: 474px) {
+
 
 footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
+    text-align: center;
+    justify-content: space-around;
+    text-decoration: none;
     background-color: #ffffff; /* Cambiado a un violeta más claro */
     color: rgb(85, 8, 95);
     font-family: Arial, sans-serif;
+    font-size: 14px;
 }
 
+
+.toggle-item {
+    display: block;
+    margin-top: 20px;
+    margin-left: 150px; 
+    margin-right: 150px; 
+}
 /* Estilo para los bloques del footer */
 .block {
     width: 100%;
@@ -107,4 +144,60 @@ h3 {
 .block {
         width: 100%
     }
+}
+
+
+@media (min-width: 720px) {
+    
+    
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; /* Distribuye los elementos de manera uniforme */
+        padding: 1em;
+        margin: auto;
+    }
+    
+    .block,
+    .toggle-item {
+        flex: 1; /* Hace que todos los elementos tengan el mismo tamaño */
+        margin: 0.5em;
+    }
+    .parrafo {
+        font-size: calc(0.9vw + 4px); /* Tamaño de la letra en relación al ancho de la pantalla con un aumento total de 5px */
+    }
+    
+    .titulo-footer {
+        font-size: calc(1.1vw + 4.5px); /* Tamaño de la letra en relación al ancho de la pantalla con un aumento total de 5px */
+    }
+    
+    .link-footer {
+        font-size: calc(0.9vw + 4px); /* Tamaño de la letra en relación al ancho de la pantalla con un aumento total de 5px */
+    }
+    
+    .parrafo1 {
+        font-size: calc(1.1vw + 4.5px); /* Tamaño de la letra en relación al ancho de la pantalla con un aumento total de 5px */
+    }
+    
+    .img-medios-de-pago {
+        margin-top: 20px;
+        max-width: calc(15vw + 50px); /* Ajusta el ancho máximo deseado en relación al ancho de la pantalla con un aumento total de 5px */
+        height: auto;
+    }
+    
+    .copy-footer {
+        font-size: calc(0.9vw + 4.1px); /* Tamaño de la letra en relación al ancho de la pantalla con un aumento total de 5px */
+    }
+    
+    
+   
+    
+}
+
+
+
+@media (min-width: 1100px) {
+
+
+
 }
