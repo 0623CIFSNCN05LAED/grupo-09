@@ -1,21 +1,26 @@
 <header>
     <div class="header-line">
-        <div class="p-1 w-100 md-w-50 lg-w-25">
+        <div class="logo-container">
             <a href="/">
-                <img src="/images/logo.png" class="imagen-logo">
+                <div class="imagen-logo-div">
+                    <img src="/images/logo.png" class="imagen-logo">
+                </div>
             </a>
         </div>
-
-        <form class="w-100 md-w-50 lg-w-25 barra-busqueda" action="/productos/search" method="POST" >
-            <input type="text" name="search" placeholder="Buscar productos" class="w-100 input-busqueda">
+    <div class="search-bar-div">
+        <form class="barra-busqueda" action="/productos/search" method="POST">
+            <input type="text" name="search" placeholder="Buscar productos" class="input-busqueda">
             <button type="submit" class="boton-buscar fas fa-search"></button>
         </form>
-
-        <div class="login w-100 md-w-50 lg-w-25">
+    </div>
+    
+        <div class="login">
             <div><a href="/login"><i class="fa-solid fa-user icon"></i></a></div>
             <div><a href="/register"><i class="fa-solid fa-id-card icon"></i></a></div>   
         </div>
     </div>
+    
+    
 
     <div class="burger">
         <button class="burger-btn" onclick="toggleMenu()">☰</button>
