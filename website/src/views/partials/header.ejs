@@ -6,12 +6,10 @@
             </a>
         </div>
 
-        <div class="w-100 md-w-50 lg-w-25 barra-busqueda">
-            <input type="text" placeholder="Buscar productos y secciones" class="input-busqueda">
-            <button class="boton-buscar">
-                <i class="fas fa-search"></i>
-            </button> 
-        </div>
+        <form class="w-100 md-w-50 lg-w-25 barra-busqueda" action="/productos/search" method="POST" >
+            <input type="text" name="search" placeholder="Buscar productos" class="w-100 input-busqueda">
+            <button type="submit" class="boton-buscar fas fa-search"></button>
+        </form>
 
         <div class="login w-100 md-w-50 lg-w-25">
             <div><a href="/login"><i class="fa-solid fa-user icon"></i></a></div>

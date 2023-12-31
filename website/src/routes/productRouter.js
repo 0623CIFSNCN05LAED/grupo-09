@@ -23,6 +23,8 @@ router.post('/destroy/:id', adminMiddleware, productController.destroy);
 
 router.get("/categoria/:id", productController.getByCategory);
 
+router.post("/search", guestMiddleware, productController.search);
+
 router.get("/cart", guestMiddleware, productController.cart);
 
 module.exports = router;
