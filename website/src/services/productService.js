@@ -1,4 +1,5 @@
 const { Productos } = require("../database/models");
+const { Op } = require("sequelize");
 
 module.exports = {
   
@@ -76,13 +77,14 @@ module.exports = {
         });
     },
 
-    /* searchProducts: (query) => {
-        const products = db.products
-            .findAll()
-            .filter((product) =>
-            product.name.toLowerCase().includes(query.toLowerCase())
-        );
-        return formatProductsPrices(products);
-    }, */
+    searchProducts: (data) => {
+        return Productos.findAll({
+            include: ['categorias', 'marcas'],
+            where: {
+                nombre: { [Op.like]: `%${data.search}%` },
+            },
+            order: [["nombre", "ASC"]],
+        });
+    },
 
 };

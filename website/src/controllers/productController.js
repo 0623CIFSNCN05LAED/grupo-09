@@ -76,6 +76,13 @@ const productController = {
         });
     },
 
+    search: (req, res) => {
+        productService.searchProducts(req.body)
+        .then(productos => {
+            res.render("./productos/list.ejs", {productos})
+        })
+    }, 
+
     cart: (req, res) => {
         res.render("./productos/cart.ejs");
     },
