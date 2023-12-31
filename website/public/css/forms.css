@@ -161,6 +161,7 @@ font-size: 12px;
 }
 
 @media (min-width: 907px) {
+    
     .container-form {
         max-width: 800px;
         margin: 0 auto;
@@ -175,6 +176,7 @@ font-size: 12px;
         margin-right: 45px;
         font-size: 16px;
     }
+
     #admin-panel{
 
         font-size: 16px;

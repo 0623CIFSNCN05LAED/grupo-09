@@ -3,8 +3,23 @@
     justify-content: space-between;
     /*position: relative;*/
 }
+
+.imagen-logo{
+    transition: transform 0.3s;
+    width: 150px; 
+    height: auto;
+}
+
+.imagen-logo:hover{
+
+    transform: scale(1.1);
+}
+
+
+
 /* Estilos para la imagen */
 .w-100 img {
+    
    
     transition: transform 0.3s; /* Agrega transiciones para suavizar el efecto */
 }
@@ -16,13 +31,13 @@
 
 .top-header2 {
     text-align: center;
-    font-size: 8px;
+    font-size: 5px;
     background-color: rgb(209, 160, 255);
     padding: 1px;
 }
 .top-header {
     background-color: rgb(209, 160, 255);
-    font-size: 8px;
+    font-size: 5px;
     padding: 1px;
     text-align: center;
     position: fixed;
@@ -66,55 +81,11 @@
 
 .login {
     display: flex;
-    margin-left: 20px;
-}
-
-.main-navbar {
-    display: flex;
-    list-style: none;
-}
-
-.main-navbar a {
-    text-decoration: none;
-    font-size: 17px;
-    padding: 5px 0;
-    display: inline-block;
-    color: #222222;
-}
-
-.main-navbar button{
-    background-color: rgb(44, 14, 72);
-    color: white;
-    height: 35px;
-    width: 100px;
-    border-radius: 5px;
-    border: none;
-    font-size: 15px;
-    margin-left: 20px;
-}
-
-.nav-bar-a{
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    font-weight: bold;
-}
-
-.nav-bar-a a{
-    padding-left: 12px;
-    position: relative;
-    font-size: clamp(0.8rem, 1vw, 1.2rem);
-}
-
-a[href="#ofertas"] button {
-    transition: transform 0.3s; /* Agrega la transición al estilo base también */
-}
-
-a[href="#ofertas"] button:hover {
-    transform: scale(1.1);
+    margin-left: 15px;
     
 }
+
+
 /*.nav-bar-a a:hover{
     text-decoration: underline;
 }*/
@@ -141,45 +112,265 @@ html {
     scroll-behavior: smooth;
 }
 
-.nav-link {
-    position: relative;
-    text-decoration: none;
-    color: #333; 
-    transition: color 0.3s; 
-}
-
-.nav-link::before {
-    content: '';
-    position: absolute;
-    width: 90%;
-    height: 2px;
-    bottom: 0;
-    left: 9px;
-    background-color: rgb(105, 34, 171);  
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
-}
-
-.nav-link:visited::before {
-    transform: scaleX(1);
-    visibility: visible;
-}
-
-.nav-link:hover::before {
-    transform: scaleX(1);
-    visibility: visible;
-}
 
 
-.nav-link:hover {
-    color: rgb(105, 34, 171); 
-}
+
+
+
 
 
 .login div {
     margin-right: 18px; /* Añade margen entre los elementos */
 }
 
+.nav-bar-a {
+    display: none;
+    
+   
+}
+
+.nav-bar-a.show {
+    display: flex;
+    display: block;
+    font-size: 13px;
+    margin-bottom: 55px;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0; 
+   
+}
+
+#nav-link1{
+    margin-bottom: 20px;
+}
+
+.nav-bar-a li {
+    text-align: center;
+    display: block;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 5px;
+    transition: transform 0.2s ease; /* Agrega una transición suave al efecto de transformación */
+}
+
+.nav-bar-a li:hover {
+    transform: scale(1.1); /* Ajusta el valor según lo que desees para el agrandamiento al pasar el ratón */
+}
+
+.burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
 
 
+
+.burger-btn {
+    
+    background-color: rgb(94, 43, 142);
+    color: white;
+    height: 25px;
+    width: 50px;
+    border-radius: 5px;
+    border: none;
+    display: block;
+    font-size: 15px;
+    margin-top: 40px;
+    margin-bottom: 12px;
+    transition: transform 0.3s;
+
+}
+
+
+
+.burger-btn:hover{
+    transform: scale(1.1);
+    background-color:rgb(44, 14, 72);
+}
+
+.burger-btn.active {
+    background-color: rgb(44, 14, 72);
+    color: white;
+}
+
+.Ofertas {
+    display: none;
+}
+
+
+
+
+@media (min-width: 474px) {
+
+    .top-header2 {
+     
+        font-size: 6px;
+      
+    }
+    .top-header {
+        
+        font-size: 6px;
+      
+    }
+    .imagen-logo{
+      
+        width: 158px; 
+        height: auto;
+    }
+
+
+
+}
+
+
+@media (min-width: 612px){
+
+    .top-header2 {
+     
+        font-size: 6px;
+      
+    }
+    .top-header {
+        
+        font-size: 6px;
+      
+    }
+    
+    .burger-btn {
+
+        display: none;
+
+    }
+
+    .Ofertas {
+       display: block;
+    }
+    
+
+    
+    .main-navbar a {
+        text-decoration: none;
+        font-size: 17px;
+        padding: 5px 0;
+        display: inline-block;
+        color: #222222;
+    }
+    
+    .main-navbar button{
+        background-color: rgb(44, 14, 72);
+        color: white;
+        height: 25px;
+        width: 70px;
+        border-radius: 5px;
+        border: none;
+        font-size: 11px;
+        margin-left: 1px;
+    }
+    
+    .nav-bar-a{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        font-weight: bold;
+    }
+    
+    .nav-bar-a a{
+        padding-left: 10px;
+        position: relative;
+        font-size: clamp(0.7rem, 1vw, 1.2rem);
+    }
+    
+    a[href="#ofertas"] button {
+        transition: transform 0.3s; /* Agrega la transición al estilo base también */
+    }
+    
+    a[href="#ofertas"] button:hover {
+        transform: scale(1.1);
+        
+    }
+    .nav-link {
+        position: relative;
+        text-decoration: none;
+        color: #333; 
+        transition: color 0.3s; 
+    }
+    
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        width: 90%;
+        height: 2px;
+        bottom: 0;
+        left: 9px;
+        background-color: rgb(105, 34, 171);  
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+    
+    .nav-link:visited::before {
+        transform: scaleX(1);
+        visibility: visible;
+    }
+    
+    .nav-link:hover::before {
+        transform: scaleX(1);
+        visibility: visible;
+    }
+    
+    
+    .nav-link:hover {
+        color: rgb(105, 34, 171); 
+    }
+    .nav-bar-a.show {
+        display: flex;
+    }
+
+    .imagen-logo{
+      
+        width: 175px; 
+        height: auto;
+    }
+
+
+
+}
+
+
+@media (min-width: 907px) {
+    .top-header2 {
+        
+        font-size: 7px;
+      
+    }
+    .top-header {
+       
+        font-size: 7px;
+      
+    }
+
+    .main-navbar button{
+        background-color: rgb(44, 14, 72);
+        color: white;
+        height: 35px;
+        width: 100px;
+        border-radius: 5px;
+        border: none;
+        font-size: 15px;
+        margin-left: 20px;
+    }
+    .nav-bar-a a{
+        padding-left: 12px;
+        position: relative;
+        font-size: clamp(0.7rem, 1vw, 1.2rem);
+    }
+    .imagen-logo{
+      
+        width: 205px; 
+        height: auto;
+    }
+
+}
