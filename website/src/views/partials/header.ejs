@@ -2,7 +2,7 @@
     <div class="header-line">
         <div class="p-1 w-100 md-w-50 lg-w-25">
             <a href="/">
-                <img src="/images/logo.png">
+                <img src="/images/logo.png" class="imagen-logo">
             </a>
         </div>
 
@@ -17,10 +17,15 @@
         </div>
     </div>
 
-    <nav class="main-navbar">
-        <ul class="nav-bar-a">
-            <li></li><a href="#ofertas"><button class="Ofertas">Ofertas</button></a></li>
+    <div class="burger">
+        <button class="burger-btn" onclick="toggleMenu()">☰</button>
+    </div>
 
+    <nav class="main-navbar">
+
+
+        <ul class="nav-bar-a" id="nav-link1">
+            <li></li><a href="#ofertas"><button class="Ofertas">Ofertas</button></a></li>
             <li><a href="/productos/categoria/1" class="nav-link">Heladeras</a></li>
             <li><a href="/productos/categoria/2" class="nav-link">Lavarropas</a></li>
             <li><a href="/productos/categoria/3" class="nav-link">Cocinas</a></li>

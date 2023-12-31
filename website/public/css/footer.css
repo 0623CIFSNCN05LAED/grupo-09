@@ -74,7 +74,7 @@ footer {
 }
 
 
-@media (min-width: 474px) {
+@media (min-width: 420px) {
 
 
 footer {
@@ -147,7 +147,7 @@ h3 {
 }
 
 
-@media (min-width: 720px) {
+@media (min-width: 710px) {
     
     
     .footer {

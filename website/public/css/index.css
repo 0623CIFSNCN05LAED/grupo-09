@@ -105,6 +105,11 @@
     font-size: 15px;
 }
 
+#titulo-index{
+    font-size: 22px;
+    margin-top: 45px;
+}
+
 #ofertas{
     margin-top: 60px;
 }
@@ -140,6 +145,11 @@
     .descuento {
         color: #d300da;
         font-size: 16px;
+    }
+
+    #titulo-index{
+        font-size: 27px;
+        margin-top: 47px;
     }
 }
 
