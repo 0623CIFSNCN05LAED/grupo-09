@@ -25,6 +25,6 @@ router.get("/categoria/:id", productController.getByCategory);
 
 router.post("/search", guestMiddleware, productController.search);
 
-router.get("/cart", guestMiddleware, productController.cart);
+router.get("/cart", productController.cart);
 
 module.exports = router;

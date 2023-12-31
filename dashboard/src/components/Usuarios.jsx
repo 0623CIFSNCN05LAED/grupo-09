@@ -18,7 +18,7 @@ function Usuarios(){
         <table className="table table-hover mt-5">
             <thead>
                 <tr>
-                    <td className="bg-primary text-white" align="center" colspan="11"><b>USUARIOS</b></td>
+                    <td className="bg-primary text-white" align="center" colspan="6"><b>USUARIOS</b></td>
                 </tr>
                 <tr>
                     <th>ID</th>
@@ -26,6 +26,7 @@ function Usuarios(){
                     <th>Email</th>
                     <th>Telefono</th>
                     <th>Pais</th>
+                    <th>Rol</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,6 +37,7 @@ function Usuarios(){
                         <td>{usuario.email}</td>
                         <td>{usuario.telefono}</td>
                         <td>{usuario.country}</td>
+                        <td>{usuario.rol_tipo}</td>
                     </tr>
                 ))}
             </tbody> 
