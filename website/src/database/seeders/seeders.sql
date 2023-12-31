@@ -62,3 +62,8 @@ INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, an
 /*ROLES*/
 INSERT INTO ecommerce.roles (tipo) VALUES('Administrador');
 INSERT INTO ecommerce.roles (tipo) VALUES('Usuario');
+
+/*USUARIOS*/
+INSERT INTO ecommerce.usuarios (fullName, country, telefono, email, password, avatar, rol_tipo) VALUES('Fernando', 'Argentina', '2604587963', 'fer@hotmail.com', '$2a$10$RwrMs1DZsNmJA6v1ldpFXOEX16.rAC1.T1ph.5I/aKh0F1X4oesti', '', 'Administrador');
+INSERT INTO ecommerce.usuarios (fullName, country, telefono, email, password, avatar, rol_tipo) VALUES('Nacho', 'Argentina', '1145896235', 'nacho@gmail.com', '$2a$10$RwrMs1DZsNmJA6v1ldpFXOEX16.rAC1.T1ph.5I/aKh0F1X4oesti', '', 'Administrador');
+INSERT INTO ecommerce.usuarios (fullName, country, telefono, email, password, avatar, rol_tipo) VALUES('Usuario', 'Argentina', '123456789', 'usuario@outlook.com', '$2a$10$RwrMs1DZsNmJA6v1ldpFXOEX16.rAC1.T1ph.5I/aKh0F1X4oesti', '', 'Usuario');

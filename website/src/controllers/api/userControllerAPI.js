@@ -7,6 +7,7 @@ const productsControllerAPI = {
             let respuesta = {
                 meta: {
                     status: 200,
+                    total: usuarios.length,
                     url: "/api/usuarios",
                 },
                 data: usuarios,

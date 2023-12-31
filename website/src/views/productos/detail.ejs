@@ -26,16 +26,26 @@
                         <div class="bold w-25" id="id-detail">Descuento:</div><div class="product-detail">Sin descuento</div>
                     <% } %>
         
-                    <button class="agregar">Agregar al Carrito</button>
+                    <button class="agregar" onclick="myFunction('<%= JSON.stringify(productos) %>')">Agregar al Carrito</button>
                 </div>
             </div>
         </main>
         
+        <p id="demo"></p>
 
         <!--FOOTER-->
         <%- include("../partials/footer") %>
         
         <!--SCRIPTS-->
         <script src="/js/carrousel.js"></script>
+
+        <script>
+            function myFunction(productos) {
+                console.log(productos);
+                document.getElementById("demo").innerHTML = "Hello World";
+                productos2 = JSON.parse(productos)
+                localStorage.setItem(productos2.id, productos);
+            }
+        </script>
     </body>
 </html>

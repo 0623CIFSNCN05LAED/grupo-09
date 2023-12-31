@@ -7,6 +7,7 @@ const categoryControllerAPI = {
             let respuesta = {
                 meta: {
                     status: 200,
+                    total: categorias.length,
                     url: "/api/categorias",
                 },
                 data: categorias,

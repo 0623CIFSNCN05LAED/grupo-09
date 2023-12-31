@@ -70,9 +70,3 @@ CREATE TABLE IF NOT EXISTS carritos (
     CONSTRAINT `carritos_usuario_fk` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`),
     CONSTRAINT `carritos_producto_fk` FOREIGN KEY (`producto_id`) REFERENCES `productos` (`id`)
 );
-
--- CREATE TABLE IF NOT EXISTS stocks (
-	-- id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    -- stock INT NOT NULL,
-	-- product_id INT NOT NULL
--- );

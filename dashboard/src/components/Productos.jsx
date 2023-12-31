@@ -46,8 +46,8 @@ function Productos(){
                         <td>{producto.alto}</td>
                         <td>{producto.profundidad}</td>
                         <td>{producto.peso}</td>
-                        <td>{producto.marca_id}</td>
-                        <td>{producto.categoria_id}</td>
+                        <td>{producto.marcas.marca}</td>
+                        <td>{producto.categorias.categoria}</td>
                     </tr>
                 ))}
             </tbody> 

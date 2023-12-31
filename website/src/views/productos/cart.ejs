@@ -3,28 +3,35 @@
     <!--HEAD-->
     <%- include("../partials/head") %>
 
-    <body>
+    <body onload="functionGetCart();">
         <!--HEADER-->
         <%- include("../partials/header") %>
 
         <main>
             <div class="carrito-container">
-                <h2>Carrito de Compras</h2>
+                <h2 class="align-center text-center">Carrito de Compras</h2>
                 <table class="carrito-table">
                     <thead>
                         <tr>
-                            <th>Producto</tr>
-                            <th>Cantidad-+</th>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
                             <th>Precio</th>
-                            
+                        </tr>
+                        <tr>
+                            <td colspan="3"></td>
+                        </tr>
+                        <tr id="datos">
+                            <!-- datos carrito -->
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td><b>Total: $0.00</b></td>
                         </tr>
                     </thead>
-                    <tbody class="carrito-body">
-                       
-                    </tbody>
                 </table>
-                <p class="total">Total: $0.00</p>
-                <button class="finalizar-btn" onclick="finalizarCompra()">Finalizar Compra</button>
+                <div class="text-center">
+                    <button class="btn-primary my-1" onclick="finalizarCompra()">Finalizar Compra</button>
+                </div>
         </main>
         
         <!--FOOTER-->
@@ -32,5 +39,44 @@
         
         <!--SCRIPTS-->
         <script src="/js/carrousel.js"></script>
+
+        <script>
+            function functionGetCart() {
+
+                let storedString = [];
+                for (let i = 0; i<localStorage.length; i++) {
+                    storedString[i] = localStorage.getItem(localStorage.key(i));
+
+                    const storedObject = JSON.parse(storedString[i]);  
+                    let producto = `<td id="producto">${storedObject.nombre}</td>`;
+                    let cantidad = `<td id="producto">${storedObject.cantidad}</td>`;
+                    let precio= `<td id="producto">${storedObject.precio}</td><tr>`;
+
+                    document.getElementById("datos").innerHTML += producto+cantidad+precio; 
+                    
+                } 
+
+                /* Object.keys(localStorage).forEach(function (element){
+                    storedString[element] = localStorage.getItem(localStorage.key(element));
+                    console.log(storedString);
+                }); */
+
+                /* const storedString = localStorage.getItem('miString'); */
+                /* const storedObject = JSON.parse(localStorage.getItem('miObjeto'));  */
+
+                /* for (let i = 0; i<localStorage.length; i++) {
+                    const storedObject = JSON.parse(storedString[i]);  
+                    let producto = `<tr><td id="producto">${storedObject.nombre}</td>`;
+                    let cantidad = `<td id="producto">${storedObject.cantidad}</td>`;
+                    let precio= `<td id="producto">${storedObject.precio}</td></tr>`;
+
+                    document.getElementById("datos").innerHTML += producto+cantidad+precio; 
+                    console.log(i)
+                }  */
+                
+            }
+           
+        </script>
+
     </body>
 </html>

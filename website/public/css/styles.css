@@ -7,11 +7,9 @@ a {
     text-decoration: none; /* Quita el subrayado de los enlaces */
 }
 
-
 .article-container a {
     text-decoration: none; 
 }
-
 
 /* DETALLE DE PRODUCTOS*/
 .description {
@@ -38,13 +36,13 @@ a {
     margin-bottom: 2px; 
     font-size: 12px;
 } 
+
 #id-detail{
 margin-top: 1px;
 margin-right: 1px;
 font-size: 13px;
 
 }
-
 
 .flex {
     display: flex;
@@ -88,19 +86,6 @@ font-size: 13px;
     width: 75%;
 }
 
-
-
-
-
-
-/* DETALLE DE PRODUCTOS */
-/*
-detalle de producto
-*/
-
-
-
-
 .agregar{
     background-color: rgb(93, 53, 130); 
     color: #fff;
@@ -116,7 +101,6 @@ detalle de producto
     background-color: rgb(44, 14, 72);
     transform: scale(1.05); ;
 }
-
 
 .oculto {
     display: none;
@@ -170,6 +154,10 @@ detalle de producto
 
 .text-center {
     text-align: center;
+}
+
+.text-right {
+    text-align: right;
 }
 
 .round {
@@ -268,6 +256,10 @@ detalle de producto
 
 .flex-center {
     justify-content: center;
+}
+
+.section-cart {
+    height: 80%;
 }
 
 
