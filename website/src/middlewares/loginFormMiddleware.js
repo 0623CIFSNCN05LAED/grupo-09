@@ -5,13 +5,6 @@ module.exports = (req, res, next) => {
 
     if (resultValidation.errors.length > 0) {
 
-        /* let email = null;
-        const userLogged = req.session.userLogged;
-
-        if (userLogged) {
-            email = userLogged.email;
-        } */
-
         return res.render('./usuarios/login', {
             errors: resultValidation.mapped(),
             oldData: req.body,

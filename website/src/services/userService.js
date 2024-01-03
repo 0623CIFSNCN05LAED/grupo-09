@@ -25,7 +25,6 @@ module.exports = {
             telefono: data.telefono,
             email: data.email,
             password: bcryptjs.hashSync(data.password, 10), 
-            /* password: data.password != '' ? bcryptjs.hashSync(data.password, 10) : getUserDetail(id).password,  */
             avatar: file ? file.filename : data.imagen
         }, {
             where: {
