@@ -8,18 +8,8 @@ const userController = {
     },
 
     registerProcess: (req, res) => {
-        /*const errors = req.session.errors;
-        const oldData = req.session.oldData;
-
-        req.session.oldData = null;
-        req.session.oldData = null;
-
-        res.render('register', {
-            errors: errors ? errors : null,
-            oldData: oldData ? oldData : null,
-        });*/
-
-        userService.createUser(req.body, req.file)
+        
+     userService.createUser(req.body, req.file)
         .then(() => {
             res.redirect("/login");
         });
@@ -48,7 +38,7 @@ const userController = {
                 } else {
                     res.redirect("/usuarios/profile");
                 }
-                /* return res.redirect('/usuarios/profile'); */
+                
 
             } else {
                 return res.render("./usuarios/login", {

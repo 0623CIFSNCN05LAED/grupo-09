@@ -6,12 +6,7 @@ module.exports = async(req, res, next) => {
 
     if (resultValidation.errors.length > 0) {
 
-        /* let email = null;
-        const userLogged = req.session.userLogged;
-
-        if (userLogged) {
-            email = userLogged.email;
-        } */
+       
 
         const id = req.params.id;
         const usuarios = await userService.getUserDetail(id);

@@ -9,7 +9,7 @@ const storage = multer.diskStorage({
     },
 
     filename: async (req, file, cb) => {
-        /*const fileName = `${await bcrypt.hash(file.originalname, 10)}_img${path.extname(file.originalname)}`;*/
+        
         const fileName = Date.now() + path.extname(file.originalname)
         cb(null, fileName);
     },

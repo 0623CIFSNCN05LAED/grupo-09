@@ -1,23 +1,3 @@
-
-   /*window.addEventListener('load', function() {
-  
-    const formulario = document.querySelector('.container my-1');
-    const mensajeRegistro = document.getElementById('mensajeRegistro');
-
-    formulario.addEventListener('submit', function(evento) {
-        evento.preventDefault();
-
-      
-        formulario.style.display = 'none';
-
-        
-        mensajeRegistro.style.display = 'block';
-    });
-    });
-    */
-
-
-
 function togglePassword() {
     const passwordField = document.getElementById('password');
     const passwordToggle = document.querySelector('.password-toggle');
@@ -30,24 +10,6 @@ function togglePassword() {
         passwordToggle.textContent = 'Mostrar';
     }
 }
-
-/*document.addEventListener('DOMContentLoaded', function() {
-    const links = document.querySelectorAll('.nav-link');
-
-    links.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-
-            // Quitar la clase 'active' de todos los enlaces
-            links.forEach(el => el.classList.remove('active'));
-
-            // Agregar la clase 'active' al enlace clicado
-            this.classList.add('active');
-        });
-    });
-});*/
-
-
 
 
 //PARA OCULTAR LA BARRA DE NAVEGACIÓN EN EL /REGISTER /LOGIN 
@@ -66,6 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+
+
 document.addEventListener('DOMContentLoaded', function () {
     
     var currentUrl = window.location.pathname;
@@ -81,9 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
     
     var currentUrl = window.location.pathname;
@@ -96,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function () {
         burger.style.display = 'none';
     }
 });
-
 
 
 
@@ -125,10 +85,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function toggleContent(id) {
     const content = document.getElementById(`${id}Content`);
-    content.style.display = content.style.display === 'none' ? 'block' : 'none';
+    
+    // Verifica el ancho de la ventana antes de realizar cambios
+    if (window.innerWidth < 710) {
+        content.style.display = content.style.display === 'none' ? 'block' : 'none';
+    } 
 }
-
-
 
 
 
@@ -161,13 +123,3 @@ document.addEventListener('DOMContentLoaded', function () {
     var isMenuVisible = getMenuState();
     navBar.classList.toggle('show', isMenuVisible);
 });
-
-
-
-
-
-
-
-
-
-

@@ -5,7 +5,7 @@ footer {
     justify-content: space-around;
     text-decoration: none;
     background-color: #ffffff; /* Cambiado a un violeta más claro */
-    color: rgb(85, 8, 95);
+   
     font-family: Arial, sans-serif;
     font-size: 12px;
    
@@ -13,10 +13,6 @@ footer {
  
 
  /*DESPLIEGUE DE GRUPO-9 Y ATENCION AL CLIENTE*/
-
- .content {
-    display: none;
-}
 
 .toggle-label:hover h3 {
     color: rgb(232, 153, 248);
@@ -30,13 +26,9 @@ footer {
     margin-right: 90px; 
 }
 
-/* Estilos adicionales según tus necesidades */
-
-
-/* Estilos generales */
 .toggle-label {
     cursor: pointer;
-    margin-top: 10px; /* Espacio entre cada elemento desplegable */
+    margin-top: 10px; 
 }
 
 .content {
@@ -53,15 +45,10 @@ footer {
 }
 
 
-/* Estilos adicionales según tus necesidades */
-
-
-
-
-
 .logo-footer {
     width: 162px;
     height: 57px;
+    
 }
 
 
@@ -70,9 +57,14 @@ footer {
 } 
 
 .img-medios-de-pago {
-    height: 100px; /* Puedes ajustar la altura según tus preferencias */
+    height: 100px; 
 }
 
+
+
+
+
+/*media 420px*/
 
 @media (min-width: 420px) {
 
@@ -84,7 +76,7 @@ footer {
     text-align: center;
     justify-content: space-around;
     text-decoration: none;
-    background-color: #ffffff; /* Cambiado a un violeta más claro */
+    background-color: #ffffff; 
     color: rgb(85, 8, 95);
     font-family: Arial, sans-serif;
     font-size: 14px;
@@ -97,17 +89,20 @@ footer {
     margin-left: 150px; 
     margin-right: 150px; 
 }
+
+
+
 /* Estilo para los bloques del footer */
 .block {
     width: 100%;
-    max-width: 300px; /* Ancho máximo para cada bloque */
+    max-width: 300px; 
 }
 
 /* Estilo para los títulos de sección */
 h3 {
     font-size: 1.2em;
     margin-bottom: 10px;
-    border-bottom: 1px solid #fff; /* Línea decorativa bajo el título */
+    border-bottom: 1px solid #fff; 
 }
 
 /* Estilo para los enlaces del footer */
@@ -124,7 +119,7 @@ h3 {
 /* Estilo para el copyright */
 .text-center1  {
     
-    background-color: #7a3d93; /* Cambiado a un violeta más oscuro */
+    background-color: rgb(159, 81, 233);  
     padding: 10px;
     margin: 0;
 }
@@ -138,7 +133,7 @@ h3 {
 }
 
 .img-medios-de-pago {
-    height: 110px; /* Puedes ajustar la altura según tus preferencias */
+    height: 110px; 
 }
 
 .block {
@@ -147,57 +142,53 @@ h3 {
 }
 
 
+
+
+/*media 710px*/
+
 @media (min-width: 710px) {
     
     
     .footer {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around; /* Distribuye los elementos de manera uniforme */
+        justify-content: space-around; 
         padding: 1em;
         margin: auto;
     }
     
     .block,
     .toggle-item {
-        flex: 1; /* Hace que todos los elementos tengan el mismo tamaño */
+        flex: 1; 
         margin: 0.5em;
     }
     .parrafo {
-        font-size: calc(0.9vw + 4px); /* Tamaño de la letra en relación al ancho de la pantalla con un aumento total de 5px */
+        font-size: calc(0.9vw + 4px);  
     }
     
     .titulo-footer {
-        font-size: calc(1.1vw + 4.5px); /* Tamaño de la letra en relación al ancho de la pantalla con un aumento total de 5px */
-    }
+        font-size: calc(1.1vw + 4.5px);
+    } 
     
     .link-footer {
-        font-size: calc(0.9vw + 4px); /* Tamaño de la letra en relación al ancho de la pantalla con un aumento total de 5px */
+        font-size: calc(0.9vw + 4px); 
     }
     
     .parrafo1 {
-        font-size: calc(1.1vw + 4.5px); /* Tamaño de la letra en relación al ancho de la pantalla con un aumento total de 5px */
+        font-size: calc(1.1vw + 4.5px); 
     }
     
     .img-medios-de-pago {
         margin-top: 20px;
-        max-width: calc(15vw + 50px); /* Ajusta el ancho máximo deseado en relación al ancho de la pantalla con un aumento total de 5px */
+        max-width: calc(15vw + 50px); 
         height: auto;
     }
     
     .copy-footer {
-        font-size: calc(0.9vw + 4.1px); /* Tamaño de la letra en relación al ancho de la pantalla con un aumento total de 5px */
+        font-size: calc(0.9vw + 4.1px); 
     }
-    
-    
-   
-    
-}
 
-
-
-@media (min-width: 1100px) {
-
-
-
+    .content {
+        display: block;
+    }
 }
