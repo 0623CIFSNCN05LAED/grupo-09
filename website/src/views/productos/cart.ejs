@@ -3,7 +3,7 @@
     <!--HEAD-->
     <%- include("../partials/head") %>
 
-    <body onload="functionGetCart();">
+    <body onload="getCart();">
         <!--HEADER-->
         <%- include("../partials/header") %>
 
@@ -30,7 +30,7 @@
                     </thead>
                 </table>
                 <div class="text-center">
-                    <button class="btn-primary my-1" onclick="finalizarCompra()">Finalizar Compra</button>
+                    <button class="btn-primary my-1" onclick=''>Finalizar Compra</button>
                 </div>
         </main>
         
@@ -39,44 +39,7 @@
         
         <!--SCRIPTS-->
         <script src="/js/carrousel.js"></script>
-
-        <script>
-            function functionGetCart() {
-
-                let storedString = [];
-                for (let i = 0; i<localStorage.length; i++) {
-                    storedString[i] = localStorage.getItem(localStorage.key(i));
-
-                    const storedObject = JSON.parse(storedString[i]);  
-                    let producto = `<td id="producto">${storedObject.nombre}</td>`;
-                    let cantidad = `<td id="producto">${storedObject.cantidad}</td>`;
-                    let precio= `<td id="producto">${storedObject.precio}</td><tr>`;
-
-                    document.getElementById("datos").innerHTML += producto+cantidad+precio; 
-                    
-                } 
-
-                /* Object.keys(localStorage).forEach(function (element){
-                    storedString[element] = localStorage.getItem(localStorage.key(element));
-                    console.log(storedString);
-                }); */
-
-                /* const storedString = localStorage.getItem('miString'); */
-                /* const storedObject = JSON.parse(localStorage.getItem('miObjeto'));  */
-
-                /* for (let i = 0; i<localStorage.length; i++) {
-                    const storedObject = JSON.parse(storedString[i]);  
-                    let producto = `<tr><td id="producto">${storedObject.nombre}</td>`;
-                    let cantidad = `<td id="producto">${storedObject.cantidad}</td>`;
-                    let precio= `<td id="producto">${storedObject.precio}</td></tr>`;
-
-                    document.getElementById("datos").innerHTML += producto+cantidad+precio; 
-                    console.log(i)
-                }  */
-                
-            }
-           
-        </script>
+        <script src="/js/cart.js"></script>
 
     </body>
 </html>
