@@ -91,6 +91,7 @@ const userController = {
     destroy: (req, res) => {
         userService.destroyUser(req.params.id)
         .then(() => {
+            req.session.destroy();
             res.redirect("/");
         });
     },
