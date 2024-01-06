@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 3px;
 }
 
 .imagen-logo{
@@ -12,15 +12,12 @@
 }
 
 .imagen-logo:hover{
-
-    transform: scale(1.1);
+    transform: scale(1.06);
 }
-
 
 
 /* Estilos para la imagen */
 .w-100 img {
-    
     transition: transform 0.3s;
 }
 
@@ -52,7 +49,7 @@
     align-items: center;
     background-color: rgb(237, 218, 255);
     border-radius: 5px;
-    padding: 5px;
+    padding: 3px;
     width: 50%;
     height: 32px;
     text-align: center;
@@ -61,14 +58,12 @@
 }
 
 .search-bar-div{
-
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 20px;
-
+    margin-top: 10px;
 }
 
 .input-busqueda {
@@ -93,9 +88,7 @@
 .login {
     display: flex;
     margin-left: 15px;
-    
 }
-
 
 .icon {
     font-size: 25px;
@@ -103,8 +96,8 @@
     margin-top: 40px;
     margin-left: 90px;
     margin-right: 90px;
-    
 }
+
 /* Estilos para los iconos */
 .icon {
    
@@ -124,17 +117,13 @@ html {
 
 .login {
     display: flex;
-   padding: 0;
-   
+    padding: 0;
     align-items: center;
     justify-content: center;
-
 }
 
 .nav-bar-a {
     display: none;
-    
-   
 }
 
 .nav-bar-a.show {
@@ -146,7 +135,6 @@ html {
     justify-content: center;
     margin: 0;
     padding: 0; 
-   
 }
 
 #nav-link1{
@@ -174,7 +162,6 @@ html {
 }
 
 .burger-btn {
-    
     background-color: rgb(89, 31, 142);
     color: white;
     height: 25px;
@@ -186,9 +173,7 @@ html {
     margin-top: 40px;
     margin-bottom: 12px;
     transition: transform 0.3s;
-
 }
-
 
 .burger-btn:hover{
     transform: scale(1.1);
@@ -205,48 +190,34 @@ html {
 }
 
 
-
-
 /*media 474px*/
-
 @media (min-width: 474px) {
 
     .top-header2 {
-     
         font-size: 6px;
-      
     }
     .top-header {
-        
         font-size: 6px;
-      
     }
     .imagen-logo{
-      
         width: 158px; 
         height: auto;
     }
-
-
-
 }
 
 
 
 
 /*media 612px*/
-
 @media (min-width: 612px){
     .header-line{
         display: flex;
         justify-content: space-between;
-       
     }
     
     .search-bar-div{
         width: 90%;
-      margin: 0;
-
+        margin: 0;
     }
 
     .barra-busqueda {
@@ -263,35 +234,25 @@ html {
         flex-grow: 2;
     }
 
-   
-
     .top-header2 {
-     
         font-size: 6px;
-      
     }
     .top-header {
-        
         font-size: 6px;
-      
     }
     
     .burger-btn {
-
         display: none;
-
     }
 
     .Ofertas {
        display: block;
     }
     
-
-    
     .main-navbar a {
         text-decoration: none;
         font-size: 17px;
-        padding: 5px 0;
+        padding: 3px 0;
         display: inline-block;
         color: #222222;
     }
@@ -299,7 +260,7 @@ html {
     .main-navbar button{
         background-color: rgb(44, 14, 72);
         color: white;
-        height: 25px;
+        height: 15px;
         width: 70px;
         border-radius: 5px;
         border: none;
@@ -308,7 +269,7 @@ html {
     }
     
     .nav-bar-a{
-        margin-top: 60px;
+        margin-top: 30px;
         list-style-type: none;
         display: flex;
         justify-content: space-between;
@@ -360,7 +321,6 @@ html {
         visibility: visible;
     }
     
-    
     .nav-link:hover {
         color: rgb(105, 34, 171); 
     }
@@ -386,26 +346,17 @@ html {
         margin-left: 20px;
         margin-right: 0px;
     }
-
-
-
 }
 
 
-
-
 /*media 907px*/
-
 @media (min-width: 907px) {
     .top-header2 {
-        
         font-size: 7px;
-      
     }
+
     .top-header {
-       
         font-size: 7px;
-      
     }
 
     .main-navbar button{
@@ -418,27 +369,32 @@ html {
         font-size: 15px;
         margin-left: 20px;
     }
+
     .nav-bar-a a{
         padding-left: 12px;
         position: relative;
         font-size: clamp(0.7rem, 1vw, 1.2rem);
     }
+
     .imagen-logo{
       
         width: 205px; 
         height: auto;
     }
+
     .login {
         margin-right: 80px; 
         margin-left:  0px;  
     }
+
     .icon {
         font-size: 25px;
         padding: 3px;
         margin-top: 40px;
         margin-left: 50px;
     }
-     .barra-busqueda {
+
+    .barra-busqueda {
         border: 1px solid black;
         display: flex;
         align-items: center;

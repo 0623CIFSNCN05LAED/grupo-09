@@ -7,11 +7,13 @@
         <!--HEADER-->
         <%- include("../partials/header") %>
       
-        <main class="p-1 vw-90 mx-auto" id="main-detail">
-            <h1 class="title w-100 text-center p-1">DETALLE DE PRODUCTO</h1>  
-            <div class="w-75 flex flex-wrap align-center product-container">
-                <img class="w-50" src="/images/productos/<%= productos.imagen %>" alt="<%= productos.descripcion %>">
-                <div class="w-50 flex flex-wrap bt-1 mx-auto p-2 product-info">
+        <main class="p-1 vw-90 mx-auto"> 
+            <div class="titulo my-2 w-100">Detalle de producto</div>
+            <div class="w-50 flex align-center product-container bt-1">
+                <div class="w-50 align-center text-center">
+                    <img src="/images/productos/<%= productos.imagen %>" alt="<%= productos.descripcion %>">
+                </div>
+                <div class="w-50 p-2">
                     <div class="bold w-25" id="id-detail">Producto:</div><div class="product-detail"><%= productos.nombre %></div>
                     <div class="bold w-25" id="id-detail">Descripcion:</div><div class="product-detail"><%= productos.descripcion %></div>
                     <div class="bold w-25" id="id-detail">Precio:</div><div class="product-detail">$<%= productos.precio %></div>

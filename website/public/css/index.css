@@ -8,6 +8,12 @@
     display: none;
 }
 
+.titulo {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+}
+
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
@@ -87,22 +93,33 @@
 }
 
 .description {
-    color: rgb(47, 0, 53);
+    text-align: center;
     width: 100%;
-    font-size: 14px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
 }
 
 .precio {
-    font-size: 18px;
-    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 30px;
+    color: #36c;
     margin-top: 10px;
     margin-bottom: 1px;
     margin-right: 10px;
-}
+    font-weight: 700;
+} 
 
 .descuento {
-    color: #d300da;
-    font-size: 15px;
+    text-align: center;
+    background: rgb(209, 160, 255);
+    color: black;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 30px;
+    padding: 5px 10px;
+    position: relative;
+    margin-left: 10px;
 }
 
 #titulo-index{
@@ -139,22 +156,30 @@
       display: block;
     }
     .description {
-        color: rgb(47, 0, 53);
         width: 100%;
-        font-size: 15px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #333;
     }
     
     .precio {
-        font-size: 19px;
-        color: rgb(0, 0, 0);
+        font-size: 30px;
+        color: #36c;
         margin-top: 10px;
         margin-bottom: 1px;
         margin-right: 10px;
-    }
+        font-weight: 700;
+    } 
     
     .descuento {
-        color: #d300da;
-        font-size: 16px;
+        background: rgb(209, 160, 255);
+        color: black;
+        font-weight: 600;
+        font-size: 14px;
+        border-radius: 30px;
+        padding: 5px 10px;
+        position: relative;
+        margin-left: 10px;
     }
 
     #titulo-index{
@@ -169,26 +194,36 @@
 @media (min-width: 1100px) {  
     .product-shadow {
       box-shadow: none;
-    }  
+    } 
+
     .product:hover .product-shadow {
       display: block;
     }
+
     .description {
-        color: rgb(47, 0, 53);
         width: 100%;
-        font-size: 16px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #333;
     }
     
     .precio {
-        font-size: 20px;
-        color: rgb(0, 0, 0);
+        font-size: 30px;
+        color: #36c;
         margin-top: 10px;
         margin-bottom: 1px;
-        margin-right: 20px;
-    }
+        margin-right: 10px;
+        font-weight: 700;
+    } 
     
     .descuento {
-        color: #d300da;
-        font-size: 17px;
+        background: rgb(209, 160, 255);
+        color: black;
+        font-weight: 600;
+        font-size: 14px;
+        border-radius: 30px;
+        padding: 5px 10px;
+        position: relative;
+        margin-left: 10px;
     }
 }
