@@ -7,24 +7,26 @@
         <!--HEADER-->
         <%- include("../partials/header") %>
       
-        <main class="p-2 vw-90 mx-auto">
-            <section class="flex flex-wrap gap section">
-                <h1 class="title w-100 text-center">LISTADO DE PRODUCTOS</h1>  
-
+        <main class="p-1 vw-90 mx-auto">
+            <div class="titulo my-2 w-100">Listado de productos</div>
+            <section class="flex flex-wrap gap section mb-2">
+                 
                 <% for (let i = 0; i < productos.length; i++) { %>
                     <article class="p-2 bt-1 border-grey border-radius bg-white product-shadow w-100 md-w-50 lg-w-25">
                         <a href="/productos/detail/<%= productos[i].id %>">
                             <div class="relative flex flex-wrap">
                                 <img class="w-100 border-radius" src="/images/productos/<%=productos[i].imagen %>" alt="<%= productos[i].descripcion %>">
                                 <p class="description"><%= productos[i].nombre %></p>
-                                <p class="precio">$<%= productos[i].precio %></p>
-                                <p class="descuento">
+                                <div class="flex flex-center w-100">
+                                    <p class="precio">$<%= productos[i].precio %></p>
                                     <% if (productos[i].descuento !== null && productos[i].descuento !== 0) { %>
-                                        <%= productos[i].descuento %> % OFF
+                                        <p class="descuento">
+                                            <%= productos[i].descuento %> % OFF
+                                        </p>
                                     <% } else { %>
                                         
                                     <% } %>
-                                </p>
+                                </div>
                             </div>
                         </a>
                     </article>
