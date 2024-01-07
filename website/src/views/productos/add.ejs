@@ -27,7 +27,6 @@
             
                 <div class="form-group my-1">
                     <label for="nombre">Nombre</label>
-               
                     <input 
                         type="text" 
                         name="nombre" 
@@ -43,7 +42,6 @@
                 
                 <div class="form-group my-1">
                     <label for="descripcion">Descripcion</label>
-               
                     <input 
                         type="text" 
                         name="descripcion" 
@@ -59,7 +57,6 @@
 
                 <div class="form-group my-1">
                     <label for="marca_id">Marca</label>
-              
                     <select name="marca_id" id="marca_id" class="form-control">
                         <% marcas.forEach(marca => { %>
                             <option value="<%= marca.id %>">
@@ -76,7 +73,6 @@
 
                 <div class="form-group my-1">
                     <label for="categoria">Categoria</label>
-                
                     <select name="categoria_id" id="categoria_id" class="form-control">
                         <% categorias.forEach(categoria => { %>
                             <option value="<%= categoria.id %>">
@@ -93,7 +89,6 @@
             
                 <div class="form-group my-1">
                     <label for="precio">Precio</label>
-                
                     <input 
                         type="text" 
                         name="precio" 
@@ -109,13 +104,11 @@
 
                 <div class="form-group my-1">
                     <label for="descuento">Descuento</label>
-          
                     <input class="form-control" type="number" name="descuento" id="">
                 </div>
 
                 <div class="form-group my-1">
                     <label for="oferta">Oferta</label>
-              
                     <select class="form-control" id="oferta" name="oferta">
                         <option value="SI">SI</option>
                         <option value="NO" selected>NO</option>
@@ -124,7 +117,6 @@
                 
                 <div class="form-group my-1">
                     <label for="ancho">Ancho</label>
-               
                     <input 
                         type="text" 
                         name="ancho" 
@@ -140,7 +132,6 @@
             
                 <div class="form-group my-1">
                     <label for="alto">Alto</label>
-             
                     <input 
                         type="text" 
                         name="alto" 
@@ -156,7 +147,6 @@
             
                 <div class="form-group my-1">
                     <label for="profundidad">Profundidad</label>
-             
                     <input 
                         type="text" 
                         name="profundidad" 
@@ -172,7 +162,6 @@
             
                 <div class="form-group my-1">
                     <label for="peso">Peso</label>
-            
                     <input 
                         type="text" 
                         name="peso" 
@@ -188,7 +177,6 @@
             
                 <div class="form-group my-1">
                     <label for="imagenPath">Imagen</label>
-                
                     <input 
                         type="file" 
                         name="imagen" 

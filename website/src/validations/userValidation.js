@@ -1,5 +1,4 @@
 const { body } = require("express-validator");
-const userService = require("../services/userService");
 const path = require("path");
 
 const validationsRegister = [
@@ -58,6 +57,5 @@ const validationsRegister = [
 			return true;
 		}), 
 ]; 
-
 
 module.exports = validationsRegister;

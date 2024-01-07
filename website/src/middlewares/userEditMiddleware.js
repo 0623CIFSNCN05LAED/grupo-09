@@ -5,9 +5,6 @@ module.exports = async(req, res, next) => {
     const resultValidation = validationResult(req);
 
     if (resultValidation.errors.length > 0) {
-
-       
-
         const id = req.params.id;
         const usuarios = await userService.getUserDetail(id);
 

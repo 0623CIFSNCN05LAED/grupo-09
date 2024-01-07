@@ -12,7 +12,6 @@
                 <div class="w-100"><h2 class="text-center">EDITAR PRODUCTO</h2></div>
                 <div class="form-group my-1">
                     <label for="sku">SKU</label>
-                
                     <input 
                         type="text"
                         name="sku" 
@@ -29,7 +28,6 @@
 
                 <div class="form-group my-1">
                     <label for="nombre">Nombre</label>
-              
                     <input 
                         type="text" 
                         name="nombre" 
@@ -46,7 +44,6 @@
 
                 <div class="form-group my-1">
                     <label for="descripcion">Descripcion</label>
-              
                     <input 
                         type="text" 
                         name="descripcion" 
@@ -63,7 +60,6 @@
 
                 <div class="form-group my-1">
                     <label for="marca_id">Marca</label>
-                
                     <select name="marca_id" id="marca_id" class="form-control">
                         <% marcas.forEach(marca => { %>
                             <option value="<%= marca.id %>" 
@@ -74,7 +70,6 @@
                             </option>
                         <% }) %>
                     </select>
-
                     <% if (locals.errors && errors.marca_id) { %>
                         <div class="text-danger">
                             <%= errors.marca_id.msg %> 
@@ -84,7 +79,6 @@
 
                 <div class="form-group my-1">
                     <label for="categoria_id">Categoria</label>
-               
                     <select name="categoria_id" id="categoria_id" class="form-control">
                         <% categorias.forEach(categoria => { %>
                             <option value="<%= categoria.id %>" 
@@ -95,7 +89,6 @@
                             </option>
                         <% }) %>
                     </select>
-                    
                     <% if (locals.errors && errors.categoria_id) { %>
                         <div class="text-danger">
                             <%= errors.categoria_id.msg %> 
@@ -105,7 +98,6 @@
 
                 <div class="form-group my-1">
                     <label for="precio">Precio</label>
-              
                     <input 
                         type="text" 
                         name="precio" 
@@ -122,7 +114,6 @@
 
                 <div class="form-group my-1">
                     <label for="descuento">Descuento</label>
-              
                     <input 
                         type="number" 
                         name="descuento" 
@@ -139,7 +130,6 @@
 
                 <div class="form-group my-1">
                     <label for="oferta">Oferta</label>
-               
                     <select class="form-control" id="oferta" name="oferta" onchange="optionSelected(this.value)">
                         <option value="1" <%= productos.oferta == 1 ? "selected" : ""  %>>SI</option>
                         <option value="0" <%= productos.oferta == 0 ? "selected" : ""  %>>NO</option>
@@ -148,7 +138,6 @@
 
                 <div class="form-group my-1">   
                     <label for="ancho">Ancho</label>
-              
                     <input 
                         type="text" 
                         name="ancho" 
@@ -165,7 +154,6 @@
 
                 <div class="form-group my-1">  
                     <label for="alto">Alto</label>
-               
                     <input 
                         type="text" 
                         name="alto" 
@@ -182,7 +170,6 @@
 
                 <div class="form-group my-1">  
                     <label for="profundidad">Profundidad</label>
-                
                     <input 
                         type="text" 
                         name="profundidad" 
@@ -199,7 +186,6 @@
 
                 <div class="form-group my-1">  
                     <label for="peso">Peso</label>
-                
                     <input 
                         type="text" 
                         name="peso" 
@@ -216,7 +202,6 @@
 
                 <div class="form-group my-1">  
                     <label for="imagen">Imagen</label>
-             
                     <input 
                         type="file" 
                         name="imagen"
@@ -246,13 +231,6 @@
         
         <!--SCRIPTS-->
         <script src="/js/carrousel.js"></script>   
-        <script>
-            function optionSelected(){
-				let e = document.getElementById("oferta");
-				let result = e.options[e.selectedIndex].value;
-				
-				document.getElementById("oferta").innerHTML = result;
-			}
-        </script>       
+     
     </body>
 </html>
