@@ -9,7 +9,6 @@ const storage = multer.diskStorage({
     },
 
     filename: async (req, file, cb) => {
-        
         const fileName = Date.now() + path.extname(file.originalname)
         cb(null, fileName);
     },

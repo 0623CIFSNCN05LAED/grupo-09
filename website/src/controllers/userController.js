@@ -8,8 +8,7 @@ const userController = {
     },
 
     registerProcess: (req, res) => {
-        
-     userService.createUser(req.body, req.file)
+        userService.createUser(req.body, req.file)
         .then(() => {
             res.redirect("/login");
         });
