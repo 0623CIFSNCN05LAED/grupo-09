@@ -18,6 +18,9 @@
                         <button class="btn-primary" onclick="window.location.href=`/productos/cart/`;">Mi carrito</button>
                     </div>
                     <div class="form-group p-1">
+                        <button class="btn-primary" onclick="window.location.href=`/usuarios/delete/<%= usuarios.id %>`;">Eliminar usuario</button>
+                    </div>
+                    <div class="form-group p-1">
                         <button class="btn-primary" onclick="window.location.href='/logout';">Cerrar Sesión</button>
                     </div>
                 </div>
@@ -70,9 +73,7 @@
                     </div>
                 </div>
                       
-                <div class="form-group p-1">
-                    <button class="btn-primary" onclick="window.location.href=`/usuarios/delete/<%= usuarios.id %>`;">Eliminar usuario</button>
-                </div>
+
             </section>
         </main>
 
