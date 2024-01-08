@@ -38,6 +38,8 @@ INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, an
 INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('COC4', 'Cocina Whirlpool Multigas 56 CM Blanca', 946999, 25, 'COCINA4', 10, 20, 30, 40, 'coc4.jpg', 0, 1, 3);
 INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('COC5', 'Cocina Whirlpool Multigas 76 cm Inox', 719999, NULL, 'COCINA5', 10, 20, 30, 40, 'coc5.jpg', 0, 1, 3);
 INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('COC6', 'Cocina Whirlpool Multigas 76 CM Inox', 691999, 12, 'COCINA6', 10, 20, 30, 40, 'coc6.jpg', 0, 1, 3);
+INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('COC7', 'Cocina Whirlpool Multigas 60 cm Inox', 719999, NULL, 'COCINA7', 10, 20, 30, 40, 'coc7.jpg', 0, 1, 3);
+INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('COC8', 'Cocina Whirlpool Multigas 60 CM Inox', 691999, 12, 'COCINA8', 10, 20, 30, 40, 'coc8.jpg', 0, 1, 3);
 
 /*MICROONDAS*/
 INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('MIC1', 'Microondas Whirlpool Con Grill 25 Lts', 398799, 5, 'MICROONDA1', 10, 20, 30, 40, 'mic1.jpg', 1, 1, 4);
@@ -46,6 +48,8 @@ INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, an
 INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('MIC4', 'Microondas Whirlpool con grill y convección 25 litros', 312598, 25, 'MICROONDA4', 10, 20, 30, 40, 'mic4.jpg', 0, 1, 4);
 INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('MIC5', 'Microondas Whirlpool con Grill 27 Lts Negro', 376892, NULL, 'MICROONDA5', 10, 20, 30, 40, 'mic5.jpg', 0, 1, 4);
 INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('MIC6', 'Microondas Whirlpool con Grill 27 Lts Negro', 420893, 18, 'MICROONDA6', 10, 20, 30, 40, 'mic6.jpg', 0, 1, 4);
+INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('MIC7', 'Microondas Whirlpool Con Grill 30 Lts', 376892, NULL, 'MICROONDA7', 10, 20, 30, 40, 'mic7.jpg', 0, 1, 4);
+INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('MIC8', 'Microondas Whirlpool con Grill 27 Lts Negro', 420893, 18, 'MICROONDA8', 10, 20, 30, 40, 'mic8.jpg', 0, 1, 4);
 
 /*LAVAVAJILLAS*/
 INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('LVV1', 'Lavavajillas Whirlpool Sense Inverter 10 Cubiertos', 1209999, 10, 'LAVAVAJILLA1', 10, 20, 30, 40, 'lvv1.jpg', 1, 1, 5);
@@ -54,6 +58,8 @@ INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, an
 INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('LVV4', 'Lavavajillas Whirlpool Inverter 14 Cubiertos Blanco', 1439999, 5, 'LAVAVAJILLA4', 10, 20, 30, 40, 'lvv4.jpg', 0, 1, 5);
 INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('LVV5', 'Lavavajillas Whirlpool Inverter 14 Cubiertos Inox', 1699999, NULL, 'LAVAVAJILLA5', 10, 20, 30, 40, 'lvv5.jpg', 0, 1, 5);
 INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('LVV6', 'Lavavajillas Whirlpool Empotrable 15 Cubiertos', 1785999, 10, 'LAVAVAJILLA6', 10, 20, 30, 40, 'lvv6.jpg', 0, 1, 5);
+INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('LVV7', 'Lavavajillas Whirlpool Sense Inverter 10 Cubiertos', 1699999, NULL, 'LAVAVAJILLA7', 10, 20, 30, 40, 'lvv7.jpg', 0, 1, 5);
+INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('LVV8', 'Lavavajillas Whirlpool Sense Inverter 10 Cubiertos', 1785999, 10, 'LAVAVAJILLA8', 10, 20, 30, 40, 'lvv8.jpg', 0, 1, 5);
 
 /*HORNOS*/
 INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('HOR1', 'Horno Whirlpool Empotrable Multigas 60 CM', 1399999, 27, 'HORNO1', 10, 20, 30, 40, 'hor1.jpg', 1, 1, 6);
@@ -62,6 +68,8 @@ INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, an
 INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('HOR4', 'Horno Whirlpool Empotrable Multigas 60 CM', 1652999, NULL, 'HORNO4', 10, 20, 30, 40, 'hor4.jpg', 0, 1, 6);
 INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('HOR5', 'Horno Whirlpool Empotrable Eléctrico 60 CM Inox', 1599999, 15, 'HORNO5', 10, 20, 30, 40, 'hor5.jpg', 0, 1, 6);
 INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('HOR6', 'Horno Whirlpool Empotrable Eléctrico 60 CM Inox', 1758999, 5, 'HORNO6', 10, 20, 30, 40, 'hor6.jpg', 0, 1, 6);
+INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('HOR7', 'Horno Whirlpool Empotrable Eléctrico 60 CM Inox', 1599999, 15, 'HORNO7', 10, 20, 30, 40, 'hor7.jpg', 0, 1, 6);
+INSERT INTO ecommerce.productos (sku, nombre, precio, descuento, descripcion, ancho, alto, profundidad, peso, imagen, oferta, marca_id, categoria_id) VALUES('HOR8', 'Horno Whirlpool Empotrable Multigas 60 CM', 1758999, 5, 'HORNO8', 10, 20, 30, 40, 'hor8.jpg', 0, 1, 6);
 
 /*ROLES*/
 INSERT INTO ecommerce.roles (tipo) VALUES('Administrador');
